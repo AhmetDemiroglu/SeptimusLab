@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SeptimusLab — Crafting Intelligent Mobile Experiences</title>
+        <title>SeptimusLab - Crafting Intelligent Mobile Experiences</title>
         <meta name="description" content="SeptimusLab develops AI-powered mobile applications. PureScan cosmetic analyzer and Fintel smart budget assistant." />
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +41,7 @@
                 scroll-behavior: smooth;
                 scrollbar-width: thin;
                 scrollbar-color: var(--navy-light) var(--bg-primary);
+                overflow-x: hidden;
             }
 
             body {
@@ -73,6 +74,7 @@
                 transform: translate(-50%, -50%);
                 z-index: 1;
                 transition: opacity 0.3s;
+                will-change: transform;
             }
 
             /* === SCROLLBAR === */
@@ -234,6 +236,7 @@
                 position: absolute;
                 inset: 0;
                 z-index: 0;
+                overflow: hidden;
             }
 
             .hero-bg .grid-lines {
@@ -515,6 +518,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
             }
 
             .about-visual .logo-showcase {
@@ -658,9 +662,9 @@
             }
 
             .product-icon-wrap {
-                width: 72px;
-                height: 72px;
-                border-radius: 20px;
+                width: 62px;
+                height: 62px;
+                border-radius: 16px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1290,8 +1294,8 @@
 
             <div style="display: flex; align-items: center; gap: 16px">
                 <div class="nav-lang">
-                    <button onclick="setLang('en')" id="langEn" class="active">EN</button>
-                    <button onclick="setLang('tr')" id="langTr">TR</button>
+                    <button onclick="setLang('en')" id="langEn">EN</button>
+                    <button onclick="setLang('tr')" id="langTr" class="active">TR</button>
                 </div>
                 <button class="nav-mobile-toggle" onclick="toggleMobile()" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
@@ -1318,7 +1322,7 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    <span data-i18n="hero_badge">Mobile Innovation Studio — Izmir, Turkey</span>
+                    <span data-i18n="hero_badge">Mobile Innovation Studio - Izmir, Turkey</span>
                 </div>
                 <h1>
                     <span data-i18n="hero_title_1">Crafting</span>
@@ -1370,7 +1374,7 @@
                         </div>
                     </div>
                     <div class="about-visual reveal reveal-delay-2">
-                        <div class="logo-showcase parallax-element" data-speed="0.02">
+                        <div class="logo-showcase">
                             <img src="assets/septimuslab.png" alt="SeptimusLab Logo" />
                         </div>
                         <div class="floating-tag tag-1" data-i18n="float_ai">🧠 AI-Powered</div>
@@ -1395,7 +1399,7 @@
                     <div class="product-card purescan reveal">
                         <div class="product-card-header">
                             <div class="product-icon-wrap">
-                                <img src="assets/purescan.png" alt="PureScan" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover" />
+                                <img src="assets/purescan.png" alt="PureScan" style="width: 56px; height: 56px; border-radius: 14px; object-fit: cover" />
                             </div>
                             <h3>PureScan</h3>
                             <p class="product-tagline" data-i18n="ps_tagline">AI-powered cosmetic ingredient analyzer. Scan any product label and instantly understand what's really inside your skincare and beauty products.</p>
@@ -1459,7 +1463,7 @@
                     <div class="product-card fintel reveal reveal-delay-2">
                         <div class="product-card-header">
                             <div class="product-icon-wrap">
-                                <img src="assets/fintel.png" alt="Fintel" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover" />
+                                <img src="assets/fintel.png" alt="Fintel" style="width: 56px; height: 56px; border-radius: 14px; object-fit: cover" />
                             </div>
                             <h3>Fintel</h3>
                             <p class="product-tagline" data-i18n="ft_tagline">Smart personal budget assistant with AI. Create budget periods, track daily spending limits, and get personalized financial insights from Nova AI.</p>
@@ -1710,7 +1714,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer" style="position: relative; z-index: 10">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="nav-logo" style="margin-bottom: 4px">
@@ -1767,7 +1771,7 @@
                     nav_tech: "Technology",
                     nav_vision: "Vision",
                     nav_contact: "Contact",
-                    hero_badge: "Mobile Innovation Studio — Izmir, Turkey",
+                    hero_badge: "Mobile Innovation Studio - Izmir, Turkey",
                     hero_title_1: "Crafting",
                     hero_title_2: "Intelligent",
                     hero_title_3: "Mobile Experiences",
@@ -1859,7 +1863,7 @@
                     nav_tech: "Teknoloji",
                     nav_vision: "Vizyon",
                     nav_contact: "İletişim",
-                    hero_badge: "Mobil İnovasyon Stüdyosu — İzmir, Türkiye",
+                    hero_badge: "Mobil İnovasyon Stüdyosu - İzmir, Türkiye",
                     hero_title_1: "Akıllı",
                     hero_title_2: "Mobil",
                     hero_title_3: "Deneyimler Üretiyoruz",
@@ -2028,8 +2032,8 @@
             });
 
             // === INIT ===
-            const savedLang = localStorage.getItem("septimus_lang");
-            if (savedLang) setLang(savedLang);
+            const savedLang = localStorage.getItem("septimus_lang") || "tr";
+            setLang(savedLang);
         </script>
     </body>
 </html>
