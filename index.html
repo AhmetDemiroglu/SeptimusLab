@@ -762,9 +762,9 @@
             }
 
             .product-icon-wrap {
-                width: 61px;
-                height: 61px;
-                border-radius: 16px;
+                width: 60px;
+                height: 60px;
+                border-radius: 15px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -773,7 +773,7 @@
             }
 
             .product-icon-wrap img {
-                border: 1.5px solid rgba(0, 0, 0, 0.08);
+                border: 1px solid rgba(0, 0, 0, 0.08);
                 border-radius: 14px;
             }
 
@@ -2421,22 +2421,22 @@
             // === MARQUEE BUILDER ===
             const marqueeItems = {
                 en: [
-                    { type: "product", img: "assets/purescan.png", text: "PureScan: Cosmetics" },
+                    { type: "product", img: "assets/brand-logo-cosmetic.png", text: "PureScan: Cosmetics" },
                     { type: "keyword", text: "AI-Powered" },
                     { type: "product", img: "assets/fintel.png", text: "Fintel: Smart Finance Assistant" },
                     { type: "store", store: "google" },
                     { type: "keyword", text: "Mobile First" },
-                    { type: "product", img: "assets/purescan2.png", text: "PureScan: Foods", soon: true },
+                    { type: "product", img: "assets/brand-logo-food.png", text: "PureScan: Foods", soon: true },
                     { type: "store", store: "apple" },
                     { type: "keyword", text: "Made in Turkey" },
                 ],
                 tr: [
-                    { type: "product", img: "assets/purescan.png", text: "PureScan: Cosmetics" },
+                    { type: "product", img: "assets/brand-logo-cosmetic.png", text: "PureScan: Cosmetics" },
                     { type: "keyword", text: "Yapay Zeka Destekli" },
                     { type: "product", img: "assets/fintel.png", text: "Fintel: Ak\u0131ll\u0131 Finans Asistan\u0131" },
                     { type: "store", store: "google" },
                     { type: "keyword", text: "Mobil \u00d6ncelikli" },
-                    { type: "product", img: "assets/purescan2.png", text: "PureScan: Foods", soon: true },
+                    { type: "product", img: "assets/brand-logo-food.png", text: "PureScan: Foods", soon: true },
                     { type: "store", store: "apple" },
                     { type: "keyword", text: "T\u00fcrkiye\u2019de \u00dcretildi" },
                 ],
@@ -2449,7 +2449,7 @@
 
             const storeLabelEN = { google: "Google Play", apple: "App Store" };
             const storeLabelTR = { google: "Google Play", apple: "App Store" };
-            const soonLabel = { en: "Soon", tr: "Yak\u0131nda" };
+            const soonLabel = { en: "(Soon)", tr: "(Yak\u0131nda)" };
 
             function buildMarquee(lang) {
                 const items = marqueeItems[lang] || marqueeItems.en;
