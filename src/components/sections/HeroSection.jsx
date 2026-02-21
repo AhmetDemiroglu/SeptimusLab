@@ -44,67 +44,125 @@ const html = String.raw`<section class="hero-section" id="hero">
                 </div>
 
                 <div class="reveal reveal-delay-2">
-                    <div class="hero-animation-container">
-                        <div class="orbit-system">
-                            <div class="center-orb">
-                                <img src="assets/septimuslab.png" alt="SeptimusLab Logo - Mobil Uygulama Geliştirme Stüdyosu">
-                            </div>
-                            <div class="orbit-ring orbit-ring-1"></div>
-                            <div class="orbit-ring orbit-ring-2"></div>
-                            <div class="orbit-ring orbit-ring-3"></div>
+                    <div class="hero-animation-container" style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+                        <svg viewBox="0 0 500 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="var(--accent-dark)" />
+                                </linearGradient>
+                                <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--turquoise)" />
+                                    <stop offset="100%" stop-color="#1F6659" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.08"/>
+                                </filter>
+                            </defs>
 
-                            <div class="orbit-item" style="animation-delay: 0s;">
-                                <div class="orbit-icon" style="transform: translate(140px, -20px);">
-                                    <img src="assets/brand-logo-cosmetic.png" alt="PureScan Cosmetics - AI Kozmetik İçerik Analizörü">
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -5s;">
-                                <div class="orbit-icon" style="transform: translate(-100px, 100px); background: var(--accent-light);">
-                                    <img src="assets/fintel.png" alt="Fintel - AI Akıllı Bütçe Asistanı">
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -10s;">
-                                <div class="orbit-icon" style="transform: translate(60px, 160px); background: var(--amber-light);">
-                                    <img src="assets/brand-logo-food.png" alt="PureScan Foods - AI Gıda İçerik Analizörü">
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -15s;">
-                                <div class="orbit-icon" style="transform: translate(-160px, -60px);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--turquoise)" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M12 16v-4M12 8h.01"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -20s;">
-                                <div class="orbit-icon" style="transform: translate(120px, 100px);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -8s;">
-                                <div class="orbit-icon" style="transform: translate(-140px, 40px); background: var(--turquoise-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--turquoise)" stroke-width="2">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="3" y1="9" x2="21" y2="9"/>
-                                        <line x1="9" y1="21" x2="9" y2="9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="orbit-item" style="animation-delay: -18s;">
-                                <div class="orbit-icon" style="transform: translate(40px, -140px); background: var(--accent-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
-                                        <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
-                                        <circle cx="12" cy="13" r="4"/>
-                                    </svg>
-                                </div>
-                            </div>
+                            <!-- Orbital Rings -->
+                            <g transform="translate(250, 250)" fill="none" stroke="var(--border)" stroke-width="1.5" opacity="0.4">
+                                <circle rx="160" ry="160" r="160" stroke-dasharray="4 12">
+                                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite" />
+                                </circle>
+                                <ellipse rx="210" ry="90" transform="rotate(30)">
+                                    <animateTransform attributeName="transform" type="rotate" from="30" to="390" dur="40s" repeatCount="indefinite" />
+                                </ellipse>
+                                <ellipse rx="210" ry="90" transform="rotate(-30)">
+                                    <animateTransform attributeName="transform" type="rotate" from="-30" to="-390" dur="45s" repeatCount="indefinite" />
+                                </ellipse>
+                                <ellipse rx="180" ry="180" stroke-dasharray="2 10" opacity="0.5"/>
+                            </g>
 
-                            <div class="data-line" style="width: 140px; top: 50%; left: 50%; transform: rotate(45deg);"></div>
-                            <div class="data-line" style="width: 190px; top: 50%; left: 50%; transform: rotate(135deg);"></div>
-                            <div class="data-line" style="width: 240px; top: 50%; left: 50%; transform: rotate(225deg);"></div>
-                        </div>
+                            <!-- Central Core (SeptimusLab Logo) -->
+                            <g transform="translate(250, 250)">
+                                <!-- Swaying Animation for Logo -->
+                                <g>
+                                    <animateTransform attributeName="transform" type="rotate" values="-5; 5; -5" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+                                    <animateTransform attributeName="transform" type="translate" values="0,-5; 0,5; 0,-5" dur="4s" repeatCount="indefinite" additive="sum" />
+                                    <circle r="45" fill="var(--bg-white)" filter="url(#drop-shadow)" />
+                                    <image href="assets/septimuslab.png" x="-35" y="-35" width="70" height="70" />
+                                </g>
+                                
+                                <circle r="60" fill="none" stroke="url(#secondaryGrad)" stroke-width="2" stroke-dasharray="10 15" opacity="0.6">
+                                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+                                </circle>
+                                <circle r="80" fill="none" stroke="url(#primaryGrad)" stroke-width="1.5" stroke-dasharray="20 10" opacity="0.4">
+                                    <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="30s" repeatCount="indefinite" />
+                                </circle>
+                            </g>
+
+                            <!-- Connection Lines (Data Streams) -->
+                            <g fill="none" stroke="var(--turquoise)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4">
+                                <!-- Core to PureScan -->
+                                <path d="M 230,220 Q 150,160 80,110">
+                                    <animate attributeName="stroke-dashoffset" values="40; 0" dur="3s" repeatCount="indefinite" />
+                                </path>
+                                <!-- Core to Fintel -->
+                                <path d="M 270,220 Q 340,160 400,100">
+                                    <animate attributeName="stroke-dashoffset" values="40; 0" dur="2.5s" repeatCount="indefinite" />
+                                </path>
+                                <!-- Core to Foods -->
+                                <path d="M 230,270 Q 150,330 90,400">
+                                    <animate attributeName="stroke-dashoffset" values="40; 0" dur="3.5s" repeatCount="indefinite" />
+                                </path>
+                                <!-- Core to Validation -->
+                                <path d="M 280,270 Q 320,300 370,360">
+                                    <animate attributeName="stroke-dashoffset" values="40; 0" dur="2s" repeatCount="indefinite" />
+                                </path>
+                            </g>
+
+                            <!-- Moving Data Packets on paths -->
+                            <circle r="4" fill="var(--accent)" filter="url(#glow)">
+                                <animateMotion path="M 230,220 Q 150,160 80,110" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle r="4" fill="var(--turquoise)" filter="url(#glow)">
+                                <animateMotion path="M 270,220 Q 340,160 400,100" dur="2.5s" repeatCount="indefinite" />
+                            </circle>
+                            <circle r="4" fill="var(--amber)" filter="url(#glow)">
+                                <animateMotion path="M 230,270 Q 150,330 90,400" dur="3.5s" repeatCount="indefinite" />
+                            </circle>
+
+                            <!-- Floating Holographic Data Nodes (Apps) -->
+                            <!-- Node 1: PureScan -->
+                            <g transform="translate(80, 110)">
+                                <animateTransform attributeName="transform" type="translate" values="80,110; 80,100; 80,110" dur="6s" repeatCount="indefinite" />
+                                <rect x="-40" y="-30" width="190" height="55" rx="14" fill="var(--bg-white)" stroke="var(--border)" stroke-width="1" filter="url(#drop-shadow)" />
+                                <image href="assets/brand-logo-cosmetic.png" x="-32" y="-18" width="30" height="30" />
+                                <text x="6" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="var(--fg)">PureScan: Cosmetics</text>
+                                <text x="6" y="12" font-family="Inter, sans-serif" font-size="11" fill="var(--muted)" data-tr="orbit-ps-desc">AI Label Analysis</text>
+                            </g>
+
+                            <!-- Node 2: Fintel -->
+                            <g transform="translate(400, 100)">
+                                <animateTransform attributeName="transform" type="translate" values="400,100; 410,100; 400,100" dur="8s" repeatCount="indefinite" />
+                                <rect x="-170" y="-30" width="190" height="55" rx="14" fill="var(--bg-white)" stroke="var(--border)" stroke-width="1" filter="url(#drop-shadow)" />
+                                <image href="assets/fintel.png" x="-162" y="-18" width="30" height="30" />
+                                <text x="-124" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="var(--fg)">Fintel</text>
+                                <text x="-124" y="12" font-family="Inter, sans-serif" font-size="11" fill="var(--muted)" data-tr="orbit-fintel-desc">Smart Finance</text>
+                            </g>
+
+                            <!-- Node 3: Future Apps (Foods) -->
+                            <g transform="translate(90, 400)">
+                                <animateTransform attributeName="transform" type="translate" values="90,400; 100,390; 90,400" dur="7s" repeatCount="indefinite" />
+                                <rect x="-40" y="-30" width="200" height="55" rx="14" fill="var(--bg-white)" stroke="var(--border)" stroke-width="1" filter="url(#drop-shadow)" />
+                                <image href="assets/brand-logo-food.png" x="-32" y="-18" width="30" height="30" />
+                                <text x="6" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="var(--fg)">PureScan: Foods</text>
+                                <text x="6" y="12" font-family="Inter, sans-serif" font-size="11" fill="var(--amber)" font-weight="600" data-tr="status-dev">In Development</text>
+                            </g>
+
+                            <!-- Node 4: Validation -->
+                            <g transform="translate(370, 360)">
+                                <animateTransform attributeName="transform" type="translate" values="370,360; 360,370; 370,360" dur="9s" repeatCount="indefinite" />
+                                <rect x="-95" y="-30" width="160" height="40" rx="20" fill="#DCFCE7" stroke="#166534" stroke-width="1" stroke-opacity="0.2" filter="drop-shadow(0px 4px 8px rgba(22, 101, 52, 0.1))" />
+                                <path d="M-80,-10 L-70,0 L-55,-15" fill="none" stroke="#166534" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <text x="-45" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#166534" data-tr="verified-label">100% Verified</text>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -112,5 +170,5 @@ const html = String.raw`<section class="hero-section" id="hero">
     </section>`;
 
 export default function HeroSection() {
-  return <HtmlBlock html={html} />;
+    return <HtmlBlock html={html} />;
 }

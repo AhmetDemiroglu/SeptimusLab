@@ -77,6 +77,22 @@ const translations = {
         "timeline-future-1": "Çoklu dil desteği",
         "timeline-future-2": "Küresel pazar genişlemesi",
         "timeline-future-3": "Öncü AI çözümleri",
+        "orbit-ps-desc": "Yapay Zeka Etiket Analizi",
+        "orbit-fintel-desc": "Akıllı Finans",
+        "verified-label": "%100 Doğrulanmış",
+        "about-badge-1": "Çapraz Platform",
+        "about-badge-2": "Temiz Mimari",
+        "about-badge-3": "Yapay Zeka Orkestrasyonu",
+        "phone-ui-score": "Mükemmel Skor",
+        "phone-ui-desc": "AI analizine dayalı",
+        "phone-ui-chart": "Performans Trendi",
+        "phone-ui-status": "Sistem Güvenli",
+        "phone-ui-status-desc": "Tüm API servisleri aktif",
+        "badge-performance": "Native Performans",
+        "badge-architecture": "Temiz Mimari",
+        "badge-backend": "Güvenli Backend",
+        "badge-aicore": "Yapay Zeka Core",
+        "badge-crossplatform": "Çapraz Platform",
         "contact-label": "İletişime Geçin",
         "contact-title": "Birlikte harika bir şeyler inşa edelim",
         "contact-desc": "Bir sorunuz veya iş birliği fikriniz mi var? Bizimle iletişime geçin.",
@@ -163,6 +179,22 @@ const translations = {
         "timeline-future-1": "Multi-language support",
         "timeline-future-2": "Global market expansion",
         "timeline-future-3": "Pioneering AI solutions",
+        "orbit-ps-desc": "AI Label Analysis",
+        "orbit-fintel-desc": "Smart Finance",
+        "verified-label": "100% Verified",
+        "about-badge-1": "Cross-Platform",
+        "about-badge-2": "Clean Architecture",
+        "about-badge-3": "AI Orchestration",
+        "phone-ui-score": "Excellent Score",
+        "phone-ui-desc": "Based on AI analysis",
+        "phone-ui-chart": "Performance Trend",
+        "phone-ui-status": "System Secure",
+        "phone-ui-status-desc": "All API services active",
+        "badge-performance": "Native Performance",
+        "badge-architecture": "Clean Architecture",
+        "badge-backend": "Secure Backend",
+        "badge-aicore": "AI Core Engine",
+        "badge-crossplatform": "Cross-Platform",
         "contact-label": "Get In Touch",
         "contact-title": "Let's build something great together",
         "contact-desc": "Have a question or collaboration idea? Get in touch with us.",
@@ -282,6 +314,11 @@ function setupSmoothScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Auto-detect and set initial language
+    const userLang = navigator.language || navigator.userLanguage;
+    const defaultLang = userLang.toLowerCase().startsWith("tr") ? "tr" : "en";
+    setLanguage(defaultLang);
+
     setupParallax();
     setupRevealAnimations();
     setupNavigation();
