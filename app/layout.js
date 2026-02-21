@@ -24,7 +24,7 @@ const jsonLd = {
             sameAs: ["https://play.google.com/store/apps/developer?id=SeptimusLab", "https://www.instagram.com/septimus.lab/"],
             contactPoint: {
                 "@type": "ContactPoint",
-                email: "septimus.labb@gmail.com",
+                email: "info@septimuslab.com",
                 contactType: "customer support",
                 availableLanguage: ["Turkish", "English"],
             },
@@ -50,7 +50,7 @@ const jsonLd = {
             name: "SeptimusLab",
             description: "Mobil uygulama geliştirme stüdyosu - İzmir, Türkiye",
             url: siteUrl,
-            email: "septimus.labb@gmail.com",
+            email: "info@septimuslab.com",
             address: {
                 "@type": "PostalAddress",
                 addressLocality: "İzmir",

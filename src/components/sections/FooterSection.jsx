@@ -20,7 +20,7 @@ const html = String.raw`<footer class="footer">
                                 <path d="M16 8.9l2.9 1.7c1.5.8 1.5 2.3 0 3.1L16 15.2 12.9 12 16 8.9z" fill="#FBBC04"/>
                             </svg>
                         </a>
-                        <a href="mailto:septimus.labb@gmail.com" class="social-link" aria-label="E-posta">
+                        <a href="mailto:info@septimuslab.com" class="social-link" aria-label="E-posta">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                 <polyline points="22,6 12,13 2,6"/>
@@ -64,7 +64,7 @@ const html = String.raw`<footer class="footer">
                     <h4 class="footer-column-title" data-tr="footer-developer">Geliştirici</h4>
                     <div class="footer-links">
                         <a href="https://ahmetdemiroglu.dev" target="_blank" rel="noopener noreferrer" class="footer-link">ahmetdemiroglu.dev</a>
-                        <a href="mailto:septimus.labb@gmail.com" class="footer-link" data-tr="footer-email">E-posta</a>
+                        <a href="mailto:info@septimuslab.com" class="footer-link" data-tr="footer-email">E-posta</a>
                     </div>
                 </div>
             </div>
@@ -79,5 +79,5 @@ const html = String.raw`<footer class="footer">
     </footer>`;
 
 export default function FooterSection() {
-  return <HtmlBlock html={html} />;
+    return <HtmlBlock html={html} />;
 }
