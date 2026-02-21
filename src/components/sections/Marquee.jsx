@@ -3,12 +3,12 @@ import { HtmlBlock } from "../HtmlBlock";
 const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknoloji bantı">
         <div class="marquee-track">
             <div class="marquee-item">
-                <img src="assets/brand-logo-cosmetic.png" alt="">
+                <img src="assets/brand-logo-cosmetic.png" alt="PureScan Cosmetics">
                 <span>PureScan Cosmetics</span>
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-ai">Yapay Zeka</div>
             <div class="marquee-item">
-                <img src="assets/fintel.png" alt="">
+                <img src="assets/fintel.png" alt="Fintel">
                 <span>Fintel</span>
             </div>
             <div class="marquee-item">
@@ -19,7 +19,7 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-mobile">Mobil Öncelikli</div>
             <div class="marquee-item">
-                <img src="assets/brand-logo-food.png" alt="">
+                <img src="assets/brand-logo-food.png" alt="PureScan Foods">
                 <span>PureScan Foods</span>
                 <span class="marquee-badge" data-tr="marquee-soon">Yakında</span>
             </div>
@@ -33,12 +33,12 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
             </div>
             <!-- Repeat -->
             <div class="marquee-item">
-                <img src="assets/brand-logo-cosmetic.png" alt="">
+                <img src="assets/brand-logo-cosmetic.png" alt="PureScan Cosmetics">
                 <span>PureScan Cosmetics</span>
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-ai">Yapay Zeka</div>
             <div class="marquee-item">
-                <img src="assets/fintel.png" alt="">
+                <img src="assets/fintel.png" alt="Fintel">
                 <span>Fintel</span>
             </div>
             <div class="marquee-item">
@@ -49,7 +49,7 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-mobile">Mobil Öncelikli</div>
             <div class="marquee-item">
-                <img src="assets/brand-logo-food.png" alt="">
+                <img src="assets/brand-logo-food.png" alt="PureScan Foods">
                 <span>PureScan Foods</span>
                 <span class="marquee-badge" data-tr="marquee-soon">Yakında</span>
             </div>

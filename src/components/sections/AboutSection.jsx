@@ -65,19 +65,19 @@ const html = String.raw`<section class="about-section" id="about">
                         </div>
                         <div class="floating-badge" style="top: 55px; right: -20px; animation-delay: 0s;">
                             <div class="flex items-center gap-2">
-                                <img src="assets/purescan.png" alt="" style="width: 18px; height: 18px;">
+                                <img src="assets/purescan.png" alt="PureScan Cosmetics" style="width: 18px; height: 18px;">
                                 <span style="font-size: 0.7rem; font-weight: 600; color: var(--fg);">PureScan: Cosmetics</span>
                             </div>
                         </div>
                         <div class="floating-badge" style="top: 130px; left: -30px; animation-delay: 0.5s;">
                             <div class="flex items-center gap-2">
-                                <img src="assets/fintel.png" alt="" style="width: 18px; height: 18px;">
+                                <img src="assets/fintel.png" alt="Fintel" style="width: 18px; height: 18px;">
                                 <span style="font-size: 0.7rem; font-weight: 600; color: var(--fg);">Fintel</span>
                             </div>
                         </div>
                         <div class="floating-badge" style="top: 210px; right: -50px; animation-delay: 2s;">
                             <div class="flex items-center gap-2">
-                                <img src="assets/purescan2.png" alt="" style="width: 18px; height: 18px;">
+                                <img src="assets/purescan2.png" alt="PureScan Foods" style="width: 18px; height: 18px;">
                                 <span style="font-size: 0.7rem; font-weight: 600; color: var(--fg);">PureScan: Foods</span>
                                 <span style="font-size: 0.55rem; background: var(--amber-light); color: var(--amber); padding: 2px 4px; border-radius: 3px;" data-tr="badge-soon">Yakında</span>
                             </div>

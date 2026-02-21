@@ -5,7 +5,7 @@ const html = String.raw`<footer class="footer">
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="assets/septimus-footer.png" alt="">
+                        <img src="assets/septimus-footer.png" alt="SeptimusLab Logo">
                         <span class="footer-logo-text brand-wordmark">
                             <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
                         </span>

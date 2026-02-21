@@ -26,7 +26,7 @@ const html = String.raw`<section class="products-section" id="products">
                     </div>
                     <div class="product-body">
                         <div class="product-icon-small bg-turquoise">
-                            <img src="assets/purescan.png" alt="">
+                            <img src="assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
                         </div>
                         <h3 class="product-name">PureScan Cosmetics</h3>
                         <p class="product-tagline" data-tr="purescan-tagline">
@@ -50,7 +50,7 @@ const html = String.raw`<section class="products-section" id="products">
                                 <span data-tr="purescan-f4">AI Asistan</span>
                             </div>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.septimuslab.purescan" target="_blank" rel="noopener noreferrer" class="product-cta">
+                        <a href="https://play.google.com/store/apps/details?id=com.septimuslab.purescan" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="PureScan Cosmetics - Google Play'de Gör">
                             <span data-tr="cta-google-play">Google Play'de Gör</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -74,7 +74,7 @@ const html = String.raw`<section class="products-section" id="products">
                     </div>
                     <div class="product-body">
                         <div class="product-icon-small bg-orange">
-                            <img src="assets/fintel.png" alt="">
+                            <img src="assets/fintel.png" alt="Fintel uygulama ikonu">
                         </div>
                         <h3 class="product-name">Fintel</h3>
                         <p class="product-tagline" data-tr="fintel-tagline">
@@ -98,7 +98,7 @@ const html = String.raw`<section class="products-section" id="products">
                                 <span data-tr="fintel-f4">Performans</span>
                             </div>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.fintel.app" target="_blank" rel="noopener noreferrer" class="product-cta">
+                        <a href="https://play.google.com/store/apps/details?id=com.fintel.app" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="Fintel - Google Play'de Gör">
                             <span data-tr="cta-google-play">Google Play'de Gör</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -121,7 +121,7 @@ const html = String.raw`<section class="products-section" id="products">
                     </div>
                     <div class="product-body">
                         <div class="product-icon-small bg-amber">
-                            <img src="assets/purescan2.png" alt="">
+                            <img src="assets/purescan2.png" alt="PureScan Foods uygulama ikonu">
                         </div>
                         <h3 class="product-name">PureScan Foods</h3>
                         <p class="product-tagline" data-tr="purescan-foods-tagline">
