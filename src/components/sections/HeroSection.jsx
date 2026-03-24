@@ -152,15 +152,17 @@ const html = String.raw`<section class="hero-section" id="hero">
                                 <rect x="-40" y="-30" width="200" height="55" rx="14" fill="var(--bg-white)" stroke="var(--border)" stroke-width="1" filter="url(#drop-shadow)" />
                                 <image href="assets/brand-logo-food.png" x="-32" y="-18" width="30" height="30" />
                                 <text x="6" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="var(--fg)">PureScan: Foods</text>
-                                <text x="6" y="12" font-family="Inter, sans-serif" font-size="11" fill="var(--amber)" font-weight="600" data-tr="status-dev">In Development</text>
+                                <text x="6" y="12" font-family="Inter, sans-serif" font-size="11" fill="var(--muted)" data-tr="orbit-foods-desc">AI Food Scanner</text>
                             </g>
 
                             <!-- Node 4: Validation -->
                             <g transform="translate(370, 360)">
                                 <animateTransform attributeName="transform" type="translate" values="370,360; 360,370; 370,360" dur="9s" repeatCount="indefinite" />
-                                <rect x="-95" y="-30" width="160" height="40" rx="20" fill="#DCFCE7" stroke="#166534" stroke-width="1" stroke-opacity="0.2" filter="drop-shadow(0px 4px 8px rgba(22, 101, 52, 0.1))" />
-                                <path d="M-80,-10 L-70,0 L-55,-15" fill="none" stroke="#166534" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <text x="-45" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#166534" data-tr="verified-label">100% Verified</text>
+                                <rect x="-100" y="-30" width="180" height="40" rx="20" fill="#DCFCE7" stroke="#166534" stroke-width="1" stroke-opacity="0.2" filter="drop-shadow(0px 4px 8px rgba(22, 101, 52, 0.1))" />
+                                <svg x="-87" y="-22" width="24" height="24" viewBox="0 0 24 24" fill="#166534">
+                                    <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <text x="-52" y="-5" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#166534" data-tr="verified-label">100% Verified</text>
                             </g>
                         </svg>
                     </div>

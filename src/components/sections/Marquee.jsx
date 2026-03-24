@@ -21,7 +21,6 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
             <div class="marquee-item">
                 <img src="assets/brand-logo-food.png" alt="PureScan Foods">
                 <span>PureScan Foods</span>
-                <span class="marquee-badge" data-tr="marquee-soon">Yakında</span>
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-tr">Türkiye'de Üretildi</div>
             <div class="marquee-item">
@@ -51,7 +50,6 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
             <div class="marquee-item">
                 <img src="assets/brand-logo-food.png" alt="PureScan Foods">
                 <span>PureScan Foods</span>
-                <span class="marquee-badge" data-tr="marquee-soon">Yakında</span>
             </div>
             <div class="marquee-item marquee-keyword" data-tr="marquee-tr">Türkiye'de Üretildi</div>
             <div class="marquee-item">

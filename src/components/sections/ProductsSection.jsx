@@ -110,8 +110,9 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- PureScan Foods -->
                 <div class="product-card reveal reveal-delay-2">
                     <div class="product-preview preview-bg-amber">
-                        <div class="product-status" style="background: var(--amber); color: white;">
-                            <span data-tr="status-dev">Geliştirme Aşamasında</span>
+                        <div class="product-status">
+                            <span class="status-dot" style="background: var(--accent);"></span>
+                            <span style="color: var(--accent);" data-tr="status-android">Google Play'de Mevcut</span>
                         </div>
                         <div class="preview-phone">
                             <div class="preview-phone-inner">
@@ -129,21 +130,24 @@ const html = String.raw`<section class="products-section" id="products">
                         </p>
                         <div class="product-features">
                             <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--amber);"></span>
+                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
                                 <span data-tr="purescan-foods-f1">Gıda Tarama</span>
                             </div>
                             <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--amber);"></span>
+                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
                                 <span data-tr="purescan-foods-f2">Alerjen Uyarıları</span>
                             </div>
                             <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--amber);"></span>
+                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
                                 <span data-tr="purescan-foods-f3">Besin Değerleri</span>
                             </div>
                         </div>
-                        <span class="product-cta" style="color: var(--amber); cursor: default;">
-                            <span data-tr="coming-soon">Yakında</span>
-                        </span>
+                        <a href="https://play.google.com/store/apps/details?id=com.purescan.foods" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="PureScan Foods - Google Play'de Gör">
+                            <span data-tr="cta-google-play">Google Play'de Gör</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
