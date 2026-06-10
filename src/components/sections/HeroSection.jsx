@@ -17,7 +17,7 @@ const html = String.raw`<section class="hero-section" id="hero">
                     <em class="hero-title-accent" data-tr="hero-title-2">Deneyimler Üretiyoruz</em>
                 </h1>
                 <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">
-                    Cebinizdeki kararları ciddiye alıyoruz. Bir kozmetik etiketinin arkasında ne olduğunu, bütçenizin ay sonunda nereye gittiğini yapay zekayla saniyeler içinde görünür kılıyoruz.
+                    Cildinize sürdüğünüz, sofranıza koyduğunuz, cüzdanınızdan çıkan her seçimin ardında bir cevap var. Onu yapay zekayla saniyeler içinde görünür kılıyoruz; ve gündelik kararların değdiği her alanı tek tek aydınlatmaya devam ediyoruz.
                 </p>
                 <div class="hero-actions reveal reveal-delay-3">
                     <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-solid" aria-label="SeptimusLab Google Play Mağazası">

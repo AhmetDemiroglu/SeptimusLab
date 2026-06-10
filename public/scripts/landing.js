@@ -10,7 +10,7 @@ const translations = {
         "hero-title-1": "Akıllı Mobil",
         "hero-title-2": "Deneyimler Üretiyoruz",
         "hero-subtitle":
-            "Cebinizdeki kararları ciddiye alıyoruz. Bir kozmetik etiketinin arkasında ne olduğunu, bütçenizin ay sonunda nereye gittiğini yapay zekayla saniyeler içinde görünür kılıyoruz.",
+            "Cildinize sürdüğünüz, sofranıza koyduğunuz, cüzdanınızdan çıkan her seçimin ardında bir cevap var. Onu yapay zekayla saniyeler içinde görünür kılıyoruz; ve gündelik kararların değdiği her alanı tek tek aydınlatmaya devam ediyoruz.",
         "hero-cta-google-play": "Google Play",
         "hero-cta-discover": "Uygulamaları Keşfet",
         "hero-scroll": "Keşfetmek için kaydırın",
@@ -102,7 +102,7 @@ const translations = {
         "hero-badge": "Mobile Innovation Studio · Izmir",
         "hero-title-1": "Building Smart Mobile",
         "hero-title-2": "Experiences",
-        "hero-subtitle": "We take your everyday decisions seriously. Our apps use AI to show what hides behind a cosmetics label, and where your budget really goes, in seconds.",
+        "hero-subtitle": "Behind everything you put on your skin, set on your table, and take out of your wallet, there is an answer. We make it visible with AI in seconds, and we keep illuminating every area where everyday decisions are made.",
         "hero-cta-google-play": "Google Play",
         "hero-cta-discover": "Discover Apps",
         "hero-scroll": "Scroll to explore",
