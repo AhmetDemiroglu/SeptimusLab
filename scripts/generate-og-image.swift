@@ -192,7 +192,7 @@ drawText(
 drawText(
     "Yapay zeka destekli mobil uygulamalarla gündelik kararları daha anlaşılır hale getiriyoruz.",
     x: 72,
-    top: 352,
+    top: 374,
     width: 560,
     font: font("Avenir Next Regular", size: 25, fallbackWeight: .regular),
     color: color(76, 70, 61),
@@ -229,9 +229,9 @@ drawText(
 )
 
 drawPhone(
-    image: foods,
+    image: cosmetics,
     rect: NSRect(x: 690, y: 88, width: 190, height: 420),
-    borderColor: color(184, 134, 11, 0.66),
+    borderColor: color(45, 138, 122, 0.66),
     shadowAlpha: 0.13
 )
 drawPhone(
@@ -241,9 +241,9 @@ drawPhone(
     shadowAlpha: 0.13
 )
 drawPhone(
-    image: cosmetics,
+    image: foods,
     rect: NSRect(x: 834, y: 42, width: 220, height: 500),
-    borderColor: color(45, 138, 122, 0.78),
+    borderColor: color(184, 134, 11, 0.78),
     shadowAlpha: 0.18
 )
 
