@@ -92,7 +92,7 @@ const jsonLd = {
             },
             installUrl: "https://play.google.com/store/apps/details?id=com.fintel.app",
             author: { "@id": `${siteUrl}/#organization` },
-            image: `${siteUrl}/assets/fintel.png`,
+            image: `${siteUrl}/assets/fintel.webp`,
         },
     ],
 };
@@ -237,8 +237,6 @@ export default function RootLayout({ children }) {
                     }}
                 />
 
-                <script src="https://cdn.tailwindcss.com"></script>
-
                 {/* Preconnects */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -246,7 +244,7 @@ export default function RootLayout({ children }) {
                 <link rel="preconnect" href="https://www.google-analytics.com" />
 
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
                     rel="stylesheet"
                 />
                 <link rel="stylesheet" href="/styles/landing.css" />

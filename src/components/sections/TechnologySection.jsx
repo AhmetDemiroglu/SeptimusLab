@@ -1,14 +1,16 @@
 import { HtmlBlock } from "../HtmlBlock";
 
 const html = String.raw`<section class="tech-section" id="technology">
+        <span class="ghost-index ghost-left" data-parallax="0.05" aria-hidden="true">03</span>
         <div class="container">
             <div class="section-header">
                 <span class="section-label reveal" data-tr="tech-label">Teknoloji</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Modern teknolojiyle güçlendirildi</h2>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Sahne arkasında titiz mühendislik</h2>
             </div>
 
             <div class="tech-grid">
                 <div class="tech-card reveal">
+                    <span class="tech-index">01</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="8" fill="currentColor" opacity="0.9">
                             <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite" />
@@ -26,11 +28,12 @@ const html = String.raw`<section class="tech-section" id="technology">
                             </ellipse>
                         </g>
                     </svg>
-                    <div class="tech-name">React & Capacitor</div>
+                    <div class="tech-name">React &amp; Capacitor</div>
                     <div class="tech-desc" data-tr="tech-1">Çapraz platform mobil</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-1">
+                    <span class="tech-index">02</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M 20 80 A 45 45 0 1 1 80 80" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity="0.2"/>
                         <path d="M 20 80 A 45 45 0 1 1 80 80" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-dasharray="212" stroke-dashoffset="212">
@@ -54,6 +57,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                 </div>
 
                 <div class="tech-card reveal reveal-delay-2">
+                    <span class="tech-index">03</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g stroke="currentColor" stroke-width="4" stroke-linejoin="round" fill="none">
                             <path d="M20 30 C 20 20, 80 20, 80 30 C 80 40, 20 40, 20 30 Z" opacity="0.4"/>
@@ -79,10 +83,11 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">Firebase</div>
-                    <div class="tech-desc" data-tr="tech-3">Auth & Real-time DB</div>
+                    <div class="tech-desc" data-tr="tech-3">Auth &amp; Real-time DB</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-3">
+                    <span class="tech-index">04</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g stroke="currentColor" stroke-width="2" opacity="0.3" stroke-linecap="round">
                             <line x1="20" y1="50" x2="50" y2="20" />
@@ -129,6 +134,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                 </div>
 
                 <div class="tech-card reveal reveal-delay-4">
+                    <span class="tech-index">05</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="25" y="25" width="50" height="50" rx="10" stroke="currentColor" stroke-width="4" fill="none"/>
                         <line x1="20" y1="25" x2="80" y2="25" stroke="#C45D3E" stroke-width="3">

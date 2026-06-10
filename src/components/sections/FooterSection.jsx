@@ -5,19 +5,16 @@ const html = String.raw`<footer class="footer">
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="assets/septimus-footer.png" alt="SeptimusLab Logo">
+                        <img src="/assets/septimus-footer.png" alt="SeptimusLab Logo">
                         <span class="footer-logo-text brand-wordmark">
                             <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
                         </span>
                     </div>
-                    <p class="footer-tagline" data-tr="footer-desc">İzmir merkezli mobil yazılım stüdyosu. AI destekli uygulamalar geliştiriyoruz.</p>
+                    <p class="footer-tagline" data-tr="footer-desc">İzmir'den, bağımsız bir stüdyodan: gündelik hayata dokunan, yapay zeka destekli uygulamalar.</p>
                     <div class="footer-social">
                         <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Play">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M3.8 2.2C3.3 2.7 3 3.4 3 4.3v15.4c0 .9.3 1.6.8 2.1l9.1-9.8L3.8 2.2z" fill="#00A0FF"/>
-                                <path d="M12.9 12L16 8.9l-8-4.5a2.2 2.2 0 0 0-2.3-.1L12.9 12z" fill="#EA4335"/>
-                                <path d="M12.9 12l-7.2 7.7c.7.4 1.5.4 2.3 0l8-4.5-3.1-3.2z" fill="#34A853"/>
-                                <path d="M16 8.9l2.9 1.7c1.5.8 1.5 2.3 0 3.1L16 15.2 12.9 12 16 8.9z" fill="#FBBC04"/>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
                             </svg>
                         </a>
                         <a href="mailto:info@septimuslab.com" class="social-link" aria-label="E-posta">
@@ -31,13 +28,6 @@ const html = String.raw`<footer class="footer">
                                 <rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5"/>
                                 <circle cx="12" cy="12" r="4.5"/>
                                 <circle cx="17.5" cy="6.5" r="1"/>
-                            </svg>
-                        </a>
-                        <a href="https://ahmetdemiroglu.dev" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Developer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
                             </svg>
                         </a>
                     </div>
@@ -72,8 +62,10 @@ const html = String.raw`<footer class="footer">
             <div class="footer-divider"></div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">2025 SeptimusLab. <span data-tr="footer-rights">Tüm hakları saklıdır.</span></p>
-                <p class="footer-credit"><a href="https://ahmetdemiroglu.dev" target="_blank" rel="noopener noreferrer">Ahmet Demiroğlu</a></p>
+                <p class="footer-copyright">&copy; 2025 &middot; <span data-tr="footer-rights">Tüm hakları saklıdır.</span></p>
+                <span class="brand-wordmark footer-bottom-brand">
+                    <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
+                </span>
             </div>
         </div>
     </footer>`;

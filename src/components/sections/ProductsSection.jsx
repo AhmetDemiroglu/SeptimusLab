@@ -1,155 +1,132 @@
 import { HtmlBlock } from "../HtmlBlock";
 
+const playGlyph = String.raw`<svg class="store-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>`;
+const appleGlyph = String.raw`<svg class="store-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
+
+const playButton = (href) => String.raw`<a href="${href}" target="_blank" rel="noopener noreferrer" class="store-btn">
+                            ${playGlyph}
+                            <span class="store-btn-lines">
+                                <small data-tr="store-get">İNDİR</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </a>`;
+
+const appleButtonDisabled = String.raw`<span class="store-btn is-disabled" aria-disabled="true" role="link">
+                            ${appleGlyph}
+                            <span class="store-btn-lines">
+                                <small data-tr="store-soon">YAKINDA</small>
+                                <strong>App Store</strong>
+                            </span>
+                        </span>`;
+
 const html = String.raw`<section class="products-section" id="products">
+        <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>
         <div class="container">
             <div class="section-header">
                 <span class="section-label reveal" data-tr="products-label">Ürünlerimiz</span>
                 <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Fark yaratan uygulamalar</h2>
                 <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">
-                    Her uygulama özenle tasarlanmış, yapay zeka ile güçlendirilmiş ve kullanıcı deneyimi odaklı geliştirilmiştir.
+                    Üçü de aynı soruyla başladı: bu kararı daha kolay veremez miyiz? Her biri özenle tasarlandı, yapay zekayla güçlendirildi ve gerçek hayatta sınandı.
                 </p>
             </div>
 
             <div class="products-grid">
-                <!-- PureScan Cosmetics -->
-                <div class="product-card reveal">
-                    <div class="product-preview preview-bg-turquoise">
-                        <div class="product-status">
-                            <span class="status-dot" style="background: var(--turquoise);"></span>
-                            <span style="color: var(--turquoise);" data-tr="status-android">Android'de Mevcut</span>
+                <!-- PureScan Foods -->
+                <article class="product-card product-amber reveal">
+                    <div class="product-visual">
+                        <div class="product-stores">
+                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
+                            <span class="store-chip is-soon" title="App Store — Yakında" aria-label="App Store yakında">${appleGlyph}</span>
                         </div>
-                        <div class="preview-phone">
-                            <div class="preview-phone-inner">
-                                <img src="assets/purescan-screen.png" alt="PureScan Cosmetics">
-                            </div>
+                        <div class="product-phone">
+                            <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
                         </div>
                     </div>
                     <div class="product-body">
-                        <div class="product-icon-small bg-turquoise">
-                            <img src="assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
-                        </div>
-                        <h3 class="product-name">PureScan Cosmetics</h3>
-                        <p class="product-tagline" data-tr="purescan-tagline">
-                            AI destekli kozmetik içerik analizörü. Ürün etiketlerini tarayın ve cilt bakım ürünlerinizin içinde ne olduğunu anında öğrenin.
+                        <header class="product-head">
+                            <span class="product-icon">
+                                <img src="/assets/purescan2.png" alt="PureScan Foods uygulama ikonu">
+                            </span>
+                            <h3 class="product-name">PureScan Foods</h3>
+                        </header>
+                        <p class="product-tagline" data-tr="purescan-foods-tagline">
+                            PureScan ailesinin yeni üyesi. Market rafındaki ürünün etiketini tarar; alerjenleri, katkıları ve besin değerlerini saniyeler içinde önünüze serer.
                         </p>
                         <div class="product-features">
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--turquoise);"></span>
-                                <span data-tr="purescan-f1">Akıllı Tarama</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--turquoise);"></span>
-                                <span data-tr="purescan-f2">AI Derecelendirme</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--turquoise);"></span>
-                                <span data-tr="purescan-f3">Cilt Analizi</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--turquoise);"></span>
-                                <span data-tr="purescan-f4">AI Asistan</span>
-                            </div>
+                            <span class="feature-tag" data-tr="purescan-foods-f1">Gıda Tarama</span>
+                            <span class="feature-tag" data-tr="purescan-foods-f2">Alerjen Uyarıları</span>
+                            <span class="feature-tag" data-tr="purescan-foods-f3">Besin Değerleri</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.septimuslab.purescan" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="PureScan Cosmetics - Google Play'de Gör">
-                            <span data-tr="cta-google-play">Google Play'de Gör</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
+                        <div class="product-actions">
+                            ${playButton("https://play.google.com/store/apps/details?id=com.purescan.foods")}
+                            ${appleButtonDisabled}
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <!-- PureScan Cosmetics -->
+                <article class="product-card product-teal reveal reveal-delay-1">
+                    <div class="product-visual">
+                        <div class="product-stores">
+                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
+                        </div>
+                        <div class="product-phone">
+                            <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <header class="product-head">
+                            <span class="product-icon">
+                                <img src="/assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
+                            </span>
+                            <h3 class="product-name">PureScan Cosmetics</h3>
+                        </header>
+                        <p class="product-tagline" data-tr="purescan-tagline">
+                            Kozmetik etiketlerindeki o okunmaz listeyi sizin için okur. Bir fotoğrafla içerikleri analiz eder; cildinize neyin iyi geldiğini anlamanıza yardımcı olur.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag" data-tr="purescan-f1">Akıllı Tarama</span>
+                            <span class="feature-tag" data-tr="purescan-f2">AI Derecelendirme</span>
+                            <span class="feature-tag" data-tr="purescan-f3">Cilt Analizi</span>
+                            <span class="feature-tag" data-tr="purescan-f4">AI Asistan</span>
+                        </div>
+                        <div class="product-actions">
+                            ${playButton("https://play.google.com/store/apps/details?id=com.septimuslab.purescan")}
+                        </div>
+                    </div>
+                </article>
 
                 <!-- Fintel -->
-                <div class="product-card reveal reveal-delay-1">
-                    <div class="product-preview preview-bg-orange">
-                        <div class="product-status">
-                            <span class="status-dot" style="background: var(--accent);"></span>
-                            <span style="color: var(--accent);" data-tr="status-android">Android'de Mevcut</span>
+                <article class="product-card product-orange reveal reveal-delay-2">
+                    <div class="product-visual">
+                        <div class="product-stores">
+                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                         </div>
-                        <div class="preview-phone">
-                            <div class="preview-phone-inner">
-                                <img src="assets/fintel-screen.png" alt="Fintel">
-                            </div>
+                        <div class="product-phone">
+                            <img src="/assets/fintel-screen.webp" alt="Fintel uygulama ekranı" loading="lazy">
                         </div>
                     </div>
                     <div class="product-body">
-                        <div class="product-icon-small bg-orange">
-                            <img src="assets/fintel.png" alt="Fintel uygulama ikonu">
-                        </div>
-                        <h3 class="product-name">Fintel</h3>
+                        <header class="product-head">
+                            <span class="product-icon">
+                                <img src="/assets/fintel.webp" alt="Fintel uygulama ikonu">
+                            </span>
+                            <h3 class="product-name">Fintel</h3>
+                        </header>
                         <p class="product-tagline" data-tr="fintel-tagline">
-                            AI destekli akıllı bütçe asistanı. Dönem bazlı bütçeler oluşturun ve Nova AI'dan kişiselleştirilmiş finansal bilgiler alın.
+                            Bütçenizi dönemler halinde planlar, harcamalarınızı sessizce takip eder. Nova AI, ay sonu sürprizlerini zamanında gelen küçük önerilere dönüştürür.
                         </p>
                         <div class="product-features">
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="fintel-f1">Dönem Bütçeleri</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="fintel-f2">Günlük Limitler</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="fintel-f3">Nova AI</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="fintel-f4">Performans</span>
-                            </div>
+                            <span class="feature-tag" data-tr="fintel-f1">Dönem Bütçeleri</span>
+                            <span class="feature-tag" data-tr="fintel-f2">Günlük Limitler</span>
+                            <span class="feature-tag" data-tr="fintel-f3">Nova AI</span>
+                            <span class="feature-tag" data-tr="fintel-f4">Performans</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.fintel.app" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="Fintel - Google Play'de Gör">
-                            <span data-tr="cta-google-play">Google Play'de Gör</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PureScan Foods -->
-                <div class="product-card reveal reveal-delay-2">
-                    <div class="product-preview preview-bg-amber">
-                        <div class="product-status">
-                            <span class="status-dot" style="background: var(--accent);"></span>
-                            <span style="color: var(--accent);" data-tr="status-android">Google Play'de Mevcut</span>
-                        </div>
-                        <div class="preview-phone">
-                            <div class="preview-phone-inner">
-                                <img src="assets/purescan-foods-screen.png" alt="PureScan Foods">
-                            </div>
+                        <div class="product-actions">
+                            ${playButton("https://play.google.com/store/apps/details?id=com.fintel.app")}
                         </div>
                     </div>
-                    <div class="product-body">
-                        <div class="product-icon-small bg-amber">
-                            <img src="assets/purescan2.png" alt="PureScan Foods uygulama ikonu">
-                        </div>
-                        <h3 class="product-name">PureScan Foods</h3>
-                        <p class="product-tagline" data-tr="purescan-foods-tagline">
-                            PureScan'ın yeni bölümü. Daha sağlıklı beslenme tercihleri için AI destekli gıda içerik analizi.
-                        </p>
-                        <div class="product-features">
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="purescan-foods-f1">Gıda Tarama</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="purescan-foods-f2">Alerjen Uyarıları</span>
-                            </div>
-                            <div class="feature-tag">
-                                <span class="feature-tag-dot" style="background: var(--accent);"></span>
-                                <span data-tr="purescan-foods-f3">Besin Değerleri</span>
-                            </div>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.purescan.foods" target="_blank" rel="noopener noreferrer" class="product-cta" aria-label="PureScan Foods - Google Play'de Gör">
-                            <span data-tr="cta-google-play">Google Play'de Gör</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>`;
