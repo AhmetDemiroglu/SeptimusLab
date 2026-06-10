@@ -1,5 +1,5 @@
 /* ============================================================
-   SeptimusLab — landing styles
+   SeptimusLab - landing styles
    Warm editorial / craft-studio direction.
    Display: Fraunces · Body: Instrument Sans
    ============================================================ */
@@ -56,7 +56,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Fine paper grain over everything — keeps the cream from feeling flat */
+/* Fine paper grain over everything, keeping the cream from feeling flat */
 body::after {
     content: '';
     position: fixed;
@@ -651,7 +651,7 @@ section > .container {
     z-index: 1;
 }
 
-/* Oversized italic ordinals — a quiet watermark anchored to each section's
+/* Oversized italic ordinals, a quiet watermark anchored to each section's
    vertical center, echoing the hero "7". Kept fully inside the section. */
 .ghost-index {
     position: absolute;

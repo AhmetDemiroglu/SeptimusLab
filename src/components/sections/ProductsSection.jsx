@@ -36,7 +36,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                            <span class="store-chip is-soon" title="App Store — Yakında" aria-label="App Store yakında">${appleGlyph}</span>
+                            <span class="store-chip is-soon" title="App Store - Yakında" aria-label="App Store yakında">${appleGlyph}</span>
                         </div>
                         <div class="product-phone">
                             <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">

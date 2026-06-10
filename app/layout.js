@@ -198,10 +198,11 @@ export const metadata = {
             "İzmir merkezli bağımsız mobil yazılım stüdyosu. PureScan ile kozmetik içerik analizi, Fintel ile akıllı bütçe yönetimi. Yapay zeka destekli Android uygulamalar geliştiriyoruz.",
         images: [
             {
-                url: "/assets/septimuslab.png",
-                width: 1024,
-                height: 1024,
-                alt: "SeptimusLab - Mobil Uygulama Geliştirme Stüdyosu Logo",
+                url: "/assets/og-septimuslab-v1.png",
+                width: 1200,
+                height: 630,
+                alt: "SeptimusLab mobil inovasyon stüdyosu ve uygulamaları",
+                type: "image/png",
             },
         ],
     },
@@ -209,7 +210,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "SeptimusLab - AI Destekli Mobil Uygulamalar | İzmir",
         description: "Kozmetik analizi (PureScan) ve akıllı bütçe yönetimi (Fintel). İzmir merkezli yapay zeka destekli Android uygulama stüdyosu.",
-        images: ["/assets/septimuslab.png"],
+        images: ["/assets/og-septimuslab-v1.png"],
     },
     category: "technology",
 };
