@@ -79,6 +79,23 @@ const jsonLd = {
         },
         {
             "@type": "SoftwareApplication",
+            name: "PureScan Foods",
+            alternateName: "PureScan Gıda İçerik Analizörü",
+            description:
+                "AI destekli gıda içerik analizörü. Ürün etiketlerini ve barkodları tarayın; alerjenleri, katkı maddelerini ve besin değerlerini anında öğrenin.",
+            applicationCategory: "HealthApplication",
+            operatingSystem: "Android, iOS",
+            offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "TRY",
+            },
+            installUrl: "https://apps.apple.com/app/id6778348937",
+            author: { "@id": `${siteUrl}/#organization` },
+            image: `${siteUrl}/assets/purescan2.png`,
+        },
+        {
+            "@type": "SoftwareApplication",
             name: "Fintel",
             alternateName: "Fintel Akıllı Bütçe Asistanı",
             description:
@@ -104,7 +121,7 @@ export const metadata = {
         template: "%s | SeptimusLab",
     },
     description:
-        "İzmir merkezli mobil uygulama geliştirme stüdyosu. AI destekli Android uygulamalar: PureScan kozmetik içerik analizörü ve Fintel akıllı bütçe asistanı. Yapay zeka ile mobil inovasyon.",
+        "İzmir merkezli mobil uygulama geliştirme stüdyosu. AI destekli mobil uygulamalar: PureScan Foods gıda içerik analizörü, PureScan kozmetik içerik analizörü ve Fintel akıllı bütçe asistanı. Yapay zeka ile mobil inovasyon.",
     keywords: [
         "SeptimusLab",
         "Septimus Lab",

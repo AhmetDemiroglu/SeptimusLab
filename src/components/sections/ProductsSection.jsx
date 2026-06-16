@@ -11,13 +11,13 @@ const playButton = (href) => String.raw`<a href="${href}" target="_blank" rel="n
                             </span>
                         </a>`;
 
-const appleButtonDisabled = String.raw`<span class="store-btn is-disabled" aria-disabled="true" role="link">
+const appleButton = (href) => String.raw`<a href="${href}" target="_blank" rel="noopener noreferrer" class="store-btn">
                             ${appleGlyph}
                             <span class="store-btn-lines">
-                                <small data-tr="store-soon">YAKINDA</small>
+                                <small data-tr="store-get">İNDİR</small>
                                 <strong>App Store</strong>
                             </span>
-                        </span>`;
+                        </a>`;
 
 const html = String.raw`<section class="products-section" id="products">
         <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>
@@ -36,7 +36,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                            <span class="store-chip is-soon" title="App Store - Yakında" aria-label="App Store yakında">${appleGlyph}</span>
+                            <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
                         </div>
                         <div class="product-phone">
                             <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
@@ -59,7 +59,7 @@ const html = String.raw`<section class="products-section" id="products">
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.purescan.foods")}
-                            ${appleButtonDisabled}
+                            ${appleButton("https://apps.apple.com/app/id6778348937")}
                         </div>
                     </div>
                 </article>

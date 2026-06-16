@@ -30,7 +30,7 @@ const html = String.raw`<section class="vision-section" id="vision">
                         <div class="timeline-title" data-tr="timeline-2026-title">Büyüme ve iOS</div>
                         <ul class="timeline-list">
                             <li data-tr="timeline-2026-1">PureScan Cosmetics yayınlandı</li>
-                            <li data-tr="timeline-2026-2">PureScan Foods geliştirme aşamasında</li>
+                            <li data-tr="timeline-2026-2">PureScan Foods App Store'da yayında</li>
                             <li data-tr="timeline-2026-3">Apple ekosistemine genişleme</li>
                         </ul>
                     </div>
