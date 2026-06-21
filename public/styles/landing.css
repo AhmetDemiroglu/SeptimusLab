@@ -1105,6 +1105,65 @@ section > .container {
     color: var(--fg);
 }
 
+/* PureScan Foods card: screenshot + name link to the marketing site */
+a.product-phone {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+.product-site-cue {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d1a14;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(32, 28, 22, 0.16);
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.product-site-cue svg {
+    width: 14px;
+    height: 14px;
+}
+.product-card:hover .product-site-cue {
+    opacity: 1;
+    transform: translateY(0);
+}
+.product-name-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s ease;
+}
+.product-name-link:hover {
+    color: var(--amber);
+}
+.product-name-link .ext-arrow {
+    display: inline-flex;
+    opacity: 0.4;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.product-name-link .ext-arrow svg {
+    width: 15px;
+    height: 15px;
+}
+.product-name-link:hover .ext-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
 .product-tagline {
     font-size: 0.9rem;
     color: var(--muted);
