@@ -42,8 +42,8 @@ const html = String.raw`<section class="products-section" id="products">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                             <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
                         </div>
-                        <a class="product-phone product-site" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası">
-                            <span class="product-site-cue">${siteArrow}</span>
+                        <a class="product-site-cue" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası">${siteArrow}</a>
+                        <a class="product-phone product-site" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası" tabindex="-1">
                             <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
                         </a>
                     </div>

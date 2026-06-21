@@ -1113,12 +1113,12 @@ a.product-phone {
 }
 .product-site-cue {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 16px;
+    right: 16px;
     z-index: 3;
-    width: 28px;
-    height: 28px;
-    border-radius: 9px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1132,8 +1132,8 @@ a.product-phone {
     transition: opacity 0.35s ease, transform 0.35s ease;
 }
 .product-site-cue svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
 }
 .product-card:hover .product-site-cue {
     opacity: 1;
