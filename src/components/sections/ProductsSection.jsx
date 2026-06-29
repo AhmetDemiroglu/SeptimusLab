@@ -23,6 +23,20 @@ const appleButton = (href) => String.raw`<a href="${href}" target="_blank" rel="
                             </span>
                         </a>`;
 
+// Google Play henüz onayda: pasif "yakında" butonu.
+const playButtonSoon = () => String.raw`<span class="store-btn is-disabled" aria-disabled="true" title="Google Play'de çok yakında">
+                            ${playGlyph}
+                            <span class="store-btn-lines">
+                                <small data-tr="store-soon">YAKINDA</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </span>`;
+
+// GGHub'ın kendi web sitesi var; kart görseli + adı oraya bağlanır, dile duyarlı.
+const GGHUB_SITE_TR = "https://gghub.social/tr";
+const GGHUB_SITE_EN = "https://gghub.social/en-US";
+const APP_STORE_GGHUB = "https://apps.apple.com/app/id6781281375";
+
 const html = String.raw`<section class="products-section" id="products">
         <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>
         <div class="container">
@@ -30,7 +44,7 @@ const html = String.raw`<section class="products-section" id="products">
                 <span class="section-label reveal" data-tr="products-label">Ürünlerimiz</span>
                 <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Fark yaratan uygulamalar</h2>
                 <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">
-                    Üçü de aynı soruyla başladı: bu kararı daha kolay veremez miyiz? Her biri özenle tasarlandı, yapay zekayla güçlendirildi ve gerçek hayatta sınandı.
+                    Her biri farklı bir ihtiyaçtan doğdu: kimi günlük bir kararı kolaylaştırmak, kimi bir oyuncu topluluğunu bir araya getirmek için. Hepsi özenle tasarlandı ve gerçek hayatta sınandı.
                 </p>
             </div>
 
@@ -101,8 +115,43 @@ const html = String.raw`<section class="products-section" id="products">
                     </div>
                 </article>
 
+                <!-- GGHub -->
+                <article class="product-card product-violet reveal reveal-delay-2">
+                    <div class="product-visual">
+                        <div class="product-stores">
+                            <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
+                            <span class="store-chip is-soon" title="Google Play (yakında)" aria-label="Google Play'de çok yakında">${playGlyph}</span>
+                        </div>
+                        <a class="product-site-cue" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi">${siteArrow}</a>
+                        <a class="product-phone product-site" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi" tabindex="-1">
+                            <img src="/assets/gghub-screen.jpg" data-img-tr="/assets/gghub-screen.jpg" data-img-en="/assets/gghub-en.jpg" alt="GGHub uygulama ekranı" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-body">
+                        <header class="product-head">
+                            <span class="product-icon">
+                                <img src="/assets/gghub.png" alt="GGHub uygulama ikonu">
+                            </span>
+                            <h3 class="product-name"><a class="product-name-link" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer">GGHub<span class="ext-arrow">${siteArrow}</span></a></h3>
+                        </header>
+                        <p class="product-tagline" data-tr="gghub-tagline">
+                            Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag" data-tr="gghub-f1">Oyun Keşfi</span>
+                            <span class="feature-tag" data-tr="gghub-f2">İnceleme & Puan</span>
+                            <span class="feature-tag" data-tr="gghub-f3">Liderlik Tablosu</span>
+                            <span class="feature-tag" data-tr="gghub-f4">Canlı Mesajlaşma</span>
+                        </div>
+                        <div class="product-actions">
+                            ${appleButton(APP_STORE_GGHUB)}
+                            ${playButtonSoon()}
+                        </div>
+                    </div>
+                </article>
+
                 <!-- Fintel -->
-                <article class="product-card product-orange reveal reveal-delay-2">
+                <article class="product-card product-orange reveal reveal-delay-3">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>

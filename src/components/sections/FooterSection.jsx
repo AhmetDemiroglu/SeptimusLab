@@ -39,6 +39,7 @@ const html = String.raw`<footer class="footer">
                         <a href="https://play.google.com/store/apps/details?id=com.septimuslab.purescan" target="_blank" rel="noopener noreferrer" class="footer-link">PureScan Cosmetics</a>
                         <a href="https://play.google.com/store/apps/details?id=com.fintel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Fintel</a>
                         <a href="#products" class="footer-link">PureScan Foods</a>
+                        <a href="https://gghub.social" target="_blank" rel="noopener noreferrer" class="footer-link">GGHub</a>
                     </div>
                 </div>
 

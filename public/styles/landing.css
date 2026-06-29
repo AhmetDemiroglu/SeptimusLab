@@ -20,6 +20,8 @@
     --teal-light: #E8F5F2;
     --amber: #B8860B;
     --amber-light: #FBF5E4;
+    --violet: #6D5AE6;
+    --violet-light: #EEEBFE;
     --line: #E4DFD4;
     --line-soft: #EEEAE0;
     --shadow: rgba(32, 28, 22, 0.07);
@@ -980,6 +982,7 @@ section > .container {
 .product-teal:hover { border-color: rgba(45, 138, 122, 0.35); }
 .product-orange:hover { border-color: rgba(196, 93, 62, 0.35); }
 .product-amber:hover { border-color: rgba(184, 134, 11, 0.35); }
+.product-violet:hover { border-color: rgba(109, 90, 230, 0.35); }
 
 .product-visual {
     position: relative;
@@ -998,6 +1001,10 @@ section > .container {
 
 .product-amber .product-visual {
     background: linear-gradient(150deg, #FBF5E4 0%, #F5EACB 100%);
+}
+
+.product-violet .product-visual {
+    background: linear-gradient(150deg, #ECE9FD 0%, #DCD6FA 100%);
 }
 
 .product-visual::after {
@@ -1149,6 +1156,9 @@ a.product-phone {
 }
 .product-name-link:hover {
     color: var(--amber);
+}
+.product-violet .product-name-link:hover {
+    color: var(--violet);
 }
 .product-name-link .ext-arrow {
     display: inline-flex;

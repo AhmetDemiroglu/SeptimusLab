@@ -44,7 +44,7 @@ const html = String.raw`<section class="hero-section" id="hero">
             <div class="hero-stage reveal reveal-delay-2">
                 <div class="hero-scene" data-tilt="5">
                     <div class="h-phone h-phone-left">
-                        <img src="/assets/fintel-screen.webp" alt="Fintel uygulama arayüzü" loading="eager">
+                        <img src="/assets/gghub-screen.jpg" data-img-tr="/assets/gghub-screen.jpg" data-img-en="/assets/gghub-en.jpg" alt="GGHub uygulama arayüzü" loading="eager">
                     </div>
                     <div class="h-phone h-phone-right">
                         <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama arayüzü" loading="eager">

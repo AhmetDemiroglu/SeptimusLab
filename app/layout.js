@@ -96,6 +96,24 @@ const jsonLd = {
         },
         {
             "@type": "SoftwareApplication",
+            name: "GGHub",
+            alternateName: "GGHub - Oyuncu Sosyal Platformu",
+            description:
+                "Oyuncular için sosyal platform. Oyunları keşfedin, puanlayın ve listeleyin; incelemeler yazın, liderlik tablolarında yarışın ve toplulukla web'de ve mobilde buluşun.",
+            applicationCategory: "GameApplication",
+            operatingSystem: "iOS, Android, Web",
+            offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "TRY",
+            },
+            installUrl: "https://apps.apple.com/app/id6781281375",
+            url: "https://gghub.social",
+            author: { "@id": `${siteUrl}/#organization` },
+            image: `${siteUrl}/assets/gghub.png`,
+        },
+        {
+            "@type": "SoftwareApplication",
             name: "Fintel",
             alternateName: "Fintel Akıllı Bütçe Asistanı",
             description:

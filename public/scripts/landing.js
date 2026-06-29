@@ -38,7 +38,7 @@ const translations = {
         "store-soon": "YAKINDA",
         "products-label": "Ürünlerimiz",
         "products-title": "Fark yaratan uygulamalar",
-        "products-desc": "Üçü de aynı soruyla başladı: bu kararı daha kolay veremez miyiz? Her biri özenle tasarlandı, yapay zekayla güçlendirildi ve gerçek hayatta sınandı.",
+        "products-desc": "Her biri farklı bir ihtiyaçtan doğdu: kimi günlük bir kararı kolaylaştırmak, kimi bir oyuncu topluluğunu bir araya getirmek için. Hepsi özenle tasarlandı ve gerçek hayatta sınandı.",
         "status-android": "Android'de Mevcut",
         "status-play": "Google Play'de Mevcut",
         "purescan-tagline":
@@ -58,6 +58,11 @@ const translations = {
         "purescan-foods-f1": "Gıda Tarama",
         "purescan-foods-f2": "Alerjen Uyarıları",
         "purescan-foods-f3": "Besin Değerleri",
+        "gghub-tagline": "Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.",
+        "gghub-f1": "Oyun Keşfi",
+        "gghub-f2": "İnceleme & Puan",
+        "gghub-f3": "Liderlik Tablosu",
+        "gghub-f4": "Canlı Mesajlaşma",
         "tech-label": "Teknoloji",
         "tech-title": "Sahne arkasında titiz mühendislik",
         "tech-1": "Tek kod tabanıyla tüm platformlarda kusursuz deneyim",
@@ -130,7 +135,7 @@ const translations = {
         "store-soon": "SOON",
         "products-label": "Our Products",
         "products-title": "Apps that make a difference",
-        "products-desc": "All three began with the same question: couldn't this decision be easier? Each one is carefully designed, AI-powered and tested in real life.",
+        "products-desc": "Each was born from a different need — some to make an everyday decision easier, others to bring a gaming community together. All are carefully designed and tested in real life.",
         "status-android": "Available on Android",
         "status-play": "Available on Google Play",
         "purescan-tagline": "Reads that unreadable ingredient list for you. Snap a label and it breaks down what each ingredient means for your skin.",
@@ -148,6 +153,11 @@ const translations = {
         "purescan-foods-f1": "Food Scanning",
         "purescan-foods-f2": "Allergen Alerts",
         "purescan-foods-f3": "Nutrition Facts",
+        "gghub-tagline": "A social platform for gamers. Discover, rate and list games; write reviews, climb the leaderboards and keep your finger on the community's pulse. On the web and on mobile, under one roof.",
+        "gghub-f1": "Game Discovery",
+        "gghub-f2": "Reviews & Ratings",
+        "gghub-f3": "Leaderboards",
+        "gghub-f4": "Live Messaging",
         "tech-label": "Technology",
         "tech-title": "Meticulous engineering, behind the scenes",
         "tech-1": "Flawless experience across all platforms with a single codebase",
@@ -205,6 +215,12 @@ function setLanguage(lang) {
     document.querySelectorAll("[data-img-" + lang + "]").forEach((img) => {
         const src = img.getAttribute("data-img-" + lang);
         if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
+    });
+
+    // Swap localized links (e.g. GGHub site -> /tr vs /en-US depending on page language)
+    document.querySelectorAll("[data-href-" + lang + "]").forEach((a) => {
+        const href = a.getAttribute("data-href-" + lang);
+        if (href && a.getAttribute("href") !== href) a.setAttribute("href", href);
     });
 
     document.querySelectorAll(".lang-btn").forEach((btn) => {
