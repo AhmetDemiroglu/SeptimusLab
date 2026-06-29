@@ -90,7 +90,7 @@ const jsonLd = {
                 price: "0",
                 priceCurrency: "TRY",
             },
-            installUrl: "https://apps.apple.com/app/id6778348937",
+            installUrl: "https://apps.apple.com/us/app/purescan-foods/id6778348937",
             author: { "@id": `${siteUrl}/#organization` },
             image: `${siteUrl}/assets/purescan2.png`,
         },

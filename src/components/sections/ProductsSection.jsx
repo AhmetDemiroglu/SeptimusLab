@@ -78,45 +78,13 @@ const html = String.raw`<section class="products-section" id="products">
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.purescan.foods")}
-                            ${appleButton("https://apps.apple.com/app/id6778348937")}
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PureScan Cosmetics -->
-                <article class="product-card product-teal reveal reveal-delay-1">
-                    <div class="product-visual">
-                        <div class="product-stores">
-                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                        </div>
-                        <div class="product-phone">
-                            <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="product-body">
-                        <header class="product-head">
-                            <span class="product-icon">
-                                <img src="/assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
-                            </span>
-                            <h3 class="product-name">PureScan Cosmetics</h3>
-                        </header>
-                        <p class="product-tagline" data-tr="purescan-tagline">
-                            Kozmetik etiketlerindeki o okunmaz listeyi sizin için okur. Bir fotoğrafla içerikleri analiz eder; cildinize neyin iyi geldiğini anlamanıza yardımcı olur.
-                        </p>
-                        <div class="product-features">
-                            <span class="feature-tag" data-tr="purescan-f1">Akıllı Tarama</span>
-                            <span class="feature-tag" data-tr="purescan-f2">AI Derecelendirme</span>
-                            <span class="feature-tag" data-tr="purescan-f3">Cilt Analizi</span>
-                            <span class="feature-tag" data-tr="purescan-f4">AI Asistan</span>
-                        </div>
-                        <div class="product-actions">
-                            ${playButton("https://play.google.com/store/apps/details?id=com.septimuslab.purescan")}
+                            ${appleButton("https://apps.apple.com/us/app/purescan-foods/id6778348937")}
                         </div>
                     </div>
                 </article>
 
                 <!-- GGHub -->
-                <article class="product-card product-violet reveal reveal-delay-2">
+                <article class="product-card product-violet reveal reveal-delay-1">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
@@ -146,6 +114,38 @@ const html = String.raw`<section class="products-section" id="products">
                         <div class="product-actions">
                             ${appleButton(APP_STORE_GGHUB)}
                             ${playButtonSoon()}
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PureScan Cosmetics -->
+                <article class="product-card product-teal reveal reveal-delay-2">
+                    <div class="product-visual">
+                        <div class="product-stores">
+                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
+                        </div>
+                        <div class="product-phone">
+                            <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <header class="product-head">
+                            <span class="product-icon">
+                                <img src="/assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
+                            </span>
+                            <h3 class="product-name">PureScan Cosmetics</h3>
+                        </header>
+                        <p class="product-tagline" data-tr="purescan-tagline">
+                            Kozmetik etiketlerindeki o okunmaz listeyi sizin için okur. Bir fotoğrafla içerikleri analiz eder; cildinize neyin iyi geldiğini anlamanıza yardımcı olur.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag" data-tr="purescan-f1">Akıllı Tarama</span>
+                            <span class="feature-tag" data-tr="purescan-f2">AI Derecelendirme</span>
+                            <span class="feature-tag" data-tr="purescan-f3">Cilt Analizi</span>
+                            <span class="feature-tag" data-tr="purescan-f4">AI Asistan</span>
+                        </div>
+                        <div class="product-actions">
+                            ${playButton("https://play.google.com/store/apps/details?id=com.septimuslab.purescan")}
                         </div>
                     </div>
                 </article>
