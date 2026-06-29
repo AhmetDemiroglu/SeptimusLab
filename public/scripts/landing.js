@@ -135,7 +135,7 @@ const translations = {
         "store-soon": "SOON",
         "products-label": "Our Products",
         "products-title": "Apps that make a difference",
-        "products-desc": "Each was born from a different need — some to make an everyday decision easier, others to bring a gaming community together. All are carefully designed and tested in real life.",
+        "products-desc": "Each was born from a different need: some to make an everyday decision easier, others to bring a gaming community together. All are carefully designed and tested in real life.",
         "status-android": "Available on Android",
         "status-play": "Available on Google Play",
         "purescan-tagline": "Reads that unreadable ingredient list for you. Snap a label and it breaks down what each ingredient means for your skin.",

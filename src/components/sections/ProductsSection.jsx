@@ -35,7 +35,7 @@ const playButtonSoon = () => String.raw`<span class="store-btn is-disabled" aria
 // GGHub'ın kendi web sitesi var; kart görseli + adı oraya bağlanır, dile duyarlı.
 const GGHUB_SITE_TR = "https://gghub.social/tr";
 const GGHUB_SITE_EN = "https://gghub.social/en-US";
-const APP_STORE_GGHUB = "https://apps.apple.com/app/id6781281375";
+const APP_STORE_GGHUB = "https://apps.apple.com/us/app/gghub-games-community/id6781281375";
 
 const html = String.raw`<section class="products-section" id="products">
         <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>

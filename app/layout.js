@@ -107,7 +107,7 @@ const jsonLd = {
                 price: "0",
                 priceCurrency: "TRY",
             },
-            installUrl: "https://apps.apple.com/app/id6781281375",
+            installUrl: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",
             url: "https://gghub.social",
             author: { "@id": `${siteUrl}/#organization` },
             image: `${siteUrl}/assets/gghub.png`,
