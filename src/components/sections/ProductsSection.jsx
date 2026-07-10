@@ -88,7 +88,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
-                            <span class="store-chip is-soon" title="Google Play (yakında)" aria-label="Google Play'de çok yakında">${playGlyph}</span>
+                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                         </div>
                         <a class="product-site-cue" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi">${siteArrow}</a>
                         <a class="product-phone product-site" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi" tabindex="-1">
@@ -113,7 +113,7 @@ const html = String.raw`<section class="products-section" id="products">
                         </div>
                         <div class="product-actions">
                             ${appleButton(APP_STORE_GGHUB)}
-                            ${playButtonSoon()}
+                            ${playButton("https://play.google.com/store/apps/details?id=com.gghub.mobile")}
                         </div>
                     </div>
                 </article>
