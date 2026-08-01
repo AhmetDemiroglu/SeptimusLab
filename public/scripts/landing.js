@@ -303,15 +303,152 @@ function setupRevealAnimations() {
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
+// Üst şeridin kaydırmaya bağlı davranışı:
+//  - 12px'den sonra `.scrolled` ile yüzen cam kapsül görünümü,
+//  - kapsülü uçtan uca geçen ilerleme çubuğu (transform tabanlı, layout tetiklemez),
+//  - görünürdeki bölümün bağlantısına `.is-spy-active` (scrollspy).
 function setupNavigation() {
     const nav = document.querySelector(".nav-wrapper");
+    if (!nav) return;
+
+    const bar = nav.querySelector(".scroll-progress");
+
+    let raf = 0;
+    function update() {
+        raf = 0;
+        nav.classList.toggle("scrolled", window.scrollY > 12);
+        if (bar) {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+            bar.style.transform = `scaleX(${progress})`;
+        }
+    }
+
     window.addEventListener(
         "scroll",
         () => {
-            nav.classList.toggle("scrolled", window.pageYOffset > 20);
+            if (!raf) raf = requestAnimationFrame(update);
         },
         { passive: true },
     );
+    update();
+
+    const links = Array.from(nav.querySelectorAll('.nav-link[href^="#"]')).filter((link) => link.getAttribute("href").length > 1);
+    const sections = links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    if (!sections.length) return;
+
+    const spy = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                links.forEach((link) => {
+                    link.classList.toggle("is-spy-active", link.getAttribute("href") === `#${entry.target.id}`);
+                });
+            });
+        },
+        { rootMargin: "-25% 0px -65% 0px" },
+    );
+    sections.forEach((section) => spy.observe(section));
+}
+
+// iOS tarzı "liquid glass": pürüzsüz mercek kırılması.
+//
+// Gürültü (feTurbulence) tabanlı yaklaşım dalgalı/buzlu cam üretir; iOS camı
+// ise pürüzsüz bir mercektir: merkez neredeyse düz, bükülme yalnızca kapsülün
+// yuvarlak kenarındaki dar bantta yoğunlaşır. Burada kapsül geometrisinden
+// (rounded-rect SDF) piksel piksel bir yer değiştirme haritası üretilir:
+// R kanalı yatay, G kanalı dikey itme; 128 = nötr. Harita feImage ->
+// feDisplacementMap ile `backdrop-filter: url(#nav-glass-lens)` içinde
+// arkadaki gerçek pikselleri büker (yalnız Chromium; diğer tarayıcılar
+// .glass-base bulanıklığına düşer).
+const GLASS_EDGE_BAND = 14; // kenar bandı genişliği (px) - bükülmenin eriştiği derinlik
+const GLASS_EDGE_POWER = 3.2; // bükülmenin kenara toplanma eğrisi
+
+function buildGlassLensMap(width, height, radius) {
+    const w = Math.max(2, Math.round(width));
+    const h = Math.max(2, Math.round(height));
+    const r = Math.max(1, Math.min(radius, Math.min(w, h) / 2));
+    const canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+
+    const image = ctx.createImageData(w, h);
+    const data = image.data;
+    const hw = w / 2;
+    const hh = h / 2;
+
+    for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+            const px = x + 0.5 - hw;
+            const py = y + 0.5 - hh;
+
+            // Yuvarlatılmış dikdörtgen SDF ve dışa bakan normal
+            const qx = Math.abs(px) - (hw - r);
+            const qy = Math.abs(py) - (hh - r);
+            let d;
+            let nx = 0;
+            let ny = 0;
+            if (qx > 0 && qy > 0) {
+                const len = Math.hypot(qx, qy);
+                d = len - r;
+                nx = (Math.sign(px) * qx) / len;
+                ny = (Math.sign(py) * qy) / len;
+            } else if (qx > qy) {
+                d = qx - r;
+                nx = Math.sign(px);
+            } else {
+                d = qy - r;
+                ny = Math.sign(py);
+            }
+
+            // Kenar bandında easing'li şiddet: merkez 0, rim'de 1
+            const t = Math.min(1, Math.max(0, 1 + d / GLASS_EDGE_BAND));
+            const s = Math.pow(t, GLASS_EDGE_POWER);
+
+            const i = (y * w + x) * 4;
+            data[i] = Math.round(128 + nx * s * 127);
+            data[i + 1] = Math.round(128 + ny * s * 127);
+            data[i + 2] = 0;
+            data[i + 3] = 255;
+        }
+    }
+
+    ctx.putImageData(image, 0, 0);
+    return canvas.toDataURL("image/png");
+}
+
+function setupNavGlass() {
+    const host = document.querySelector(".nav-bar");
+    const feImage = document.getElementById("nav-glass-map");
+    const refract = host && host.querySelector(".glass-refract");
+    if (!host || !feImage || !refract) return;
+
+    let raf = 0;
+    let lastKey = "";
+
+    function regenerate() {
+        raf = 0;
+        const rect = host.getBoundingClientRect();
+        const radius = parseFloat(window.getComputedStyle(host).borderTopLeftRadius) || 0;
+        const key = `${Math.round(rect.width)}x${Math.round(rect.height)}r${radius}`;
+        if (key === lastKey || rect.width < 2 || rect.height < 2) return;
+        const url = buildGlassLensMap(rect.width, rect.height, radius);
+        if (!url) return;
+        lastKey = key;
+        feImage.setAttribute("href", url);
+        // Harita hazır olana dek filtre kapalıydı; yoksa boş harita tüm arka
+        // planı köşeye kaydırır.
+        refract.removeAttribute("style");
+    }
+
+    const observer = new ResizeObserver(() => {
+        if (!raf) raf = requestAnimationFrame(regenerate);
+    });
+    observer.observe(host);
+    // İlk harita senkron üretilir; rAF yalnızca resize gazlaması için.
+    regenerate();
 }
 
 function setupMobileMenu() {
@@ -367,6 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTilt();
     setupRevealAnimations();
     setupNavigation();
+    setupNavGlass();
     setupMobileMenu();
     setupLanguageToggle();
     setupSmoothScroll();

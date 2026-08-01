@@ -2,6 +2,20 @@ import { HtmlBlock } from "../HtmlBlock";
 
 const html = String.raw`<nav class="nav-wrapper" role="navigation" aria-label="Ana navigasyon">
         <div class="container nav-bar">
+            <span class="glass-stack" aria-hidden="true">
+                <svg class="glass-defs" focusable="false" aria-hidden="true">
+                    <defs>
+                        <filter id="nav-glass-lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage id="nav-glass-map" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="48" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                        </filter>
+                    </defs>
+                </svg>
+                <span class="glass-base"></span>
+                <span class="glass-refract" style="backdrop-filter:none;-webkit-backdrop-filter:none"></span>
+                <span class="glass-shine"></span>
+            </span>
+
             <a href="#" class="nav-brand" aria-label="SeptimusLab Ana Sayfa">
                 <img src="/assets/septimus-footer.png" alt="SeptimusLab Logo" class="nav-brand-logo">
                 <span class="brand-wordmark">
@@ -71,6 +85,8 @@ const html = String.raw`<nav class="nav-wrapper" role="navigation" aria-label="A
                     </svg>
                 </button>
             </div>
+
+            <span class="scroll-progress-track" aria-hidden="true"><span class="scroll-progress"></span></span>
         </div>
     </nav>`;
 
