@@ -124,14 +124,31 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent;
     border: 1px solid transparent;
     border-radius: 20px;
-    transition:
-        min-height 340ms cubic-bezier(0.22, 0.61, 0.36, 1),
-        border-color 300ms ease,
-        box-shadow 340ms ease;
+    transition: min-height 340ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .nav-wrapper.scrolled .nav-bar {
     min-height: 62px;
+}
+
+/* Kapsülün kenar çizgisi ve gölgesi .nav-bar'ın kendisinde değil, cam
+   katmanlarından SONRA boyanan bu katmanda. .nav-bar'da olsaydı
+   .glass-refract'ın backdrop'una girer, mercek onları kenardan içeri
+   bükerdi: sağ uçta, köşe merkezinde dört köşeli bir yıldız belirirdi. */
+.nav-bar::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    inset: -1px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+    transition:
+        border-color 300ms ease,
+        box-shadow 340ms ease;
+}
+
+.nav-wrapper.scrolled .nav-bar::after {
     border-color: rgba(32, 28, 22, 0.11);
     box-shadow: 0 18px 45px -18px rgba(32, 28, 22, 0.28);
 }
