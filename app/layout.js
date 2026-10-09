@@ -32,6 +32,7 @@ const jsonLd = {
                 "@type": "Person",
                 name: "Ahmet Demiroğlu",
                 url: "https://ahmetdemiroglu.dev",
+                sameAs: ["https://www.linkedin.com/in/ahmetdemiroglu/"],
             },
         },
         {

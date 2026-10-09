@@ -52,10 +52,12 @@ const html = String.raw`<footer class="footer">
                 </div>
 
                 <div>
-                    <h4 class="footer-column-title" data-tr="footer-developer">Geliştirici</h4>
+                    <h4 class="footer-column-title" data-tr="footer-developer">Kurucu</h4>
                     <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/ahmetdemiroglu/" target="_blank" rel="noopener noreferrer" class="footer-link">Ahmet Demiroğlu</a>
+                        <a href="https://www.linkedin.com/in/ahmetdemiroglu/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
                         <a href="https://ahmetdemiroglu.dev" target="_blank" rel="noopener noreferrer" class="footer-link">ahmetdemiroglu.dev</a>
-                        <a href="mailto:info@septimuslab.com" class="footer-link" data-tr="footer-email">E-posta</a>
+                        <a href="mailto:info@septimuslab.com" class="footer-link">info@septimuslab.com</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +65,7 @@ const html = String.raw`<footer class="footer">
             <div class="footer-divider"></div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2025 &middot; <span data-tr="footer-rights">Tüm hakları saklıdır.</span></p>
+                <p class="footer-copyright">&copy; 2026 SeptimusLab &middot; İzmir, Türkiye &middot; <span data-tr="footer-rights">Tüm hakları saklıdır.</span></p>
                 <span class="brand-wordmark footer-bottom-brand">
                     <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
                 </span>
