@@ -15,7 +15,7 @@ const jsonLd = {
                 width: 1024,
                 height: 1024,
             },
-            description: "İzmir merkezli bağımsız mobil yazılım stüdyosu. AI destekli mobil uygulamalar geliştiriyoruz.",
+            description: "Yapay zeka destekli iOS ve Android uygulamaları geliştiren bağımsız mobil uygulama stüdyosu. PureScan Foods, PureScan Cosmetics, Fintel ve Pause Menu.",
             foundingDate: "2025",
             foundingLocation: {
                 "@type": "Place",
@@ -41,7 +41,7 @@ const jsonLd = {
             url: siteUrl,
             name: "SeptimusLab",
             alternateName: "SeptimusLab - Mobil İnovasyon Stüdyosu",
-            description: "AI destekli mobil uygulamalar geliştiren İzmir merkezli yazılım stüdyosu",
+            description: "Yapay zeka destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyosu",
             publisher: { "@id": `${siteUrl}/#organization` },
             inLanguage: ["tr-TR", "en-US"],
         },
@@ -49,7 +49,7 @@ const jsonLd = {
             "@type": "LocalBusiness",
             "@id": `${siteUrl}/#localbusiness`,
             name: "SeptimusLab",
-            description: "Mobil uygulama geliştirme stüdyosu - İzmir, Türkiye",
+            description: "Yapay zeka destekli mobil uygulama stüdyosu",
             url: siteUrl,
             email: "info@septimuslab.com",
             address: {
@@ -136,11 +136,11 @@ const jsonLd = {
 export const metadata = {
     metadataBase: new URL(siteUrl),
     title: {
-        default: "SeptimusLab - Mobil Uygulama Geliştirme Stüdyosu | İzmir",
+        default: "SeptimusLab | Yapay zeka destekli mobil uygulamalar",
         template: "%s | SeptimusLab",
     },
     description:
-        "İzmir merkezli mobil uygulama geliştirme stüdyosu. AI destekli mobil uygulamalar: PureScan Foods gıda içerik analizörü, PureScan kozmetik içerik analizörü ve Fintel akıllı bütçe asistanı. Yapay zeka ile mobil inovasyon.",
+        "Yapay zeka destekli iOS ve Android uygulamaları geliştiren bağımsız mobil uygulama stüdyosu. PureScan Foods, PureScan Cosmetics, Fintel ve Pause Menu.",
     keywords: [
         "SeptimusLab",
         "Septimus Lab",
@@ -232,12 +232,12 @@ export const metadata = {
         siteName: "SeptimusLab",
         locale: "tr_TR",
         alternateLocale: ["en_US"],
-        title: "SeptimusLab - Mobil Uygulama Geliştirme | AI Destekli Android Uygulamalar",
+        title: "SeptimusLab | Yapay zeka destekli mobil uygulamalar",
         description:
-            "İzmir merkezli bağımsız mobil yazılım stüdyosu. PureScan ile kozmetik içerik analizi, Fintel ile akıllı bütçe yönetimi. Yapay zeka destekli Android uygulamalar geliştiriyoruz.",
+            "Yapay zeka destekli iOS ve Android uygulamaları geliştiren bağımsız mobil uygulama stüdyosu. PureScan Foods, PureScan Cosmetics, Fintel ve Pause Menu.",
         images: [
             {
-                url: "/assets/brand/septimuslab-og-1200x630.png",
+                url: "/assets/brand/og-septimuslab-v2.png",
                 width: 1200,
                 height: 630,
                 alt: "SeptimusLab: yapay zeka destekli mobil uygulamalar",
@@ -247,9 +247,9 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "SeptimusLab - AI Destekli Mobil Uygulamalar | İzmir",
-        description: "Kozmetik analizi (PureScan) ve akıllı bütçe yönetimi (Fintel). İzmir merkezli yapay zeka destekli Android uygulama stüdyosu.",
-        images: ["/assets/brand/septimuslab-og-1200x630.png"],
+        title: "SeptimusLab | Yapay zeka destekli mobil uygulamalar",
+        description: "Yapay zeka destekli iOS ve Android uygulamaları geliştiren bağımsız mobil uygulama stüdyosu. PureScan Foods, PureScan Cosmetics, Fintel ve Pause Menu.",
+        images: ["/assets/brand/og-septimuslab-v2.png"],
     },
     category: "technology",
     // Next 13.5 viewport export'unu okumuyor, theme-color buradan basılır
