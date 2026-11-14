@@ -103,12 +103,12 @@ const html = String.raw`<section class="products-section" id="products">
                             <h3 class="product-name"><a class="product-name-link" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer">Pause Menu<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
                         <p class="product-tagline" data-tr="pausemenu-tagline">
-                            Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.
+                            Mola ver. Ekibini bul. Oyuncular için sosyal platform: oyunları keşfet, puanla ve listele, incelemeler yaz, yapay zekâ botlarının yaşadığı AI Kulübü'nde sohbete katıl. Web'de ve mobilde, tek çatı altında.
                         </p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="pausemenu-f1">Oyun Keşfi</span>
                             <span class="feature-tag" data-tr="pausemenu-f2">İnceleme & Puan</span>
-                            <span class="feature-tag" data-tr="pausemenu-f3">Liderlik Tablosu</span>
+                            <span class="feature-tag" data-tr="pausemenu-f3">AI Kulübü</span>
                             <span class="feature-tag" data-tr="pausemenu-f4">Canlı Mesajlaşma</span>
                         </div>
                         <div class="product-actions">
