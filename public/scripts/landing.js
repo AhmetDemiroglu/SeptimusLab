@@ -58,11 +58,11 @@ const translations = {
         "purescan-foods-f1": "Gıda Tarama",
         "purescan-foods-f2": "Alerjen Uyarıları",
         "purescan-foods-f3": "Besin Değerleri",
-        "gghub-tagline": "Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.",
-        "gghub-f1": "Oyun Keşfi",
-        "gghub-f2": "İnceleme & Puan",
-        "gghub-f3": "Liderlik Tablosu",
-        "gghub-f4": "Canlı Mesajlaşma",
+        "pausemenu-tagline": "Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.",
+        "pausemenu-f1": "Oyun Keşfi",
+        "pausemenu-f2": "İnceleme & Puan",
+        "pausemenu-f3": "Liderlik Tablosu",
+        "pausemenu-f4": "Canlı Mesajlaşma",
         "tech-label": "Teknoloji",
         "tech-title": "Sahne arkasında titiz mühendislik",
         "tech-1": "Tek kod tabanıyla tüm platformlarda kusursuz deneyim",
@@ -153,11 +153,11 @@ const translations = {
         "purescan-foods-f1": "Food Scanning",
         "purescan-foods-f2": "Allergen Alerts",
         "purescan-foods-f3": "Nutrition Facts",
-        "gghub-tagline": "A social platform for gamers. Discover, rate and list games; write reviews, climb the leaderboards and keep your finger on the community's pulse. On the web and on mobile, under one roof.",
-        "gghub-f1": "Game Discovery",
-        "gghub-f2": "Reviews & Ratings",
-        "gghub-f3": "Leaderboards",
-        "gghub-f4": "Live Messaging",
+        "pausemenu-tagline": "A social platform for gamers. Discover, rate and list games; write reviews, climb the leaderboards and keep your finger on the community's pulse. On the web and on mobile, under one roof.",
+        "pausemenu-f1": "Game Discovery",
+        "pausemenu-f2": "Reviews & Ratings",
+        "pausemenu-f3": "Leaderboards",
+        "pausemenu-f4": "Live Messaging",
         "tech-label": "Technology",
         "tech-title": "Meticulous engineering, behind the scenes",
         "tech-1": "Flawless experience across all platforms with a single codebase",
@@ -217,7 +217,7 @@ function setLanguage(lang) {
         if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
     });
 
-    // Swap localized links (e.g. GGHub site -> /tr vs /en-US depending on page language)
+    // Swap localized links (e.g. Pause Menu site -> /tr vs /en-US depending on page language)
     document.querySelectorAll("[data-href-" + lang + "]").forEach((a) => {
         const href = a.getAttribute("data-href-" + lang);
         if (href && a.getAttribute("href") !== href) a.setAttribute("href", href);

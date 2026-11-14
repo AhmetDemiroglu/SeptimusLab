@@ -32,10 +32,10 @@ const playButtonSoon = () => String.raw`<span class="store-btn is-disabled" aria
                             </span>
                         </span>`;
 
-// GGHub'ın kendi web sitesi var; kart görseli + adı oraya bağlanır, dile duyarlı.
-const GGHUB_SITE_TR = "https://gghub.social/tr";
-const GGHUB_SITE_EN = "https://gghub.social/en-US";
-const APP_STORE_GGHUB = "https://apps.apple.com/us/app/gghub-games-community/id6781281375";
+// Pause Menu'nün kendi web sitesi var; kart görseli + adı oraya bağlanır, dile duyarlı.
+const PAUSEMENU_SITE_TR = "https://pausemenu.app/tr";
+const PAUSEMENU_SITE_EN = "https://pausemenu.app/en-US";
+const APP_STORE_PAUSEMENU = "https://apps.apple.com/app/id6781281375";
 
 const html = String.raw`<section class="products-section" id="products">
         <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>
@@ -83,36 +83,36 @@ const html = String.raw`<section class="products-section" id="products">
                     </div>
                 </article>
 
-                <!-- GGHub -->
+                <!-- Pause Menu -->
                 <article class="product-card product-violet reveal reveal-delay-1">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                         </div>
-                        <a class="product-site-cue" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi">${siteArrow}</a>
-                        <a class="product-phone product-site" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="GGHub web sitesi" tabindex="-1">
-                            <img src="/assets/gghub-screen.jpg" data-img-tr="/assets/gghub-screen.jpg" data-img-en="/assets/gghub-en.jpg" alt="GGHub uygulama ekranı" loading="lazy">
+                        <a class="product-site-cue" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi">${siteArrow}</a>
+                        <a class="product-phone product-site" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi" tabindex="-1">
+                            <img src="/assets/pausemenu-screen.jpg" data-img-tr="/assets/pausemenu-screen.jpg" data-img-en="/assets/pausemenu-en.jpg" alt="Pause Menu uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
                         <header class="product-head">
                             <span class="product-icon">
-                                <img src="/assets/gghub.png" alt="GGHub uygulama ikonu">
+                                <img src="/assets/pausemenu.png" alt="Pause Menu uygulama ikonu">
                             </span>
-                            <h3 class="product-name"><a class="product-name-link" href="${GGHUB_SITE_TR}" data-href-tr="${GGHUB_SITE_TR}" data-href-en="${GGHUB_SITE_EN}" target="_blank" rel="noopener noreferrer">GGHub<span class="ext-arrow">${siteArrow}</span></a></h3>
+                            <h3 class="product-name"><a class="product-name-link" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer">Pause Menu<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
-                        <p class="product-tagline" data-tr="gghub-tagline">
+                        <p class="product-tagline" data-tr="pausemenu-tagline">
                             Oyuncular için sosyal platform. Oyunları keşfet, puanla ve listele; incelemeler yaz, liderlik tablolarında yarış ve topluluğun nabzını tut. Web'de ve mobilde, tek çatı altında.
                         </p>
                         <div class="product-features">
-                            <span class="feature-tag" data-tr="gghub-f1">Oyun Keşfi</span>
-                            <span class="feature-tag" data-tr="gghub-f2">İnceleme & Puan</span>
-                            <span class="feature-tag" data-tr="gghub-f3">Liderlik Tablosu</span>
-                            <span class="feature-tag" data-tr="gghub-f4">Canlı Mesajlaşma</span>
+                            <span class="feature-tag" data-tr="pausemenu-f1">Oyun Keşfi</span>
+                            <span class="feature-tag" data-tr="pausemenu-f2">İnceleme & Puan</span>
+                            <span class="feature-tag" data-tr="pausemenu-f3">Liderlik Tablosu</span>
+                            <span class="feature-tag" data-tr="pausemenu-f4">Canlı Mesajlaşma</span>
                         </div>
                         <div class="product-actions">
-                            ${appleButton(APP_STORE_GGHUB)}
+                            ${appleButton(APP_STORE_PAUSEMENU)}
                             ${playButton("https://play.google.com/store/apps/details?id=com.gghub.mobile")}
                         </div>
                     </div>

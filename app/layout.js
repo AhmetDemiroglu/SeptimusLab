@@ -97,8 +97,8 @@ const jsonLd = {
         },
         {
             "@type": "SoftwareApplication",
-            name: "GGHub",
-            alternateName: "GGHub - Oyuncu Sosyal Platformu",
+            name: "Pause Menu",
+            alternateName: "Pause Menu - Oyuncu Sosyal Platformu",
             description:
                 "Oyuncular için sosyal platform. Oyunları keşfedin, puanlayın ve listeleyin; incelemeler yazın, liderlik tablolarında yarışın ve toplulukla web'de ve mobilde buluşun.",
             applicationCategory: "GameApplication",
@@ -108,10 +108,10 @@ const jsonLd = {
                 price: "0",
                 priceCurrency: "TRY",
             },
-            installUrl: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",
-            url: "https://gghub.social",
+            installUrl: "https://apps.apple.com/app/id6781281375",
+            url: "https://pausemenu.app",
             author: { "@id": `${siteUrl}/#organization` },
-            image: `${siteUrl}/assets/gghub.png`,
+            image: `${siteUrl}/assets/pausemenu.png`,
         },
         {
             "@type": "SoftwareApplication",

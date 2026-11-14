@@ -30,8 +30,8 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>App Store</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-gghub.png" alt="GGHub">
-                <span>GGHub</span>
+                <img src="/assets/brand-logo-pausemenu.png" alt="Pause Menu">
+                <span>Pause Menu</span>
             </div>
             <!-- Repeat -->
             <div class="marquee-item">
@@ -62,8 +62,8 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>App Store</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-gghub.png" alt="GGHub">
-                <span>GGHub</span>
+                <img src="/assets/brand-logo-pausemenu.png" alt="Pause Menu">
+                <span>Pause Menu</span>
             </div>
         </div>
     </div>`;
