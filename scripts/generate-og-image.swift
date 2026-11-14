@@ -107,7 +107,7 @@ func load(_ name: String) -> NSImage {
     return image
 }
 
-let logo = load("septimus-footer.png")
+let logo = load("brand/septimuslab-isaret-acik-zemin-1024.png")
 let foods = load("purescan-foods-screen.webp")
 let cosmetics = load("purescan-screen.webp")
 let fintel = load("fintel-screen.webp")

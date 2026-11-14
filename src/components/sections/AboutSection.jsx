@@ -34,7 +34,7 @@ const html = String.raw`<section class="about-section" id="about">
                 <div class="about-visual reveal reveal-delay-2">
                     <div class="studio-card" data-tilt="4">
                         <header class="studio-card-head">
-                            <img src="/assets/septimuslab.png" alt="SeptimusLab" class="studio-card-logo">
+                            <img src="/assets/brand/septimuslab-isaret-acik-zemin.svg" alt="SeptimusLab" class="studio-card-logo">
                             <div class="studio-card-id">
                                 <span class="brand-wordmark studio-card-name">
                                     <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
@@ -71,7 +71,7 @@ const html = String.raw`<section class="about-section" id="about">
                                     <textPath href="#stampCircle" textLength="288" lengthAdjust="spacingAndGlyphs">SEPTIMUSLAB &#8226; IZMIR &#8226; EST. 2025 &#8226;</textPath>
                                 </text>
                             </svg>
-                            <img src="/assets/septimuslab.png" alt="" class="studio-stamp-logo">
+                            <img src="/assets/brand/septimuslab-isaret-acik-zemin.svg" alt="" class="studio-stamp-logo">
                         </div>
                     </div>
                 </div>

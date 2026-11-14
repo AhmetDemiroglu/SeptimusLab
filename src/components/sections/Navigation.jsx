@@ -17,10 +17,7 @@ const html = String.raw`<nav class="nav-wrapper" role="navigation" aria-label="A
             </span>
 
             <a href="#" class="nav-brand" aria-label="SeptimusLab Ana Sayfa">
-                <img src="/assets/septimus-footer.png" alt="SeptimusLab Logo" class="nav-brand-logo">
-                <span class="brand-wordmark">
-                    <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
-                </span>
+                <img src="/assets/brand/septimuslab-lockup-yatay-acik-zemin.svg" alt="SeptimusLab" class="nav-brand-logo" width="184" height="27">
             </a>
 
             <div class="nav-links">

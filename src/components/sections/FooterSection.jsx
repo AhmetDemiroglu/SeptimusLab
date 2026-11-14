@@ -5,10 +5,7 @@ const html = String.raw`<footer class="footer">
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="/assets/septimus-footer.png" alt="SeptimusLab Logo">
-                        <span class="footer-logo-text brand-wordmark">
-                            <span class="brand-septimus">Septimus</span><span class="brand-lab">Lab</span>
-                        </span>
+                        <img src="/assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg" alt="SeptimusLab" width="233" height="34">
                     </div>
                     <p class="footer-tagline" data-tr="footer-desc">İzmir'den, bağımsız bir stüdyodan: gündelik hayata dokunan, yapay zeka destekli uygulamalar.</p>
                     <div class="footer-social">

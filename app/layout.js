@@ -11,7 +11,7 @@ const jsonLd = {
             url: siteUrl,
             logo: {
                 "@type": "ImageObject",
-                url: `${siteUrl}/assets/septimuslab.png`,
+                url: `${siteUrl}/assets/brand/septimuslab-isaret-acik-zemin-1024.png`,
                 width: 1024,
                 height: 1024,
             },
@@ -58,7 +58,7 @@ const jsonLd = {
                 addressCountry: "TR",
             },
             priceRange: "$$",
-            image: `${siteUrl}/assets/septimuslab.png`,
+            image: `${siteUrl}/assets/brand/septimuslab-isaret-acik-zemin-1024.png`,
             sameAs: ["https://play.google.com/store/apps/developer?id=SeptimusLab", "https://www.instagram.com/septimus.lab/"],
         },
         {
@@ -205,9 +205,12 @@ export const metadata = {
         },
     },
     icons: {
-        icon: "/assets/favicon.ico",
-        shortcut: "/assets/favicon.ico",
-        apple: "/assets/favicon.ico",
+        icon: [
+            { url: "/assets/brand/favicon.ico", sizes: "48x48" },
+            { url: "/assets/brand/favicon.svg", type: "image/svg+xml" },
+        ],
+        shortcut: "/assets/brand/favicon.ico",
+        apple: "/assets/brand/apple-touch-icon.png",
     },
     robots: {
         index: true,
@@ -234,10 +237,10 @@ export const metadata = {
             "İzmir merkezli bağımsız mobil yazılım stüdyosu. PureScan ile kozmetik içerik analizi, Fintel ile akıllı bütçe yönetimi. Yapay zeka destekli Android uygulamalar geliştiriyoruz.",
         images: [
             {
-                url: "/assets/og-septimuslab-v1.png",
+                url: "/assets/brand/septimuslab-og-1200x630.png",
                 width: 1200,
                 height: 630,
-                alt: "SeptimusLab mobil inovasyon stüdyosu ve uygulamaları",
+                alt: "SeptimusLab: yapay zeka destekli mobil uygulamalar",
                 type: "image/png",
             },
         ],
@@ -246,15 +249,17 @@ export const metadata = {
         card: "summary_large_image",
         title: "SeptimusLab - AI Destekli Mobil Uygulamalar | İzmir",
         description: "Kozmetik analizi (PureScan) ve akıllı bütçe yönetimi (Fintel). İzmir merkezli yapay zeka destekli Android uygulama stüdyosu.",
-        images: ["/assets/og-septimuslab-v1.png"],
+        images: ["/assets/brand/septimuslab-og-1200x630.png"],
     },
     category: "technology",
+    // Next 13.5 viewport export'unu okumuyor, theme-color buradan basılır
+    themeColor: "#F2F5FA",
 };
 
 export const viewport = {
     width: "device-width",
     initialScale: 1,
-    themeColor: "#F8F7F4",
+    themeColor: "#F2F5FA",
 };
 
 export default function RootLayout({ children }) {
@@ -281,7 +286,7 @@ export default function RootLayout({ children }) {
                 <link rel="preconnect" href="https://www.google-analytics.com" />
 
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;1,400;1,600&display=swap"
                     rel="stylesheet"
                 />
                 <link rel="stylesheet" href="/styles/landing.css" />

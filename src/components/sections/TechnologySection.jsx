@@ -137,7 +137,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <span class="tech-index">05</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="25" y="25" width="50" height="50" rx="10" stroke="currentColor" stroke-width="4" fill="none"/>
-                        <line x1="20" y1="25" x2="80" y2="25" stroke="#C45D3E" stroke-width="3">
+                        <line x1="20" y1="25" x2="80" y2="25" stroke="#4F7CFF" stroke-width="3">
                             <animate attributeName="y1" values="25;75;25" dur="3s" repeatCount="indefinite" />
                             <animate attributeName="y2" values="25;75;25" dur="3s" repeatCount="indefinite" />
                             <animate attributeName="opacity" values="0;1;1;0;0" dur="3s" repeatCount="indefinite" />
