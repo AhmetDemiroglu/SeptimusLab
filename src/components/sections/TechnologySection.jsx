@@ -4,7 +4,7 @@ const html = String.raw`<section class="tech-section" id="technology">
         <div class="container">
             <div class="section-header">
                 <span class="section-label reveal" data-tr="tech-label">Altyapı</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamalarımıza güç veren mimari</h2>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamaların altyapısı</h2>
             </div>
 
             <!-- [FEATURE-2 START: Unified Ecosystem Architecture Board] -->
@@ -13,7 +13,6 @@ const html = String.raw`<section class="tech-section" id="technology">
 
             <div class="tech-grid">
                 <div class="tech-card reveal" data-tech-node="1">
-                    <span class="tech-index">01</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none">
                             <ellipse cx="50" cy="50" rx="37" ry="13" opacity="0.32">
@@ -43,7 +42,6 @@ const html = String.raw`<section class="tech-section" id="technology">
                 </div>
 
                 <div class="tech-card reveal reveal-delay-1" data-tech-node="2">
-                    <span class="tech-index">02</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M 18 76 A 40 40 0 1 1 82 76" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" opacity="0.16"/>
                         <path d="M 18 76 A 40 40 0 1 1 82 76" stroke="#4F7CFF" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="190" stroke-dashoffset="190">
@@ -71,7 +69,6 @@ const html = String.raw`<section class="tech-section" id="technology">
                 </div>
 
                 <div class="tech-card reveal reveal-delay-2" data-tech-node="3">
-                    <span class="tech-index">03</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" fill="none">
                             <ellipse cx="50" cy="24" rx="26" ry="8" opacity="0.45"/>
@@ -96,7 +93,6 @@ const html = String.raw`<section class="tech-section" id="technology">
                 </div>
 
                 <div class="tech-card reveal reveal-delay-3" data-tech-node="4">
-                    <span class="tech-index">04</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2" opacity="0.26" stroke-linecap="round">
                             <line x1="18" y1="50" x2="48" y2="22" />
@@ -134,12 +130,11 @@ const html = String.raw`<section class="tech-section" id="technology">
                             <animate attributeName="opacity" values="0.65;0" dur="1.6s" repeatCount="indefinite" />
                         </circle>
                     </svg>
-                    <div class="tech-name" data-tr="tech-4-name">AI Orkestrasyon</div>
-                    <div class="tech-desc" data-tr="tech-4">Göreve göre en uygun dil ve görsel modelini seçen akıllı yönlendirme katmanı</div>
+                    <div class="tech-name" data-tr="tech-4-name">Model Yönlendirme</div>
+                    <div class="tech-desc" data-tr="tech-4">Göreve göre uygun dil ve görsel modelini seçen yönlendirme katmanı</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-4" data-tech-node="5">
-                    <span class="tech-index">05</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="#0E1A33" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M24 36 V26 H34" />

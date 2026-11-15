@@ -33,6 +33,15 @@ const playButtonSoon = () => String.raw`<span class="store-btn is-disabled" aria
                             </span>
                         </span>`;
 
+// App Store sürümü hazırlanıyor: pasif "yakında" düğmesi.
+const appleButtonSoon = () => String.raw`<span class="store-btn is-disabled" aria-disabled="true" title="App Store'da çok yakında">
+                            ${appleGlyph}
+                            <span class="store-btn-lines">
+                                <small data-tr="store-soon">YAKINDA</small>
+                                <strong>App Store</strong>
+                            </span>
+                        </span>`;
+
 // Pause Menu'nün kendi web sitesi var; kart görseli + adı oraya bağlanır, dile duyarlı.
 const PAUSEMENU_SITE_TR = "https://pausemenu.app/tr";
 const PAUSEMENU_SITE_EN = "https://pausemenu.app/en-US";
@@ -50,23 +59,8 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- PureScan Foods -->
                 <article class="product-card product-amber reveal">
                     <div class="product-visual">
-                        <div class="product-stores">
-                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                            <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
-                        </div>
                         <a class="product-site-cue" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası">${siteArrow}</a>
-                        <div class="live-stage" aria-hidden="true">
-                            <span class="live-chip live-chip-left">
-                                <span class="live-dot live-dot-green"></span>
-                                <span data-tr="f1-foods-chip1">Gluten: Yok</span>
-                            </span>
-                            <span class="live-chip live-chip-right">
-                                <span class="live-dot live-dot-amber"></span>
-                                <span data-tr="f1-foods-chip2">Skor: 92/100</span>
-                            </span>
-                        </div>
                         <a class="product-phone product-site" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası" tabindex="-1">
-                            <span class="live-scan-line" aria-hidden="true"></span>
                             <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
                         </a>
                     </div>
@@ -77,9 +71,7 @@ const html = String.raw`<section class="products-section" id="products">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer">PureScan Foods<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
-                        <p class="product-tagline" data-tr="purescan-foods-tagline">
-                            PureScan ailesinin yeni üyesi. Market rafındaki ürünün etiketini tarar; alerjenleri, katkıları ve besin değerlerini saniyeler içinde önünüze serer.
-                        </p>
+                        <p class="product-tagline" data-tr="purescan-foods-tagline">Market rafındaki ürünün etiketini tarar; alerjenleri, katkıları ve besin değerlerini gösterir.</p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="purescan-foods-f1">Gıda Tarama</span>
                             <span class="feature-tag" data-tr="purescan-foods-f2">Alerjen Uyarıları</span>
@@ -95,21 +87,7 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- Pause Menu -->
                 <article class="product-card product-violet reveal reveal-delay-1">
                     <div class="product-visual">
-                        <div class="product-stores">
-                            <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
-                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                        </div>
                         <a class="product-site-cue" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi">${siteArrow}</a>
-                        <div class="live-stage" aria-hidden="true">
-                            <span class="live-chip live-chip-left">
-                                <span class="live-dot live-dot-violet"></span>
-                                <span data-tr="f1-pause-chip1">★ 9.4 İnceleme</span>
-                            </span>
-                            <span class="live-chip live-chip-right">
-                                <span class="live-typing"><i></i><i></i><i></i></span>
-                                <span data-tr="f1-pause-chip2">AI Kulübü Aktif</span>
-                            </span>
-                        </div>
                         <a class="product-phone product-site" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi" tabindex="-1">
                             <img src="/assets/pausemenu-screen.jpg" data-img-tr="/assets/pausemenu-screen.jpg" data-img-en="/assets/pausemenu-en.jpg" alt="Pause Menu uygulama ekranı" loading="lazy">
                         </a>
@@ -121,9 +99,7 @@ const html = String.raw`<section class="products-section" id="products">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer">Pause Menu<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
-                        <p class="product-tagline" data-tr="pausemenu-tagline">
-                            Oyuncular için yeni nesil sosyal platform. Oyunları keşfedin, puanlayıp kendi listelerinizi oluşturun, incelemeler yazın ve farklı karakterlere sahip yapay zeka personalarının yer aldığı AI Kulübü'nde sohbete katılın. Web ve mobilde, tek çatı altında.
-                        </p>
+                        <p class="product-tagline" data-tr="pausemenu-tagline">Oyuncular için sosyal platform. Oyunları keşfedin, puanlayın, listeler oluşturun, incelemeler yazın. Farklı karakterlere sahip yapay zeka personalarının yer aldığı AI Kulübü'nde sohbete katılın. Web ve mobilde.</p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="pausemenu-f1">Oyun Keşfi</span>
                             <span class="feature-tag" data-tr="pausemenu-f2">İnceleme &amp; Puan</span>
@@ -140,22 +116,8 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- PureScan Cosmetics -->
                 <article class="product-card product-teal reveal reveal-delay-2">
                     <div class="product-visual">
-                        <div class="product-stores">
-                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                        </div>
                         <a class="product-site-cue" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası">${siteArrow}</a>
-                        <div class="live-stage" aria-hidden="true">
-                            <span class="live-chip live-chip-left">
-                                <span class="live-dot live-dot-green"></span>
-                                <span data-tr="f1-cosm-chip1">Cilt Uyumu: %96</span>
-                            </span>
-                            <span class="live-chip live-chip-right">
-                                <span class="live-dot live-dot-teal"></span>
-                                <span data-tr="f1-cosm-chip2">Temiz İçerik</span>
-                            </span>
-                        </div>
                         <a class="product-phone product-site" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası" tabindex="-1">
-                            <span class="live-scan-line live-scan-teal" aria-hidden="true"></span>
                             <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
                         </a>
                     </div>
@@ -166,17 +128,16 @@ const html = String.raw`<section class="products-section" id="products">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer">PureScan Cosmetics<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
-                        <p class="product-tagline" data-tr="purescan-tagline">
-                            Kozmetik etiketlerindeki karmaşık içerik listelerini saniyeler içinde çözümler. Tek bir fotoğrafla formülü analiz eder; cildinize neyin iyi geldiğini netleştirir.
-                        </p>
+                        <p class="product-tagline" data-tr="purescan-tagline">Kozmetik etiketindeki içerik listesini fotoğraftan okur, formülü analiz eder ve cildinize uygun olup olmadığını gösterir.</p>
                         <div class="product-features">
-                            <span class="feature-tag" data-tr="purescan-f1">Akıllı Tarama</span>
-                            <span class="feature-tag" data-tr="purescan-f2">AI Derecelendirme</span>
+                            <span class="feature-tag" data-tr="purescan-f1">İçerik Tarama</span>
+                            <span class="feature-tag" data-tr="purescan-f2">Uyumluluk Skoru</span>
                             <span class="feature-tag" data-tr="purescan-f3">Cilt Analizi</span>
-                            <span class="feature-tag" data-tr="purescan-f4">AI Asistan</span>
+                            <span class="feature-tag" data-tr="purescan-f4">Sohbet Asistanı</span>
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.septimuslab.purescan")}
+                            ${appleButtonSoon()}
                         </div>
                     </div>
                 </article>
@@ -184,19 +145,6 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- Fintel -->
                 <article class="product-card product-orange reveal reveal-delay-3">
                     <div class="product-visual">
-                        <div class="product-stores">
-                            <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
-                        </div>
-                        <div class="live-stage" aria-hidden="true">
-                            <span class="live-chip live-chip-left">
-                                <span class="live-dot live-dot-blue"></span>
-                                <span data-tr="f1-fintel-chip1">Nova: Durum iyi</span>
-                            </span>
-                            <span class="live-chip live-chip-right">
-                                <span class="live-dot live-dot-green"></span>
-                                <span data-tr="f1-fintel-chip2">Limit içinde</span>
-                            </span>
-                        </div>
                         <div class="product-phone">
                             <img src="/assets/fintel-screen.webp" alt="Fintel uygulama ekranı" loading="lazy">
                         </div>
@@ -219,6 +167,7 @@ const html = String.raw`<section class="products-section" id="products">
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.fintel.app")}
+                            ${appleButtonSoon()}
                         </div>
                     </div>
                 </article>
