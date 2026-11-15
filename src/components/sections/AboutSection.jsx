@@ -5,8 +5,8 @@ const html = String.raw`<section class="about-section" id="about">
             <div class="about-grid">
                 <div class="about-copy">
                     <span class="section-label reveal" data-tr="about-label">Stüdyo</span>
-                    <h2 class="section-title reveal reveal-delay-1" data-tr="about-title">Küçük bir stüdyo, uçtan uca iş</h2>
-                    <p class="section-desc reveal reveal-delay-2" data-tr="about-desc">SeptimusLab bağımsız bir mobil uygulama stüdyosu. Fikri dinliyor, tasarlıyor, geliştiriyor ve mağazada yayınlıyoruz. Büyük ekip yok, uzun toplantı yok. Yayındaki uygulamalarımız bu çalışma biçiminin örnekleri.</p>
+                    <h2 class="section-title reveal reveal-delay-1" data-tr="about-title">Bağımsız stüdyo, uçtan uca üretim</h2>
+                    <p class="section-desc reveal reveal-delay-2" data-tr="about-desc">SeptimusLab bağımsız bir mobil ürün stüdyosu. Fikirden arayüz tasarımına, yapay zeka mimarisinden mağaza yayınına kadar tüm süreci kendi bünyemizde yürütüyoruz. Hantal süreçler yerine doğrudan ürüne odaklanıyor; kendi kullandığımız ve arkasında durduğumuz uygulamalar geliştiriyoruz.</p>
 
                     <div class="stat-strip reveal reveal-delay-3">
                         <div class="stat-item">
@@ -36,7 +36,7 @@ const html = String.raw`<section class="about-section" id="about">
                             </div>
                         </header>
 
-                        <blockquote class="studio-card-quote" data-tr="card-quote">Septimus, Latince “yedinci” demek. Eylül, eski Roma takviminde yedinci aydı.</blockquote>
+                        <blockquote class="studio-card-quote" data-tr="card-quote">Eylül (September), Ocak ve Şubat takvime eklenmeden önce antik Roma yılının yedinci ayıydı. Takvim değişip dokuzuncu sıraya geçse de kökü değişmedi; Latince “yedinci” anlamına gelen Septimus, stüdyomuzun adı oldu.</blockquote>
 
                         <ul class="studio-card-specs">
                             <li>
@@ -45,7 +45,7 @@ const html = String.raw`<section class="about-section" id="about">
                             </li>
                             <li>
                                 <span data-tr="card-row-focus-label">Odak</span>
-                                <strong data-tr="card-row-focus">Yapay zeka destekli mobil</strong>
+                                <strong data-tr="card-row-focus">AI destekli mobil ürünler</strong>
                             </li>
                             <li>
                                 <span data-tr="card-row-platform-label">Platform</span>

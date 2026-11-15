@@ -4,7 +4,7 @@ const html = String.raw`<section class="tech-section" id="technology">
         <div class="container">
             <div class="section-header">
                 <span class="section-label reveal" data-tr="tech-label">Altyapı</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamaların arkasında ne var</h2>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamalarımıza güç veren mimari</h2>
             </div>
 
             <div class="tech-grid">
@@ -28,7 +28,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">React &amp; Capacitor</div>
-                    <div class="tech-desc" data-tr="tech-1">Tek kod tabanı, web teknolojisiyle yazılan mobil uygulama</div>
+                    <div class="tech-desc" data-tr="tech-1">Tek kod tabanıyla iOS, Android ve web genelinde tutarlı deneyim</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-1">
@@ -52,7 +52,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">React Native</div>
-                    <div class="tech-desc" data-tr="tech-2">Performansın önemli olduğu yerde yerel arayüz</div>
+                    <div class="tech-desc" data-tr="tech-2">Yüksek performans ve akıcı animasyon gerektiren ürünlerde yerel arayüz</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-2">
@@ -82,7 +82,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">Firebase</div>
-                    <div class="tech-desc" data-tr="tech-3">Giriş, veritabanı ve gerçek zamanlı senkron</div>
+                    <div class="tech-desc" data-tr="tech-3">Kimlik doğrulama, bulut veritabanı ve gerçek zamanlı veri senkronizasyonu</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-3">
@@ -128,8 +128,8 @@ const html = String.raw`<section class="tech-section" id="technology">
                             <animate attributeName="opacity" values="0.5;0" dur="1.5s" repeatCount="indefinite" />
                         </circle>
                     </svg>
-                    <div class="tech-name">AI Orkestrasyon</div>
-                    <div class="tech-desc" data-tr="tech-4">Birden fazla yapay zeka modelini işe göre seçen katman</div>
+                    <div class="tech-name" data-tr="tech-4-name">AI Orkestrasyon</div>
+                    <div class="tech-desc" data-tr="tech-4">Göreve göre en uygun dil ve görsel modelini seçen akıllı yönlendirme katmanı</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-4">
@@ -155,8 +155,8 @@ const html = String.raw`<section class="tech-section" id="technology">
                             <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite" />
                         </path>
                     </svg>
-                    <div class="tech-name">Yerel API</div>
-                    <div class="tech-desc" data-tr="tech-5">Kamera, barkod okuma ve sesli okuma</div>
+                    <div class="tech-name" data-tr="tech-5-name">Yerel API</div>
+                    <div class="tech-desc" data-tr="tech-5">Kamera, barkod tarama ve cihaz içi seslendirme entegrasyonları</div>
                 </div>
             </div>
         </div>

@@ -1078,13 +1078,13 @@ section > .container {
 }
 
 .studio-card-quote {
-    padding: 1.6rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--line-soft);
     font-family: var(--font-display);
     font-style: italic;
-    font-size: 1.35rem;
+    font-size: 1.12rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.52;
     color: var(--navy);
 }
 

@@ -41,9 +41,9 @@ const APP_STORE_PAUSEMENU = "https://apps.apple.com/app/id6781281375";
 const html = String.raw`<section class="products-section" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-label reveal" data-tr="products-label">Yaptıklarımız</span>
+                <span class="section-label reveal" data-tr="products-label">Ürünlerimiz</span>
                 <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Yayındaki uygulamalar</h2>
-                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">Gıdadan oyuna, farklı alanlarda dört uygulama. Hepsi aynı stüdyodan, baştan sona.</p>
+                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">Gıdadan finansa, kozmetikten oyun dünyasına uzanan dört farklı mobil ürün. Tamamı aynı mühendislik ve tasarım anlayışıyla geliştirildi.</p>
             </div>
 
             <div class="products-grid">
@@ -101,7 +101,7 @@ const html = String.raw`<section class="products-section" id="products">
                             <h3 class="product-name"><a class="product-name-link" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer">Pause Menu<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
                         <p class="product-tagline" data-tr="pausemenu-tagline">
-                            Mola ver. Ekibini bul. Oyuncular için sosyal platform: oyunları keşfet, puanla ve listele, incelemeler yaz, yapay zekâ botlarının yaşadığı AI Kulübü'nde sohbete katıl. Web'de ve mobilde, tek çatı altında.
+                            Oyuncular için yeni nesil sosyal platform. Oyunları keşfedin, puanlayıp kendi listelerinizi oluşturun, incelemeler yazın ve farklı karakterlere sahip yapay zeka personalarının yer aldığı AI Kulübü'nde sohbete katılın. Web ve mobilde, tek çatı altında.
                         </p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="pausemenu-f1">Oyun Keşfi</span>
@@ -135,7 +135,7 @@ const html = String.raw`<section class="products-section" id="products">
                             <h3 class="product-name"><a class="product-name-link" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer">PureScan Cosmetics<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
                         <p class="product-tagline" data-tr="purescan-tagline">
-                            Kozmetik etiketlerindeki o okunmaz listeyi sizin için okur. Bir fotoğrafla içerikleri analiz eder; cildinize neyin iyi geldiğini anlamanıza yardımcı olur.
+                            Kozmetik etiketlerindeki karmaşık içerik listelerini saniyeler içinde çözümler. Tek bir fotoğrafla formülü analiz eder; cildinize neyin iyi geldiğini netleştirir.
                         </p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="purescan-f1">Akıllı Tarama</span>
@@ -173,7 +173,7 @@ const html = String.raw`<section class="products-section" id="products">
                             <span class="feature-tag" data-tr="fintel-f1">Dönem Bütçeleri</span>
                             <span class="feature-tag" data-tr="fintel-f2">Günlük Limitler</span>
                             <span class="feature-tag" data-tr="fintel-f3">Nova AI</span>
-                            <span class="feature-tag" data-tr="fintel-f4">Performans</span>
+                            <span class="feature-tag" data-tr="fintel-f4">Harcama Analizi</span>
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.fintel.app")}

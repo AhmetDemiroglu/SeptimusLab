@@ -100,7 +100,7 @@ const jsonLd = {
             name: "Pause Menu",
             alternateName: "Pause Menu - Oyuncu Sosyal Platformu",
             description:
-                "Mola ver. Ekibini bul. Oyuncular için sosyal platform: oyunları keşfedin, puanlayın ve listeleyin, incelemeler yazın, yapay zekâ botlarının yaşadığı AI Kulübü'nde sohbete katılın. Web'de ve mobilde.",
+                "Oyuncular için yeni nesil sosyal platform. Oyunları keşfedin, puanlayıp kendi listelerinizi oluşturun, incelemeler yazın ve farklı karakterlere sahip yapay zeka personalarının yer aldığı AI Kulübü'nde sohbete katılın. Web ve mobilde, tek çatı altında.",
             applicationCategory: "GameApplication",
             operatingSystem: "iOS, Android, Web",
             offers: {

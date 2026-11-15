@@ -4,9 +4,9 @@ const html = String.raw`<section class="vision-section" id="vision">
         <div class="container">
             <div class="vision-grid">
                 <div class="vision-copy">
-                    <span class="section-label reveal" data-tr="vision-label">Zaman çizgisi</span>
-                    <h2 class="section-title reveal reveal-delay-1" data-tr="vision-title">Buraya nasıl geldik</h2>
-                    <p class="section-desc reveal reveal-delay-2" data-tr="vision-desc">Her yıl bir öncekinin üstüne bir şey koyduk.</p>
+                    <span class="section-label reveal" data-tr="vision-label">Yolculuk &amp; Vizyon</span>
+                    <h2 class="section-title reveal reveal-delay-1" data-tr="vision-title">Adım adım büyüyen ekosistem</h2>
+                    <p class="section-desc reveal reveal-delay-2" data-tr="vision-desc">Her yeni üründe altyapımızı ve tasarım dilimizi bir adım ileri taşıyoruz.</p>
                 </div>
 
                 <div class="timeline">
@@ -17,7 +17,7 @@ const html = String.raw`<section class="vision-section" id="vision">
                         <ul class="timeline-list">
                             <li data-tr="timeline-2025-1">SeptimusLab kuruldu</li>
                             <li data-tr="timeline-2025-2">Fintel Google Play'de yayınlandı</li>
-                            <li data-tr="timeline-2025-3">İlk yapay zeka özellikleri uygulamaya girdi</li>
+                            <li data-tr="timeline-2025-3">İlk yapay zeka destekli analiz motoru devreye alındı</li>
                         </ul>
                     </div>
 
@@ -35,11 +35,11 @@ const html = String.raw`<section class="vision-section" id="vision">
                     <div class="timeline-item timeline-navy reveal reveal-delay-2">
                         <div class="timeline-dot"></div>
                         <div class="timeline-year" data-tr="timeline-future">Sırada</div>
-                        <div class="timeline-title" data-tr="timeline-future-title">Devamı</div>
+                        <div class="timeline-title" data-tr="timeline-future-title">Yol Haritası</div>
                         <ul class="timeline-list">
-                            <li data-tr="timeline-future-1">Daha fazla dil</li>
-                            <li data-tr="timeline-future-2">Mevcut uygulamalara yeni özellikler</li>
-                            <li data-tr="timeline-future-3">Yeni uygulama fikirleri</li>
+                            <li data-tr="timeline-future-1">Çoklu dil desteği ve küresel ölçekleme</li>
+                            <li data-tr="timeline-future-2">Mevcut ürünlerde derinleşen yapay zeka yetenekleri</li>
+                            <li data-tr="timeline-future-3">Yeni dikeylerde mobil ürünler</li>
                         </ul>
                     </div>
                 </div>
