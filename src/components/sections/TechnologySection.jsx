@@ -7,8 +7,118 @@ const html = String.raw`<section class="tech-section" id="technology">
                 <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamalarımıza güç veren mimari</h2>
             </div>
 
+            <!-- [FEATURE-2 START: Interactive SVG System Architecture Pipeline] -->
+            <div class="tech-pipeline reveal reveal-delay-1" data-active-app="all">
+                <div class="tech-pipeline-bar">
+                    <div class="tech-pipeline-meta">
+                        <span class="tech-pipeline-dot"></span>
+                        <span class="tech-pipeline-title" data-tr="f2-pipe-label">CANLI VERİ HATTI</span>
+                        <span class="tech-pipeline-status" id="techPipelineStatus" data-tr="f2-status-all">5 katmanlı birleşik mobil üretim hattı</span>
+                    </div>
+                    <div class="tech-pipeline-tabs" role="tablist" aria-label="Uygulama mimari rotası">
+                        <button type="button" class="tech-pipe-tab active" data-pipe-app="all" data-nodes="1,2,3,4,5" data-tr="f2-tab-all">Tüm Ekosistem</button>
+                        <button type="button" class="tech-pipe-tab" data-pipe-app="foods" data-nodes="1,3,4,5">PureScan Foods</button>
+                        <button type="button" class="tech-pipe-tab" data-pipe-app="pause" data-nodes="1,3,4">Pause Menu</button>
+                        <button type="button" class="tech-pipe-tab" data-pipe-app="cosmetics" data-nodes="2,3,4,5">PureScan Cosmetics</button>
+                        <button type="button" class="tech-pipe-tab" data-pipe-app="fintel" data-nodes="2,3,4">Fintel</button>
+                    </div>
+                </div>
+
+                <div class="tech-pipeline-canvas">
+                    <svg class="tech-pipeline-svg" viewBox="0 0 1000 124" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="pipeBusGrad" x1="100" y1="54" x2="900" y2="54" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#0E1A33" stop-opacity="0.15" />
+                                <stop offset="50%" stop-color="#4F7CFF" stop-opacity="0.55" />
+                                <stop offset="100%" stop-color="#0E1A33" stop-opacity="0.15" />
+                            </linearGradient>
+                            <path id="pipeMainTrack" d="M 100 54 L 300 54 L 500 54 L 700 54 L 900 54" />
+                            <path id="pipeArc1" d="M 100 54 C 200 12, 400 12, 500 54 C 600 96, 800 96, 900 54" />
+                            <path id="pipeArc2" d="M 300 54 C 400 18, 600 18, 700 54" />
+                        </defs>
+
+                        <!-- Background grid ticks -->
+                        <g stroke="currentColor" stroke-opacity="0.08" stroke-width="1">
+                            <line x1="40" y1="54" x2="960" y2="54" stroke-dasharray="3 6" />
+                            <line x1="100" y1="16" x2="100" y2="122" />
+                            <line x1="300" y1="16" x2="300" y2="122" />
+                            <line x1="500" y1="16" x2="500" y2="122" />
+                            <line x1="700" y1="16" x2="700" y2="122" />
+                            <line x1="900" y1="16" x2="900" y2="122" />
+                        </g>
+
+                        <!-- Secondary curved architecture buses -->
+                        <use href="#pipeArc1" stroke="url(#pipeBusGrad)" stroke-width="1.6" stroke-dasharray="5 7" />
+                        <use href="#pipeArc2" stroke="#4F7CFF" stroke-opacity="0.28" stroke-width="1.5" />
+
+                        <!-- Primary horizontal bus -->
+                        <use href="#pipeMainTrack" stroke="currentColor" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
+                        <use href="#pipeMainTrack" class="pipe-stream-line" stroke="#4F7CFF" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="14 22">
+                            <animate attributeName="stroke-dashoffset" values="72;0" dur="2.2s" repeatCount="indefinite" />
+                        </use>
+
+                        <!-- Traveling telemetry packets -->
+                        <circle r="4" fill="#4F7CFF">
+                            <animateMotion dur="4.2s" repeatCount="indefinite" path="M 100 54 L 300 54 L 500 54 L 700 54 L 900 54" />
+                        </circle>
+                        <circle r="3.2" fill="#0E1A33">
+                            <animateMotion dur="5.4s" repeatCount="indefinite" path="M 900 54 C 800 96, 600 96, 500 54 C 400 12, 200 12, 100 54" />
+                        </circle>
+                        <circle r="3.5" fill="#4F7CFF">
+                            <animateMotion dur="3.1s" repeatCount="indefinite" path="M 300 54 C 400 18, 600 18, 700 54" />
+                        </circle>
+
+                        <!-- Node 01 -->
+                        <g class="pipe-node is-active" data-pipe-node="1">
+                            <line x1="100" y1="54" x2="100" y2="122" class="pipe-drop" />
+                            <circle cx="100" cy="54" r="18" class="pipe-node-halo" />
+                            <rect x="86" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
+                            <text x="100" y="58" text-anchor="middle" class="pipe-node-num">01</text>
+                            <circle cx="100" cy="118" r="3.5" class="pipe-drop-tip" />
+                        </g>
+
+                        <!-- Node 02 -->
+                        <g class="pipe-node is-active" data-pipe-node="2">
+                            <line x1="300" y1="54" x2="300" y2="122" class="pipe-drop" />
+                            <circle cx="300" cy="54" r="18" class="pipe-node-halo" />
+                            <rect x="286" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
+                            <text x="300" y="58" text-anchor="middle" class="pipe-node-num">02</text>
+                            <circle cx="300" cy="118" r="3.5" class="pipe-drop-tip" />
+                        </g>
+
+                        <!-- Node 03 -->
+                        <g class="pipe-node is-active" data-pipe-node="3">
+                            <line x1="500" y1="54" x2="500" y2="122" class="pipe-drop" />
+                            <circle cx="500" cy="54" r="18" class="pipe-node-halo" />
+                            <rect x="486" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
+                            <text x="500" y="58" text-anchor="middle" class="pipe-node-num">03</text>
+                            <circle cx="500" cy="118" r="3.5" class="pipe-drop-tip" />
+                        </g>
+
+                        <!-- Node 04 -->
+                        <g class="pipe-node is-active" data-pipe-node="4">
+                            <line x1="700" y1="54" x2="700" y2="122" class="pipe-drop" />
+                            <circle cx="700" cy="54" r="18" class="pipe-node-halo" />
+                            <rect x="686" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
+                            <text x="700" y="58" text-anchor="middle" class="pipe-node-num">04</text>
+                            <circle cx="700" cy="118" r="3.5" class="pipe-drop-tip" />
+                        </g>
+
+                        <!-- Node 05 -->
+                        <g class="pipe-node is-active" data-pipe-node="5">
+                            <line x1="900" y1="54" x2="900" y2="122" class="pipe-drop" />
+                            <circle cx="900" cy="54" r="18" class="pipe-node-halo" />
+                            <rect x="886" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
+                            <text x="900" y="58" text-anchor="middle" class="pipe-node-num">05</text>
+                            <circle cx="900" cy="118" r="3.5" class="pipe-drop-tip" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <!-- [FEATURE-2 END] -->
+
             <div class="tech-grid">
-                <div class="tech-card reveal">
+                <div class="tech-card reveal" data-tech-node="1">
                     <span class="tech-index">01</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none">
@@ -38,7 +148,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <div class="tech-desc" data-tr="tech-1">Tek kod tabanıyla iOS, Android ve web genelinde tutarlı deneyim</div>
                 </div>
 
-                <div class="tech-card reveal reveal-delay-1">
+                <div class="tech-card reveal reveal-delay-1" data-tech-node="2">
                     <span class="tech-index">02</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M 18 76 A 40 40 0 1 1 82 76" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" opacity="0.16"/>
@@ -66,7 +176,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <div class="tech-desc" data-tr="tech-2">Yüksek performans ve akıcı animasyon gerektiren ürünlerde yerel arayüz</div>
                 </div>
 
-                <div class="tech-card reveal reveal-delay-2">
+                <div class="tech-card reveal reveal-delay-2" data-tech-node="3">
                     <span class="tech-index">03</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" fill="none">
@@ -91,7 +201,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <div class="tech-desc" data-tr="tech-3">Kimlik doğrulama, bulut veritabanı ve gerçek zamanlı veri senkronizasyonu</div>
                 </div>
 
-                <div class="tech-card reveal reveal-delay-3">
+                <div class="tech-card reveal reveal-delay-3" data-tech-node="4">
                     <span class="tech-index">04</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="currentColor" stroke-width="2" opacity="0.26" stroke-linecap="round">
@@ -134,7 +244,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <div class="tech-desc" data-tr="tech-4">Göreve göre en uygun dil ve görsel modelini seçen akıllı yönlendirme katmanı</div>
                 </div>
 
-                <div class="tech-card reveal reveal-delay-4">
+                <div class="tech-card reveal reveal-delay-4" data-tech-node="5">
                     <span class="tech-index">05</span>
                     <svg class="tech-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <g stroke="#0E1A33" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">

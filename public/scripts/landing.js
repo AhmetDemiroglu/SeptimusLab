@@ -107,6 +107,15 @@ const translations = {
         "f1-fintel-chip1": "Nova AI: +%18",
         "f1-fintel-chip2": "Limit: Dengeli",
         // [FEATURE-1 END]
+        // [FEATURE-2 START]
+        "f2-pipe-label": "CANLI VERİ HATTI",
+        "f2-tab-all": "Tüm Ekosistem",
+        "f2-status-all": "5 katmanlı birleşik mobil üretim hattı",
+        "f2-status-foods": "Barkod & Kamera (05) -> React/Capacitor (01) -> AI Analiz (04) -> Firebase (03)",
+        "f2-status-pause": "React/Capacitor (01) -> Gerçek Zamanlı Firebase (03) -> AI Kulübü Orkestrasyonu (04)",
+        "f2-status-cosmetics": "Kamera Vizyonu (05) -> React Native (02) -> Formül AI (04) -> Bulut Senkron (03)",
+        "f2-status-fintel": "React Native 60fps (02) -> Şifreli Bulut (03) -> Nova AI Bütçe Motoru (04)",
+        // [FEATURE-2 END]
     },
     en: {
         "nav-about": "About",
@@ -215,6 +224,15 @@ const translations = {
         "f1-fintel-chip1": "Nova AI: +18%",
         "f1-fintel-chip2": "Limit: On Track",
         // [FEATURE-1 END]
+        // [FEATURE-2 START]
+        "f2-pipe-label": "LIVE DATA PIPELINE",
+        "f2-tab-all": "Full Ecosystem",
+        "f2-status-all": "Unified 5-layer mobile production pipeline",
+        "f2-status-foods": "Barcode & Camera (05) -> React/Capacitor (01) -> AI Analysis (04) -> Firebase (03)",
+        "f2-status-pause": "React/Capacitor (01) -> Real-Time Firebase (03) -> AI Club Orchestration (04)",
+        "f2-status-cosmetics": "Camera Vision (05) -> React Native (02) -> Formula AI (04) -> Cloud Sync (03)",
+        "f2-status-fintel": "React Native 60fps (02) -> Encrypted Cloud (03) -> Nova AI Budget Engine (04)",
+        // [FEATURE-2 END]
     },
 };
 
@@ -417,6 +435,69 @@ function setupSmoothScroll() {
     });
 }
 
+// [FEATURE-2 START: Interactive SVG System Architecture Pipeline]
+function setupFeature2Pipeline() {
+    const pipeline = document.querySelector(".tech-pipeline");
+    if (!pipeline) return;
+
+    const tabs = Array.from(pipeline.querySelectorAll(".tech-pipe-tab"));
+    const svgNodes = Array.from(pipeline.querySelectorAll(".pipe-node"));
+    const cards = Array.from(document.querySelectorAll(".tech-card[data-tech-node]"));
+    const statusEl = document.getElementById("techPipelineStatus");
+
+    function activateRoute(appKey, nodeList) {
+        pipeline.dataset.activeApp = appKey;
+        const activeSet = new Set(nodeList.map(String));
+
+        tabs.forEach((t) => {
+            t.classList.toggle("active", t.dataset.pipeApp === appKey);
+        });
+
+        svgNodes.forEach((node) => {
+            const id = node.dataset.pipeNode;
+            node.classList.toggle("is-active", activeSet.has(id));
+            node.classList.toggle("is-dimmed", !activeSet.has(id));
+        });
+
+        cards.forEach((card) => {
+            const id = card.dataset.techNode;
+            const isMatch = activeSet.has(id);
+            card.classList.toggle("is-pipe-active", appKey !== "all" && isMatch);
+            card.classList.toggle("is-pipe-dimmed", appKey !== "all" && !isMatch);
+        });
+
+        if (statusEl) {
+            const trKey = `f2-status-${appKey}`;
+            statusEl.setAttribute("data-tr", trKey);
+            if (translations[currentLang] && translations[currentLang][trKey]) {
+                statusEl.textContent = translations[currentLang][trKey];
+            }
+        }
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const appKey = tab.dataset.pipeApp || "all";
+            const nodes = (tab.dataset.nodes || "1,2,3,4,5").split(",");
+            activateRoute(appKey, nodes);
+        });
+    });
+
+    cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            const id = card.dataset.techNode;
+            const node = pipeline.querySelector(`.pipe-node[data-pipe-node="${id}"]`);
+            if (node) node.classList.add("is-hovered");
+        });
+        card.addEventListener("mouseleave", () => {
+            const id = card.dataset.techNode;
+            const node = pipeline.querySelector(`.pipe-node[data-pipe-node="${id}"]`);
+            if (node) node.classList.remove("is-hovered");
+        });
+    });
+}
+// [FEATURE-2 END]
+
 document.addEventListener("DOMContentLoaded", () => {
     // Auto-detect and set initial language
     const userLang = navigator.language || navigator.userLanguage;
@@ -430,4 +511,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupMobileMenu();
     setupLanguageToggle();
     setupSmoothScroll();
+    // [FEATURE-2 START]
+    setupFeature2Pipeline();
+    // [FEATURE-2 END]
 });

@@ -2266,3 +2266,182 @@ button:focus-visible {
     50% { top: 58%; opacity: 0.95; }
 }
 /* === [FEATURE-1 END] === */
+
+/* === [FEATURE-2 START: Interactive SVG System Architecture Pipeline] === */
+.tech-pipeline {
+    background: var(--bg-white);
+    border: 1px solid var(--line-soft);
+    border-radius: 22px;
+    padding: 1.15rem 1.35rem 0.65rem;
+    margin-bottom: 1.15rem;
+    box-shadow: 0 12px 32px rgba(14, 26, 51, 0.04);
+}
+
+.tech-pipeline-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.tech-pipeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.tech-pipeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.16);
+    animation: pipeDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes pipeDotPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.14); }
+    50% { box-shadow: 0 0 0 6px rgba(79, 124, 255, 0.28); }
+}
+
+.tech-pipeline-title {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.tech-pipeline-status {
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding-left: 0.55rem;
+    border-left: 1px solid var(--line);
+}
+
+.tech-pipeline-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
+}
+
+.tech-pipe-tab {
+    font-family: var(--font-body);
+    font-size: 0.73rem;
+    font-weight: 600;
+    padding: 0.36rem 0.75rem;
+    border-radius: 100px;
+    border: 1px solid var(--line-soft);
+    background: var(--bg-soft);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tech-pipe-tab:hover {
+    color: var(--fg);
+    border-color: var(--line);
+}
+
+.tech-pipe-tab.active {
+    background: var(--navy);
+    color: #EDF1F7;
+    border-color: var(--navy);
+    box-shadow: 0 4px 12px rgba(14, 26, 51, 0.16);
+}
+
+.tech-pipeline-canvas {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0.35rem;
+}
+
+.tech-pipeline-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 118px;
+    color: var(--navy);
+}
+
+.pipe-node {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pipe-node.is-dimmed {
+    opacity: 0.26;
+}
+
+.pipe-node-halo {
+    fill: rgba(79, 124, 255, 0.1);
+    stroke: rgba(79, 124, 255, 0.28);
+    stroke-width: 1.2;
+    transition: r 0.3s ease, fill 0.3s ease;
+}
+
+.pipe-node.is-hovered .pipe-node-halo {
+    fill: rgba(79, 124, 255, 0.22);
+    stroke: var(--accent);
+}
+
+.pipe-node-box {
+    fill: var(--navy);
+    stroke: var(--accent);
+    stroke-width: 1.6;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.pipe-node.is-hovered .pipe-node-box {
+    fill: var(--accent);
+}
+
+.pipe-node-num {
+    fill: #FFFFFF;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.pipe-drop {
+    stroke: var(--accent);
+    stroke-width: 1.6;
+    stroke-dasharray: 4 4;
+    opacity: 0.55;
+}
+
+.pipe-drop-tip {
+    fill: var(--accent);
+}
+
+.tech-card.is-pipe-active {
+    border-color: var(--accent);
+    box-shadow: 0 16px 36px rgba(79, 124, 255, 0.14);
+    transform: translateY(-3px);
+}
+
+.tech-card.is-pipe-Active .tech-index,
+.tech-card.is-pipe-active .tech-index {
+    color: var(--accent);
+}
+
+.tech-card.is-pipe-dimmed {
+    opacity: 0.48;
+    filter: grayscale(25%);
+}
+
+@media (max-width: 767px) {
+    .tech-pipeline-status {
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+    }
+    .tech-pipeline-canvas {
+        display: none;
+    }
+}
+/* === [FEATURE-2 END] === */
