@@ -7,12 +7,10 @@ const html = String.raw`<section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="reveal">
-                    <span class="section-label contact-overline" data-tr="contact-label">İletişime Geçin</span>
+                    <span class="section-label contact-overline" data-tr="contact-label">İletişim</span>
                 </div>
-                <h2 class="contact-title reveal reveal-delay-1" data-tr="contact-title">Aklınızda bir fikir mi var? Konuşalım</h2>
-                <p class="contact-desc reveal reveal-delay-2" data-tr="contact-desc">
-                    Bir soru, bir iş birliği önerisi ya da sadece merhaba demek için: yazın, her mesajı okuyoruz.
-                </p>
+                <h2 class="contact-title reveal reveal-delay-1" data-tr="contact-title">Bir fikriniz mi var? Yazın.</h2>
+                <p class="contact-desc reveal reveal-delay-2" data-tr="contact-desc">Soru, iş birliği ya da sadece merhaba. Her mesajı okuyoruz.</p>
                 <div class="contact-buttons reveal reveal-delay-3">
                     <a href="mailto:info@septimuslab.com" class="btn-primary btn-lg">
                         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">

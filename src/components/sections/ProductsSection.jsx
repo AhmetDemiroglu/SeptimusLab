@@ -38,14 +38,11 @@ const PAUSEMENU_SITE_EN = "https://pausemenu.app/en-US";
 const APP_STORE_PAUSEMENU = "https://apps.apple.com/app/id6781281375";
 
 const html = String.raw`<section class="products-section" id="products">
-        <span class="ghost-index ghost-right" data-parallax="0.05" aria-hidden="true">02</span>
         <div class="container">
             <div class="section-header">
-                <span class="section-label reveal" data-tr="products-label">Ürünlerimiz</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Fark yaratan uygulamalar</h2>
-                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">
-                    Her biri farklı bir ihtiyaçtan doğdu: kimi günlük bir kararı kolaylaştırmak, kimi bir oyuncu topluluğunu bir araya getirmek için. Hepsi özenle tasarlandı ve gerçek hayatta sınandı.
-                </p>
+                <span class="section-label reveal" data-tr="products-label">Uygulamalar</span>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Dört uygulama, dört ayrı dert</h2>
+                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">Biri gıda etiketini okur, biri kozmetik içeriğini, biri bütçeyi tutar, biri oyuncuları buluşturur.</p>
             </div>
 
             <div class="products-grid">

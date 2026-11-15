@@ -2,23 +2,19 @@ import { HtmlBlock } from "../HtmlBlock";
 
 const html = String.raw`<section class="hero-section" id="hero">
         <div class="hero-bg" aria-hidden="true">
-            <div class="hero-haze hero-haze-1" data-parallax="0.08"></div>
-            <div class="hero-haze hero-haze-2" data-parallax="0.14"></div>
-            <span class="hero-seven" data-parallax="0.05">7</span>
+            <svg class="hero-grid" data-parallax="0.05" viewBox="0 0 84 84" aria-hidden="true">
+                <g class="hero-grid-base"><rect width="24" height="24" rx="7.2"/><rect x="30" width="24" height="24" rx="7.2"/><rect x="60" width="24" height="24" rx="7.2"/><rect y="30" width="24" height="24" rx="7.2"/><rect x="30" y="30" width="24" height="24" rx="7.2"/><rect x="60" y="30" width="24" height="24" rx="7.2"/><rect x="30" y="60" width="24" height="24" rx="7.2"/><rect x="60" y="60" width="24" height="24" rx="7.2"/></g>
+                <path class="hero-grid-seven" d="M7.2,60H16.8A7.2,7.2 0 0 1 24,67.2V76.8A7.2,7.2 0 0 1 16.8,84H14.4A2.4,2.4 0 0 1 12,81.6V71H2.4A2.4,2.4 0 0 1 0,68.6V67.2A7.2,7.2 0 0 1 7.2,60Z"/>
+            </svg>
         </div>
 
         <div class="container hero-layout">
             <div class="hero-copy">
-                <p class="hero-overline reveal">
-                    <span data-tr="hero-badge">Mobil İnovasyon Stüdyosu · İzmir</span>
-                </p>
-                <h1 class="hero-title reveal reveal-delay-1">
-                    <span data-tr="hero-title-1">Akıllı Mobil</span><br>
-                    <em class="hero-title-accent" data-tr="hero-title-2">Deneyimler Üretiyoruz</em>
+                <h1 class="hero-title reveal">
+                    <span data-tr="hero-title-1">Etiketi okuyan, bütçeyi tutan,</span><br>
+                    <em class="hero-title-accent" data-tr="hero-title-2">oyununu bulan uygulamalar.</em>
                 </h1>
-                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">
-                    Cildinize sürdüğünüz, sofranıza koyduğunuz, cüzdanınızdan çıkan her seçimin ardında bir cevap var. Onu yapay zekayla saniyeler içinde görünür kılıyoruz; ve gündelik kararların değdiği her alanı tek tek aydınlatmaya devam ediyoruz.
-                </p>
+                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">Gıda etiketini, kozmetik içeriğini ve aylık bütçeyi anlaşılır hale getiren uygulamalar yapıyoruz. Oyuncular için de bir buluşma yeri kurduk.</p>
                 <div class="hero-actions reveal reveal-delay-3">
                     <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-solid" aria-label="SeptimusLab Google Play Mağazası">
                         <svg class="store-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -55,11 +51,6 @@ const html = String.raw`<section class="hero-section" id="hero">
                     <div class="hero-ground"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="hero-scroll-hint" aria-hidden="true">
-            <span class="hero-scroll-line"></span>
-            <span data-tr="hero-scroll">Keşfetmek için kaydırın</span>
         </div>
     </section>`;
 

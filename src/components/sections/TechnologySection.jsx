@@ -1,11 +1,10 @@
 import { HtmlBlock } from "../HtmlBlock";
 
 const html = String.raw`<section class="tech-section" id="technology">
-        <span class="ghost-index ghost-left" data-parallax="0.05" aria-hidden="true">03</span>
         <div class="container">
             <div class="section-header">
-                <span class="section-label reveal" data-tr="tech-label">Teknoloji</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Sahne arkasında titiz mühendislik</h2>
+                <span class="section-label reveal" data-tr="tech-label">Altyapı</span>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamaların arkasında ne var</h2>
             </div>
 
             <div class="tech-grid">
@@ -29,7 +28,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">React &amp; Capacitor</div>
-                    <div class="tech-desc" data-tr="tech-1">Çapraz platform mobil</div>
+                    <div class="tech-desc" data-tr="tech-1">Tek kod tabanı, web teknolojisiyle yazılan mobil uygulama</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-1">
@@ -53,7 +52,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">React Native</div>
-                    <div class="tech-desc" data-tr="tech-2">Yerel performans</div>
+                    <div class="tech-desc" data-tr="tech-2">Performansın önemli olduğu yerde yerel arayüz</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-2">
@@ -83,7 +82,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </g>
                     </svg>
                     <div class="tech-name">Firebase</div>
-                    <div class="tech-desc" data-tr="tech-3">Auth &amp; Real-time DB</div>
+                    <div class="tech-desc" data-tr="tech-3">Giriş, veritabanı ve gerçek zamanlı senkron</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-3">
@@ -130,7 +129,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </circle>
                     </svg>
                     <div class="tech-name">AI Orkestrasyon</div>
-                    <div class="tech-desc" data-tr="tech-4">Çoklu AI pipeline</div>
+                    <div class="tech-desc" data-tr="tech-4">Birden fazla yapay zeka modelini işe göre seçen katman</div>
                 </div>
 
                 <div class="tech-card reveal reveal-delay-4">
@@ -157,7 +156,7 @@ const html = String.raw`<section class="tech-section" id="technology">
                         </path>
                     </svg>
                     <div class="tech-name">Yerel API</div>
-                    <div class="tech-desc" data-tr="tech-5">Kamera, Barkod, TTS</div>
+                    <div class="tech-desc" data-tr="tech-5">Kamera, barkod okuma ve sesli okuma</div>
                 </div>
             </div>
         </div>
