@@ -44,11 +44,11 @@ const translations = {
         "purescan-f3": "Cilt Analizi",
         "purescan-f4": "AI Asistan",
         "fintel-tagline":
-            "Bütçenizi dönemler halinde planlar, harcamalarınızı sessizce takip eder. Nova AI, ay sonu sürprizlerini zamanında gelen küçük önerilere dönüştürür.",
+        "Maaş dönemini, günlük limitini ve taksitlerini tek yerde takip eder. Fişi okur, Nova ile sorularını yanıtlar.",
         "fintel-f1": "Dönem Bütçeleri",
         "fintel-f2": "Günlük Limitler",
-        "fintel-f3": "Nova AI",
-        "fintel-f4": "Harcama Analizi",
+        "fintel-f3": "Fiş Okuma",
+        "fintel-f4": "Nova",
         "cta-google-play": "Google Play'de Gör",
         "purescan-foods-tagline":
             "PureScan ailesinin yeni üyesi. Market rafındaki ürünün etiketini tarar; alerjenleri, katkıları ve besin değerlerini saniyeler içinde önünüze serer.",
@@ -104,8 +104,8 @@ const translations = {
         "f1-pause-chip2": "AI Kulübü Aktif",
         "f1-cosm-chip1": "Cilt Uyumu: %96",
         "f1-cosm-chip2": "Temiz İçerik",
-        "f1-fintel-chip1": "Nova AI: +%18",
-        "f1-fintel-chip2": "Limit: Dengeli",
+        "f1-fintel-chip1": "Nova: Durum iyi",
+        "f1-fintel-chip2": "Limit içinde",
         // [FEATURE-1 END]
     },
     en: {
@@ -152,11 +152,11 @@ const translations = {
         "purescan-f3": "Skin Analysis",
         "purescan-f4": "AI Assistant",
         "fintel-tagline":
-            "Plans your budget in periods and quietly tracks your spending. Nova AI turns end-of-month surprises into small, timely suggestions.",
+        "Tracks your pay period, daily limit and installments in one place. Reads receipts and answers your questions with Nova.",
         "fintel-f1": "Period Budgets",
         "fintel-f2": "Daily Limits",
-        "fintel-f3": "Nova AI",
-        "fintel-f4": "Spending Insights",
+        "fintel-f3": "Receipt Scan",
+        "fintel-f4": "Nova",
         "cta-google-play": "View on Google Play",
         "purescan-foods-tagline":
             "The newest member of the PureScan family. Scan a product on the shelf and see allergens, additives and nutrition facts in seconds.",
@@ -212,8 +212,8 @@ const translations = {
         "f1-pause-chip2": "AI Club Live",
         "f1-cosm-chip1": "Skin Match: 96%",
         "f1-cosm-chip2": "Clean Formula",
-        "f1-fintel-chip1": "Nova AI: +18%",
-        "f1-fintel-chip2": "Limit: On Track",
+        "f1-fintel-chip1": "Nova: Status good",
+        "f1-fintel-chip2": "Within limit",
         // [FEATURE-1 END]
     },
 };

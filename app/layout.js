@@ -116,9 +116,9 @@ const jsonLd = {
         {
             "@type": "SoftwareApplication",
             name: "Fintel",
-            alternateName: "Fintel Akıllı Bütçe Asistanı",
+            alternateName: "Fintel Aile Bütçesi",
             description:
-                "AI destekli akıllı bütçe asistanı. Dönem bazlı bütçeler oluşturun ve Nova AI'dan kişiselleştirilmiş finansal bilgiler alın.",
+                "Maaş dönemi, günlük limit, taksit ve fiş okuma ile aile bütçesi uygulaması. Nova ile harcama raporu ve sohbet.",
             applicationCategory: "FinanceApplication",
             operatingSystem: "Android",
             offers: {

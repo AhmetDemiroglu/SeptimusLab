@@ -190,11 +190,11 @@ const html = String.raw`<section class="products-section" id="products">
                         <div class="live-stage" aria-hidden="true">
                             <span class="live-chip live-chip-left">
                                 <span class="live-dot live-dot-blue"></span>
-                                <span data-tr="f1-fintel-chip1">Nova AI: +%18</span>
+                                <span data-tr="f1-fintel-chip1">Nova: Durum iyi</span>
                             </span>
                             <span class="live-chip live-chip-right">
                                 <span class="live-dot live-dot-green"></span>
-                                <span data-tr="f1-fintel-chip2">Limit: Dengeli</span>
+                                <span data-tr="f1-fintel-chip2">Limit içinde</span>
                             </span>
                         </div>
                         <div class="product-phone">
@@ -209,13 +209,13 @@ const html = String.raw`<section class="products-section" id="products">
                             <h3 class="product-name">Fintel</h3>
                         </header>
                         <p class="product-tagline" data-tr="fintel-tagline">
-                            Bütçenizi dönemler halinde planlar, harcamalarınızı sessizce takip eder. Nova AI, ay sonu sürprizlerini zamanında gelen küçük önerilere dönüştürür.
+                            Maaş dönemini, günlük limitini ve taksitlerini tek yerde takip eder. Fişi okur, Nova ile sorularını yanıtlar.
                         </p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="fintel-f1">Dönem Bütçeleri</span>
                             <span class="feature-tag" data-tr="fintel-f2">Günlük Limitler</span>
-                            <span class="feature-tag" data-tr="fintel-f3">Nova AI</span>
-                            <span class="feature-tag" data-tr="fintel-f4">Harcama Analizi</span>
+                            <span class="feature-tag" data-tr="fintel-f3">Fiş Okuma</span>
+                            <span class="feature-tag" data-tr="fintel-f4">Nova</span>
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.fintel.app")}
