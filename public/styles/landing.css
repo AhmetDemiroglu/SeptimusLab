@@ -1381,6 +1381,9 @@ a.product-phone {
 .product-name-link:hover {
     color: var(--amber);
 }
+.product-teal .product-name-link:hover {
+    color: #2D8A7A;
+}
 .product-violet .product-name-link:hover {
     color: var(--violet);
 }
@@ -1452,6 +1455,51 @@ a.product-phone {
 
 .product-actions .store-btn-lines strong {
     font-size: 0.82rem;
+}
+
+/* Kart içi hizalama: görsel, başlık, açıklama, etiketler ve butonlar
+   aynı satırdaki tüm kartlarda aynı hizada başlar (subgrid, 5 satır). */
+@media (min-width: 720px) {
+    .products-grid {
+        row-gap: 0;
+        margin-bottom: -1.75rem;
+    }
+    .product-card {
+        grid-row: span 5;
+        display: grid;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        margin-bottom: 1.75rem;
+    }
+    .product-card .product-body {
+        display: contents;
+    }
+    .product-card .product-head,
+    .product-card .product-tagline,
+    .product-card .product-features,
+    .product-card .product-actions {
+        margin-left: 1.75rem;
+        margin-right: 1.75rem;
+    }
+    .product-card .product-head { margin-top: 1.75rem; }
+    .product-card .product-features { align-content: flex-start; }
+    .product-card .product-actions {
+        margin-bottom: 2rem;
+        align-self: end;
+    }
+}
+@supports not (grid-template-rows: subgrid) {
+    @media (min-width: 720px) {
+        .product-card { display: flex; flex-direction: column; grid-row: auto; margin-bottom: 0; }
+        .products-grid { row-gap: 1.75rem; margin-bottom: 0; }
+        .product-card .product-body { display: flex; flex-direction: column; flex: 1; }
+        .product-card .product-head,
+        .product-card .product-tagline,
+        .product-card .product-features,
+        .product-card .product-actions { margin-left: 0; margin-right: 0; }
+        .product-card .product-head { margin-top: 0; }
+        .product-card .product-actions { margin-top: auto; margin-bottom: 0; }
+    }
 }
 
 /* ============================================================
