@@ -40,7 +40,7 @@ const jsonLd = {
             "@id": `${siteUrl}/#website`,
             url: siteUrl,
             name: "SeptimusLab",
-            alternateName: "SeptimusLab - Mobil İnovasyon Stüdyosu",
+            alternateName: "Septimus Lab",
             description: "Yapay zeka destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyosu",
             publisher: { "@id": `${siteUrl}/#organization` },
             inLanguage: ["tr-TR", "en-US"],

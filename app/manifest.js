@@ -1,9 +1,9 @@
 export default function manifest() {
   return {
-    name: "SeptimusLab - Mobil İnovasyon Stüdyosu",
+    name: "SeptimusLab",
     short_name: "SeptimusLab",
     description:
-      "İzmir merkezli mobil yazılım stüdyosu. AI destekli Android uygulamalar: PureScan ve Fintel.",
+      "Fikirden mağazaya, iOS ve Android için yapay zeka destekli mobil uygulamalar.",
     start_url: "/",
     display: "standalone",
     background_color: "#F2F5FA",
