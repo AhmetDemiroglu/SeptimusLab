@@ -7,7 +7,7 @@ const html = String.raw`<footer class="footer">
                     <div class="footer-logo">
                         <img src="/assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg" alt="SeptimusLab" width="233" height="34">
                     </div>
-                    <p class="footer-tagline" data-tr="footer-desc">Bağımsız mobil uygulama stüdyosu. Gıda, kozmetik, bütçe ve oyun için uygulamalar.</p>
+                    <p class="footer-tagline" data-tr="footer-desc">Bağımsız mobil uygulama stüdyosu. Fikirden mağazaya, iOS ve Android için akıllı uygulamalar.</p>
                     <div class="footer-social">
                         <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Play">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

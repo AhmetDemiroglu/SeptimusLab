@@ -5,8 +5,8 @@ const html = String.raw`<section class="about-section" id="about">
             <div class="about-grid">
                 <div class="about-copy">
                     <span class="section-label reveal" data-tr="about-label">Stüdyo</span>
-                    <h2 class="section-title reveal reveal-delay-1" data-tr="about-title">Küçük bir stüdyo, dört uygulama</h2>
-                    <p class="section-desc reveal reveal-delay-2" data-tr="about-desc">SeptimusLab bağımsız bir mobil uygulama stüdyosu. Büyük ekip yok, uzun toplantı yok. Her uygulama günlük hayatta karşımıza çıkan bir sorudan doğdu: bu üründe ne var, bu ay ne kadar harcadım, bu akşam ne oynasam.</p>
+                    <h2 class="section-title reveal reveal-delay-1" data-tr="about-title">Küçük bir stüdyo, uçtan uca iş</h2>
+                    <p class="section-desc reveal reveal-delay-2" data-tr="about-desc">SeptimusLab bağımsız bir mobil uygulama stüdyosu. Fikri dinliyor, tasarlıyor, geliştiriyor ve mağazada yayınlıyoruz. Büyük ekip yok, uzun toplantı yok. Yayındaki uygulamalarımız bu çalışma biçiminin örnekleri.</p>
 
                     <div class="stat-strip reveal reveal-delay-3">
                         <div class="stat-item">

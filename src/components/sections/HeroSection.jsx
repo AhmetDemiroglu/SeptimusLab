@@ -11,10 +11,10 @@ const html = String.raw`<section class="hero-section" id="hero">
         <div class="container hero-layout">
             <div class="hero-copy">
                 <h1 class="hero-title reveal">
-                    <span data-tr="hero-title-1">Etiketi okuyan, bütçeyi tutan,</span><br>
-                    <em class="hero-title-accent" data-tr="hero-title-2">oyununu bulan uygulamalar.</em>
+                    <span data-tr="hero-title-1">Fikirden mağazaya,</span><br>
+                    <em class="hero-title-accent" data-tr="hero-title-2">akıllı mobil uygulamalar.</em>
                 </h1>
-                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">Gıda etiketini, kozmetik içeriğini ve aylık bütçeyi anlaşılır hale getiren uygulamalar yapıyoruz. Oyuncular için de bir buluşma yeri kurduk.</p>
+                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">Bir fikri alıp iOS ve Android'de yayınlanan, yapay zeka destekli bir uygulamaya dönüştürüyoruz. Tasarım, geliştirme ve mağaza süreci tek stüdyoda.</p>
                 <div class="hero-actions reveal reveal-delay-3">
                     <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-solid" aria-label="SeptimusLab Google Play Mağazası">
                         <svg class="store-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

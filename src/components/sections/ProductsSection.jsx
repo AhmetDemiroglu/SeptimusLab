@@ -40,9 +40,9 @@ const APP_STORE_PAUSEMENU = "https://apps.apple.com/app/id6781281375";
 const html = String.raw`<section class="products-section" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-label reveal" data-tr="products-label">Uygulamalar</span>
-                <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Dört uygulama, dört ayrı dert</h2>
-                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">Biri gıda etiketini okur, biri kozmetik içeriğini, biri bütçeyi tutar, biri oyuncuları buluşturur.</p>
+                <span class="section-label reveal" data-tr="products-label">Yaptıklarımız</span>
+                <h2 class="section-title reveal reveal-delay-1" data-tr="products-title">Yayındaki uygulamalar</h2>
+                <p class="section-desc reveal reveal-delay-2" data-tr="products-desc">Gıdadan oyuna, farklı alanlarda dört uygulama. Hepsi aynı stüdyodan, baştan sona.</p>
             </div>
 
             <div class="products-grid">
