@@ -22,70 +22,6 @@ const html = String.raw`<section class="about-section" id="about">
                             <div class="stat-label" data-tr="stat-founded">Kuruluş</div>
                         </div>
                     </div>
-
-                    <!-- [FEATURE-4 START: Interactive 3x3 Septimus Roman Calendar Matrix] -->
-                    <div class="septimus-matrix reveal reveal-delay-3" data-era="roman">
-                        <div class="matrix-head">
-                            <div class="matrix-title-group">
-                                <span class="matrix-dot"></span>
-                                <span class="matrix-eyebrow" data-tr="f4-eyebrow">ETKİLEŞİMLİ KÖKEN MATRİSİ</span>
-                            </div>
-                            <div class="matrix-era-switch" role="group" aria-label="Takvim dönemi seçimi">
-                                <button type="button" class="matrix-era-btn active" data-era-btn="roman" data-tr="f4-era-roman">Roma Takvimi (7. Ay)</button>
-                                <button type="button" class="matrix-era-btn" data-era-btn="modern" data-tr="f4-era-modern">+Ocak &amp; Şubat (9. Ay)</button>
-                            </div>
-                        </div>
-
-                        <div class="matrix-body">
-                            <div class="matrix-grid" id="septimusMatrixGrid" role="grid" aria-label="Septimus 3x3 Takvim Matrisi">
-                                <button type="button" class="matrix-cell" data-slot="1">
-                                    <span class="matrix-roman">I</span>
-                                    <span class="matrix-month">Martius</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="2">
-                                    <span class="matrix-roman">II</span>
-                                    <span class="matrix-month">Aprilis</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="3">
-                                    <span class="matrix-roman">III</span>
-                                    <span class="matrix-month">Maius</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="4">
-                                    <span class="matrix-roman">IV</span>
-                                    <span class="matrix-month">Iunius</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="5">
-                                    <span class="matrix-roman">V</span>
-                                    <span class="matrix-month">Quintilis</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="6">
-                                    <span class="matrix-roman">VI</span>
-                                    <span class="matrix-month">Sextilis</span>
-                                </button>
-                                <button type="button" class="matrix-cell is-septimus" data-slot="7">
-                                    <span class="matrix-roman">VII</span>
-                                    <span class="matrix-month">Septimus</span>
-                                    <svg class="matrix-seven-glyph" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                                        <path d="M5 6 H22 V23" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="8">
-                                    <span class="matrix-roman">VIII</span>
-                                    <span class="matrix-month">October</span>
-                                </button>
-                                <button type="button" class="matrix-cell" data-slot="9">
-                                    <span class="matrix-roman">IX</span>
-                                    <span class="matrix-month">November</span>
-                                </button>
-                            </div>
-
-                            <div class="matrix-info">
-                                <div class="matrix-badge" id="matrixBadge" data-tr="f4-badge-roman">7. KARE · SEPTIMUS</div>
-                                <p class="matrix-readout" id="matrixReadout" data-tr="f4-readout-roman">Logomuzdaki 3x3 dizilimin 7. karesi (sol alt), eski Roma takviminde yılın 7. ayı olan Eylül'ü (Septimus) temsil eder.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [FEATURE-4 END] -->
                 </div>
 
                 <div class="about-visual reveal reveal-delay-2">
@@ -101,6 +37,20 @@ const html = String.raw`<section class="about-section" id="about">
                         </header>
 
                         <blockquote class="studio-card-quote" data-tr="card-quote">Eylül (September), Ocak ve Şubat takvime eklenmeden önce antik Roma yılının yedinci ayıydı. Takvim değişip dokuzuncu sıraya geçse de kökü değişmedi; Latince “yedinci” anlamına gelen Septimus, stüdyomuzun adı oldu.</blockquote>
+
+                        <!-- [FEATURE-4 START: Single-Row Roman Numeral Strip] -->
+                        <div class="roman-strip" id="romanStrip" data-era="roman" role="group" aria-label="Roma takvimi dizilimi">
+                            <span class="roman-step" data-rslot="1">I</span>
+                            <span class="roman-step" data-rslot="2">II</span>
+                            <span class="roman-step" data-rslot="3">III</span>
+                            <span class="roman-step" data-rslot="4">IV</span>
+                            <span class="roman-step" data-rslot="5">V</span>
+                            <span class="roman-step" data-rslot="6">VI</span>
+                            <span class="roman-step is-septimus" data-rslot="7">VII · Septimus</span>
+                            <span class="roman-step" data-rslot="8">VIII</span>
+                            <span class="roman-step" data-rslot="9">IX</span>
+                        </div>
+                        <!-- [FEATURE-4 END] -->
 
                         <ul class="studio-card-specs">
                             <li>

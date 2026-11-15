@@ -107,26 +107,6 @@ const translations = {
         "f1-fintel-chip1": "Nova AI: +%18",
         "f1-fintel-chip2": "Limit: Dengeli",
         // [FEATURE-1 END]
-        // [FEATURE-2 START]
-        "f2-pipe-label": "CANLI VERİ HATTI",
-        "f2-tab-all": "Tüm Ekosistem",
-        "f2-status-all": "5 katmanlı birleşik mobil üretim hattı",
-        "f2-status-foods": "Barkod & Kamera (05) -> React/Capacitor (01) -> AI Analiz (04) -> Firebase (03)",
-        "f2-status-pause": "React/Capacitor (01) -> Gerçek Zamanlı Firebase (03) -> AI Kulübü Orkestrasyonu (04)",
-        "f2-status-cosmetics": "Kamera Vizyonu (05) -> React Native (02) -> Formül AI (04) -> Bulut Senkron (03)",
-        "f2-status-fintel": "React Native 60fps (02) -> Şifreli Bulut (03) -> Nova AI Bütçe Motoru (04)",
-        // [FEATURE-2 END]
-        // [FEATURE-4 START]
-        "f4-eyebrow": "ETKİLEŞİMLİ KÖKEN MATRİSİ",
-        "f4-era-roman": "Roma Takvimi (7. Ay)",
-        "f4-era-modern": "+Ocak & Şubat (9. Ay)",
-        "f4-badge-roman": "7. KARE · SEPTIMUS",
-        "f4-readout-roman":
-            "Logomuzdaki 3x3 dizilimin 7. karesi (sol alt), eski Roma takviminde yılın 7. ayı olan Eylül'ü (Septimus) temsil eder.",
-        "f4-badge-modern": "9. SIRA · KÖK KORUNDU",
-        "f4-readout-modern":
-            "Ocak (Ianuarius) ve Şubat (Februarius) başa eklenince Eylül 9. sıraya kaydı; ancak Latince 'yedinci' (Septimus) kökü değişmedi.",
-        // [FEATURE-4 END]
     },
     en: {
         "nav-about": "About",
@@ -235,26 +215,6 @@ const translations = {
         "f1-fintel-chip1": "Nova AI: +18%",
         "f1-fintel-chip2": "Limit: On Track",
         // [FEATURE-1 END]
-        // [FEATURE-2 START]
-        "f2-pipe-label": "LIVE DATA PIPELINE",
-        "f2-tab-all": "Full Ecosystem",
-        "f2-status-all": "Unified 5-layer mobile production pipeline",
-        "f2-status-foods": "Barcode & Camera (05) -> React/Capacitor (01) -> AI Analysis (04) -> Firebase (03)",
-        "f2-status-pause": "React/Capacitor (01) -> Real-Time Firebase (03) -> AI Club Orchestration (04)",
-        "f2-status-cosmetics": "Camera Vision (05) -> React Native (02) -> Formula AI (04) -> Cloud Sync (03)",
-        "f2-status-fintel": "React Native 60fps (02) -> Encrypted Cloud (03) -> Nova AI Budget Engine (04)",
-        // [FEATURE-2 END]
-        // [FEATURE-4 START]
-        "f4-eyebrow": "INTERACTIVE ORIGIN MATRIX",
-        "f4-era-roman": "Roman Calendar (7th)",
-        "f4-era-modern": "+Jan & Feb (9th)",
-        "f4-badge-roman": "TILE VII · SEPTIMUS",
-        "f4-readout-roman":
-            "Tile 7 (bottom-left) in our 3x3 emblem marks September (Septimus), originally the 7th month of the ancient Roman year.",
-        "f4-badge-modern": "SLOT IX · ROOT ENDURED",
-        "f4-readout-modern":
-            "Adding Ianuarius and Februarius shifted September to the 9th slot, yet its Latin root Septimus ('the seventh') remained.",
-        // [FEATURE-4 END]
     },
 };
 
@@ -457,64 +417,35 @@ function setupSmoothScroll() {
     });
 }
 
-// [FEATURE-2 START: Interactive SVG System Architecture Pipeline]
+// [FEATURE-2 START: Unified Ecosystem Architecture Board]
 function setupFeature2Pipeline() {
-    const pipeline = document.querySelector(".tech-pipeline");
-    if (!pipeline) return;
+    const board = document.querySelector(".tech-board");
+    if (!board) return;
 
-    const tabs = Array.from(pipeline.querySelectorAll(".tech-pipe-tab"));
-    const svgNodes = Array.from(pipeline.querySelectorAll(".pipe-node"));
-    const cards = Array.from(document.querySelectorAll(".tech-card[data-tech-node]"));
-    const statusEl = document.getElementById("techPipelineStatus");
+    const cards = Array.from(board.querySelectorAll(".tech-card[data-tech-node]"));
+    const dockApps = Array.from(board.querySelectorAll(".tech-dock-app[data-dock-app]"));
 
-    function activateRoute(appKey, nodeList) {
-        pipeline.dataset.activeApp = appKey;
-        const activeSet = new Set(nodeList.map(String));
-
-        tabs.forEach((t) => {
-            t.classList.toggle("active", t.dataset.pipeApp === appKey);
+    cards.forEach((card) => {
+        const id = card.dataset.techNode;
+        card.addEventListener("mouseenter", () => {
+            const trace = board.querySelector(`.bus-trace[data-trace-in="${id}"]`);
+            if (trace) trace.classList.add("is-boosted");
         });
-
-        svgNodes.forEach((node) => {
-            const id = node.dataset.pipeNode;
-            node.classList.toggle("is-active", activeSet.has(id));
-            node.classList.toggle("is-dimmed", !activeSet.has(id));
-        });
-
-        cards.forEach((card) => {
-            const id = card.dataset.techNode;
-            const isMatch = activeSet.has(id);
-            card.classList.toggle("is-pipe-active", appKey !== "all" && isMatch);
-            card.classList.toggle("is-pipe-dimmed", appKey !== "all" && !isMatch);
-        });
-
-        if (statusEl) {
-            const trKey = `f2-status-${appKey}`;
-            statusEl.setAttribute("data-tr", trKey);
-            if (translations[currentLang] && translations[currentLang][trKey]) {
-                statusEl.textContent = translations[currentLang][trKey];
-            }
-        }
-    }
-
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            const appKey = tab.dataset.pipeApp || "all";
-            const nodes = (tab.dataset.nodes || "1,2,3,4,5").split(",");
-            activateRoute(appKey, nodes);
+        card.addEventListener("mouseleave", () => {
+            const trace = board.querySelector(`.bus-trace[data-trace-in="${id}"]`);
+            if (trace) trace.classList.remove("is-boosted");
         });
     });
 
-    cards.forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-            const id = card.dataset.techNode;
-            const node = pipeline.querySelector(`.pipe-node[data-pipe-node="${id}"]`);
-            if (node) node.classList.add("is-hovered");
+    dockApps.forEach((app) => {
+        const id = app.dataset.dockApp;
+        app.addEventListener("mouseenter", () => {
+            const trace = board.querySelector(`.bus-trace[data-trace-out="${id}"]`);
+            if (trace) trace.classList.add("is-boosted");
         });
-        card.addEventListener("mouseleave", () => {
-            const id = card.dataset.techNode;
-            const node = pipeline.querySelector(`.pipe-node[data-pipe-node="${id}"]`);
-            if (node) node.classList.remove("is-hovered");
+        app.addEventListener("mouseleave", () => {
+            const trace = board.querySelector(`.bus-trace[data-trace-out="${id}"]`);
+            if (trace) trace.classList.remove("is-boosted");
         });
     });
 }
@@ -626,83 +557,75 @@ function setupFeature3ThemeAndAudio() {
 }
 // [FEATURE-3 END]
 
-// [FEATURE-4 START: Interactive 3x3 Septimus Roman Calendar Matrix]
+// [FEATURE-4 START: Single-Row Roman Numeral Strip]
 function setupFeature4Matrix() {
-    const matrix = document.querySelector(".septimus-matrix");
-    if (!matrix) return;
+    const strip = document.getElementById("romanStrip");
+    if (!strip) return;
 
-    const eraBtns = Array.from(matrix.querySelectorAll(".matrix-era-btn"));
-    const cells = Array.from(matrix.querySelectorAll(".matrix-cell"));
-    const badgeEl = document.getElementById("matrixBadge");
-    const readoutEl = document.getElementById("matrixReadout");
+    const steps = Array.from(strip.querySelectorAll(".roman-step"));
+    const romanLabels = ["I", "II", "III", "IV", "V", "VI", "VII · Septimus", "VIII", "IX"];
+    const modernLabels = ["+I", "+II", "III", "IV", "V", "VI", "VII", "VIII", "IX · Septimus"];
 
-    const romanSlots = [
-        { num: "I", name: "Martius", septimus: false, added: false },
-        { num: "II", name: "Aprilis", septimus: false, added: false },
-        { num: "III", name: "Maius", septimus: false, added: false },
-        { num: "IV", name: "Iunius", septimus: false, added: false },
-        { num: "V", name: "Quintilis", septimus: false, added: false },
-        { num: "VI", name: "Sextilis", septimus: false, added: false },
-        { num: "VII", name: "Septimus", septimus: true, added: false },
-        { num: "VIII", name: "October", septimus: false, added: false },
-        { num: "IX", name: "November", septimus: false, added: false },
-    ];
-
-    const modernSlots = [
-        { num: "+I", name: "Ianuarius", septimus: false, added: true },
-        { num: "+II", name: "Februarius", septimus: false, added: true },
-        { num: "III", name: "Martius", septimus: false, added: false },
-        { num: "IV", name: "Aprilis", septimus: false, added: false },
-        { num: "V", name: "Maius", septimus: false, added: false },
-        { num: "VI", name: "Iunius", septimus: false, added: false },
-        { num: "VII", name: "Quintilis", septimus: false, added: false },
-        { num: "VIII", name: "Sextilis", septimus: false, added: false },
-        { num: "IX", name: "Septimus", septimus: true, added: false },
-    ];
-
-    const sevenGlyph = `<svg class="matrix-seven-glyph" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M5 6 H22 V23" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-
-    function renderEra(era) {
-        matrix.dataset.era = era;
-        const slots = era === "modern" ? modernSlots : romanSlots;
-
-        eraBtns.forEach((btn) => {
-            btn.classList.toggle("active", btn.dataset.eraBtn === era);
+    function setEra(era) {
+        strip.dataset.era = era;
+        const labels = era === "modern" ? modernLabels : romanLabels;
+        steps.forEach((el, idx) => {
+            el.textContent = labels[idx];
+            const isSept = (era === "roman" && idx === 6) || (era === "modern" && idx === 8);
+            const isAdded = era === "modern" && (idx === 0 || idx === 1);
+            el.classList.toggle("is-septimus", isSept);
+            el.classList.toggle("is-added", isAdded);
         });
-
-        cells.forEach((cell, idx) => {
-            const item = slots[idx];
-            cell.classList.toggle("is-septimus", item.septimus);
-            cell.classList.toggle("is-added", item.added);
-            cell.innerHTML = `<span class="matrix-roman">${item.num}</span><span class="matrix-month">${item.name}</span>${item.septimus ? sevenGlyph : ""}`;
-        });
-
-        if (badgeEl && readoutEl) {
-            const badgeKey = era === "modern" ? "f4-badge-modern" : "f4-badge-roman";
-            const readoutKey = era === "modern" ? "f4-readout-modern" : "f4-readout-roman";
-            badgeEl.setAttribute("data-tr", badgeKey);
-            readoutEl.setAttribute("data-tr", readoutKey);
-            if (translations[currentLang]) {
-                badgeEl.textContent = translations[currentLang][badgeKey] || badgeEl.textContent;
-                readoutEl.textContent = translations[currentLang][readoutKey] || readoutEl.textContent;
-            }
-        }
     }
 
-    eraBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            renderEra(btn.dataset.eraBtn || "roman");
-        });
-    });
-
-    cells.forEach((cell) => {
-        cell.addEventListener("click", () => {
-            const nextEra = matrix.dataset.era === "roman" ? "modern" : "roman";
-            renderEra(nextEra);
-        });
+    strip.addEventListener("click", () => {
+        setEra(strip.dataset.era === "roman" ? "modern" : "roman");
     });
 }
 // [FEATURE-4 END]
+
+// [FEATURE-5 START: Vision Scroll-Linked Logo-Blue Timeline Beam]
+function setupVisionTimelineBeam() {
+    const timeline = document.querySelector(".timeline");
+    if (!timeline) return;
+
+    const items = Array.from(timeline.querySelectorAll(".timeline-item"));
+    let ticking = false;
+
+    function updateBeam() {
+        ticking = false;
+        const rect = timeline.getBoundingClientRect();
+        const vh = window.innerHeight;
+        // Start filling when top of timeline enters 72% of viewport, finish near 28%
+        const startY = vh * 0.72;
+        const raw = (startY - rect.top) / Math.max(1, rect.height - 20);
+        const progress = Math.max(0, Math.min(1, raw));
+        timeline.style.setProperty("--tl-progress", progress.toFixed(4));
+
+        const beamTipY = rect.top + 10 + (rect.height - 20) * progress;
+        items.forEach((item) => {
+            const dot = item.querySelector(".timeline-dot");
+            if (!dot) return;
+            const dotRect = dot.getBoundingClientRect();
+            const dotCenter = dotRect.top + dotRect.height * 0.5;
+            item.classList.toggle("is-lit", progress > 0.02 && beamTipY >= dotCenter - 6);
+        });
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                requestAnimationFrame(updateBeam);
+                ticking = true;
+            }
+        },
+        { passive: true },
+    );
+    window.addEventListener("resize", updateBeam, { passive: true });
+    updateBeam();
+}
+// [FEATURE-5 END]
 
 document.addEventListener("DOMContentLoaded", () => {
     // Auto-detect and set initial language
@@ -726,4 +649,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // [FEATURE-4 START]
     setupFeature4Matrix();
     // [FEATURE-4 END]
+    // [FEATURE-5 START]
+    setupVisionTimelineBeam();
+    // [FEATURE-5 END]
 });

@@ -7,114 +7,8 @@ const html = String.raw`<section class="tech-section" id="technology">
                 <h2 class="section-title reveal reveal-delay-1" data-tr="tech-title">Uygulamalarımıza güç veren mimari</h2>
             </div>
 
-            <!-- [FEATURE-2 START: Interactive SVG System Architecture Pipeline] -->
-            <div class="tech-pipeline reveal reveal-delay-1" data-active-app="all">
-                <div class="tech-pipeline-bar">
-                    <div class="tech-pipeline-meta">
-                        <span class="tech-pipeline-dot"></span>
-                        <span class="tech-pipeline-title" data-tr="f2-pipe-label">CANLI VERİ HATTI</span>
-                        <span class="tech-pipeline-status" id="techPipelineStatus" data-tr="f2-status-all">5 katmanlı birleşik mobil üretim hattı</span>
-                    </div>
-                    <div class="tech-pipeline-tabs" role="tablist" aria-label="Uygulama mimari rotası">
-                        <button type="button" class="tech-pipe-tab active" data-pipe-app="all" data-nodes="1,2,3,4,5" data-tr="f2-tab-all">Tüm Ekosistem</button>
-                        <button type="button" class="tech-pipe-tab" data-pipe-app="foods" data-nodes="1,3,4,5">PureScan Foods</button>
-                        <button type="button" class="tech-pipe-tab" data-pipe-app="pause" data-nodes="1,3,4">Pause Menu</button>
-                        <button type="button" class="tech-pipe-tab" data-pipe-app="cosmetics" data-nodes="2,3,4,5">PureScan Cosmetics</button>
-                        <button type="button" class="tech-pipe-tab" data-pipe-app="fintel" data-nodes="2,3,4">Fintel</button>
-                    </div>
-                </div>
-
-                <div class="tech-pipeline-canvas">
-                    <svg class="tech-pipeline-svg" viewBox="0 0 1000 124" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <defs>
-                            <linearGradient id="pipeBusGrad" x1="100" y1="54" x2="900" y2="54" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#0E1A33" stop-opacity="0.15" />
-                                <stop offset="50%" stop-color="#4F7CFF" stop-opacity="0.55" />
-                                <stop offset="100%" stop-color="#0E1A33" stop-opacity="0.15" />
-                            </linearGradient>
-                            <path id="pipeMainTrack" d="M 100 54 L 300 54 L 500 54 L 700 54 L 900 54" />
-                            <path id="pipeArc1" d="M 100 54 C 200 12, 400 12, 500 54 C 600 96, 800 96, 900 54" />
-                            <path id="pipeArc2" d="M 300 54 C 400 18, 600 18, 700 54" />
-                        </defs>
-
-                        <!-- Background grid ticks -->
-                        <g stroke="currentColor" stroke-opacity="0.08" stroke-width="1">
-                            <line x1="40" y1="54" x2="960" y2="54" stroke-dasharray="3 6" />
-                            <line x1="100" y1="16" x2="100" y2="122" />
-                            <line x1="300" y1="16" x2="300" y2="122" />
-                            <line x1="500" y1="16" x2="500" y2="122" />
-                            <line x1="700" y1="16" x2="700" y2="122" />
-                            <line x1="900" y1="16" x2="900" y2="122" />
-                        </g>
-
-                        <!-- Secondary curved architecture buses -->
-                        <use href="#pipeArc1" stroke="url(#pipeBusGrad)" stroke-width="1.6" stroke-dasharray="5 7" />
-                        <use href="#pipeArc2" stroke="#4F7CFF" stroke-opacity="0.28" stroke-width="1.5" />
-
-                        <!-- Primary horizontal bus -->
-                        <use href="#pipeMainTrack" stroke="currentColor" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
-                        <use href="#pipeMainTrack" class="pipe-stream-line" stroke="#4F7CFF" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="14 22">
-                            <animate attributeName="stroke-dashoffset" values="72;0" dur="2.2s" repeatCount="indefinite" />
-                        </use>
-
-                        <!-- Traveling telemetry packets -->
-                        <circle r="4" fill="#4F7CFF">
-                            <animateMotion dur="4.2s" repeatCount="indefinite" path="M 100 54 L 300 54 L 500 54 L 700 54 L 900 54" />
-                        </circle>
-                        <circle r="3.2" fill="#0E1A33">
-                            <animateMotion dur="5.4s" repeatCount="indefinite" path="M 900 54 C 800 96, 600 96, 500 54 C 400 12, 200 12, 100 54" />
-                        </circle>
-                        <circle r="3.5" fill="#4F7CFF">
-                            <animateMotion dur="3.1s" repeatCount="indefinite" path="M 300 54 C 400 18, 600 18, 700 54" />
-                        </circle>
-
-                        <!-- Node 01 -->
-                        <g class="pipe-node is-active" data-pipe-node="1">
-                            <line x1="100" y1="54" x2="100" y2="122" class="pipe-drop" />
-                            <circle cx="100" cy="54" r="18" class="pipe-node-halo" />
-                            <rect x="86" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
-                            <text x="100" y="58" text-anchor="middle" class="pipe-node-num">01</text>
-                            <circle cx="100" cy="118" r="3.5" class="pipe-drop-tip" />
-                        </g>
-
-                        <!-- Node 02 -->
-                        <g class="pipe-node is-active" data-pipe-node="2">
-                            <line x1="300" y1="54" x2="300" y2="122" class="pipe-drop" />
-                            <circle cx="300" cy="54" r="18" class="pipe-node-halo" />
-                            <rect x="286" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
-                            <text x="300" y="58" text-anchor="middle" class="pipe-node-num">02</text>
-                            <circle cx="300" cy="118" r="3.5" class="pipe-drop-tip" />
-                        </g>
-
-                        <!-- Node 03 -->
-                        <g class="pipe-node is-active" data-pipe-node="3">
-                            <line x1="500" y1="54" x2="500" y2="122" class="pipe-drop" />
-                            <circle cx="500" cy="54" r="18" class="pipe-node-halo" />
-                            <rect x="486" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
-                            <text x="500" y="58" text-anchor="middle" class="pipe-node-num">03</text>
-                            <circle cx="500" cy="118" r="3.5" class="pipe-drop-tip" />
-                        </g>
-
-                        <!-- Node 04 -->
-                        <g class="pipe-node is-active" data-pipe-node="4">
-                            <line x1="700" y1="54" x2="700" y2="122" class="pipe-drop" />
-                            <circle cx="700" cy="54" r="18" class="pipe-node-halo" />
-                            <rect x="686" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
-                            <text x="700" y="58" text-anchor="middle" class="pipe-node-num">04</text>
-                            <circle cx="700" cy="118" r="3.5" class="pipe-drop-tip" />
-                        </g>
-
-                        <!-- Node 05 -->
-                        <g class="pipe-node is-active" data-pipe-node="5">
-                            <line x1="900" y1="54" x2="900" y2="122" class="pipe-drop" />
-                            <circle cx="900" cy="54" r="18" class="pipe-node-halo" />
-                            <rect x="886" y="40" width="28" height="28" rx="8" class="pipe-node-box" />
-                            <text x="900" y="58" text-anchor="middle" class="pipe-node-num">05</text>
-                            <circle cx="900" cy="118" r="3.5" class="pipe-drop-tip" />
-                        </g>
-                    </svg>
-                </div>
-            </div>
+            <!-- [FEATURE-2 START: Unified Ecosystem Architecture Board] -->
+            <div class="tech-board reveal reveal-delay-1">
             <!-- [FEATURE-2 END] -->
 
             <div class="tech-grid">
@@ -281,6 +175,118 @@ const html = String.raw`<section class="tech-section" id="technology">
                     <div class="tech-desc" data-tr="tech-5">Kamera, barkod tarama ve cihaz içi seslendirme entegrasyonları</div>
                 </div>
             </div>
+
+            <!-- [FEATURE-2 START: Orthogonal Circuit Bus & Ecosystem App Dock] -->
+            <div class="tech-bus-wrap" aria-hidden="true">
+                <svg class="tech-bus-svg" viewBox="0 0 1000 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base PCB traces from the 5 Tech Cards (top) into SeptimusLab Core (center) -->
+                    <g class="bus-traces-base" stroke="currentColor" stroke-opacity="0.14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path id="traceIn1" d="M 94 0 V 36 Q 94 48 106 48 H 456" />
+                        <path id="traceIn2" d="M 297 0 V 26 Q 297 38 309 38 H 456" />
+                        <path id="traceIn3" d="M 500 0 V 30" />
+                        <path id="traceIn4" d="M 703 0 V 26 Q 703 38 691 38 H 544" />
+                        <path id="traceIn5" d="M 906 0 V 36 Q 906 48 894 48 H 544" />
+
+                        <!-- Output traces from SeptimusLab Core (center) to the 4 Shipped Apps (bottom) -->
+                        <path id="traceOut1" d="M 456 58 H 137 Q 125 58 125 70 V 112" />
+                        <path id="traceOut2" d="M 482 68 V 78 Q 482 88 470 88 H 387 Q 375 88 375 98 V 112" />
+                        <path id="traceOut3" d="M 518 68 V 78 Q 518 88 530 88 H 613 Q 625 88 625 98 V 112" />
+                        <path id="traceOut4" d="M 544 58 H 863 Q 875 58 875 70 V 112" />
+                    </g>
+
+                    <!-- Animated energy pulses flowing along the exact PCB traces -->
+                    <g class="bus-traces-pulse" stroke="#4F7CFF" stroke-width="2" stroke-linecap="round">
+                        <use href="#traceIn1" class="bus-trace" data-trace-in="1" stroke-dasharray="44 380">
+                            <animate attributeName="stroke-dashoffset" values="424;0" dur="3.4s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceIn2" class="bus-trace" data-trace-in="2" stroke-dasharray="36 220">
+                            <animate attributeName="stroke-dashoffset" values="256;0" dur="2.6s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceIn3" class="bus-trace" data-trace-in="3" stroke-dasharray="16 60">
+                            <animate attributeName="stroke-dashoffset" values="76;0" dur="1.8s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceIn4" class="bus-trace" data-trace-in="4" stroke-dasharray="36 220">
+                            <animate attributeName="stroke-dashoffset" values="256;0" dur="2.8s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceIn5" class="bus-trace" data-trace-in="5" stroke-dasharray="44 380">
+                            <animate attributeName="stroke-dashoffset" values="424;0" dur="3.6s" repeatCount="indefinite" />
+                        </use>
+
+                        <use href="#traceOut1" class="bus-trace" data-trace-out="1" stroke-dasharray="42 360">
+                            <animate attributeName="stroke-dashoffset" values="402;0" dur="3.2s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceOut2" class="bus-trace" data-trace-out="2" stroke-dasharray="28 180">
+                            <animate attributeName="stroke-dashoffset" values="208;0" dur="2.4s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceOut3" class="bus-trace" data-trace-out="3" stroke-dasharray="28 180">
+                            <animate attributeName="stroke-dashoffset" values="208;0" dur="2.5s" repeatCount="indefinite" />
+                        </use>
+                        <use href="#traceOut4" class="bus-trace" data-trace-out="4" stroke-dasharray="42 360">
+                            <animate attributeName="stroke-dashoffset" values="402;0" dur="3.3s" repeatCount="indefinite" />
+                        </use>
+                    </g>
+
+                    <!-- Top card physical socket pins (aligned with cards 01..05) -->
+                    <g class="bus-sockets-top">
+                        <circle cx="94" cy="3" r="3.5" fill="#4F7CFF" />
+                        <circle cx="297" cy="3" r="3.5" fill="#4F7CFF" />
+                        <circle cx="500" cy="3" r="3.5" fill="#4F7CFF" />
+                        <circle cx="703" cy="3" r="3.5" fill="#4F7CFF" />
+                        <circle cx="906" cy="3" r="3.5" fill="#4F7CFF" />
+                    </g>
+
+                    <!-- Central SeptimusLab Core Hub -->
+                    <g class="bus-core-node" transform="translate(500, 49)">
+                        <rect x="-46" y="-19" width="92" height="38" rx="12" class="bus-core-pill" />
+                        <rect x="-34" y="-7" width="14" height="14" rx="3.5" fill="#4F7CFF" opacity="0.2" />
+                        <circle cx="-27" cy="0" r="3.5" fill="#4F7CFF">
+                            <animate attributeName="r" values="3;4.5;3" dur="2.2s" repeatCount="indefinite" />
+                        </circle>
+                        <text x="6" y="4" text-anchor="middle" class="bus-core-text">CORE VII</text>
+                    </g>
+
+                    <!-- Bottom app physical socket pins (aligned with the 4 apps) -->
+                    <g class="bus-sockets-bottom">
+                        <circle cx="125" cy="109" r="3.5" fill="#4F7CFF" />
+                        <circle cx="375" cy="109" r="3.5" fill="#4F7CFF" />
+                        <circle cx="625" cy="109" r="3.5" fill="#4F7CFF" />
+                        <circle cx="875" cy="109" r="3.5" fill="#4F7CFF" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="tech-apps-dock">
+                <a href="#products" class="tech-dock-app" data-dock-app="1">
+                    <img src="/assets/apps/purescan-foods-icon.png" alt="PureScan Foods" width="32" height="32">
+                    <div class="tech-dock-meta">
+                        <strong>PureScan Foods</strong>
+                        <span>iOS · Android</span>
+                    </div>
+                </a>
+                <a href="#products" class="tech-dock-app" data-dock-app="2">
+                    <img src="/assets/apps/pausemenu-icon.png" alt="Pause Menu" width="32" height="32">
+                    <div class="tech-dock-meta">
+                        <strong>Pause Menu</strong>
+                        <span>Web · Android</span>
+                    </div>
+                </a>
+                <a href="#products" class="tech-dock-app" data-dock-app="3">
+                    <img src="/assets/apps/purescan-icon.png" alt="PureScan Cosmetics" width="32" height="32">
+                    <div class="tech-dock-meta">
+                        <strong>PureScan Cosmetics</strong>
+                        <span>Android</span>
+                    </div>
+                </a>
+                <a href="#products" class="tech-dock-app" data-dock-app="4">
+                    <img src="/assets/apps/fintel-icon.png" alt="Fintel" width="32" height="32">
+                    <div class="tech-dock-meta">
+                        <strong>Fintel</strong>
+                        <span>Android</span>
+                    </div>
+                </a>
+            </div>
+            </div>
+            <!-- [FEATURE-2 END] -->
         </div>
     </section>`;
 
