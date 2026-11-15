@@ -6,6 +6,7 @@ const appleGlyph = String.raw`<svg class="store-glyph" viewBox="0 0 24 24" fill=
 // PureScan Foods ve Cosmetics'in kendi tanıtım sayfası var; kart görseli ve adı oraya bağlanır.
 const FOODS_SITE = "https://purescan-foods.septimuslab.com/marketing/";
 const COSMETICS_SITE = "https://purescan.septimuslab.com/marketing/";
+const FINTEL_SITE = "https://fintel.septimuslab.com/marketing/";
 const siteArrow = String.raw`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>`;
 
 const playButton = (href) => String.raw`<a href="${href}" target="_blank" rel="noopener noreferrer" class="store-btn">
@@ -145,16 +146,17 @@ const html = String.raw`<section class="products-section" id="products">
                 <!-- Fintel -->
                 <article class="product-card product-orange reveal reveal-delay-3">
                     <div class="product-visual">
-                        <div class="product-phone">
+                        <a class="product-site-cue" href="${FINTEL_SITE}" target="_blank" rel="noopener noreferrer" aria-label="Fintel tanıtım sayfası">${siteArrow}</a>
+                        <a class="product-phone product-site" href="${FINTEL_SITE}" target="_blank" rel="noopener noreferrer" aria-label="Fintel tanıtım sayfası" tabindex="-1">
                             <img src="/assets/fintel-screen.webp" alt="Fintel uygulama ekranı" loading="lazy">
-                        </div>
+                        </a>
                     </div>
                     <div class="product-body">
                         <header class="product-head">
                             <span class="product-icon">
                                 <img src="/assets/fintel.webp" alt="Fintel uygulama ikonu">
                             </span>
-                            <h3 class="product-name">Fintel</h3>
+                            <h3 class="product-name"><a class="product-name-link" href="${FINTEL_SITE}" target="_blank" rel="noopener noreferrer">Fintel<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
                         <p class="product-tagline" data-tr="fintel-tagline">
                             Maaş dönemini, günlük limitini ve taksitlerini tek yerde takip eder. Fişi okur, Nova ile sorularını yanıtlar.
