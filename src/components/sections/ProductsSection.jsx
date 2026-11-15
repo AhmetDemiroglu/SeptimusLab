@@ -55,7 +55,18 @@ const html = String.raw`<section class="products-section" id="products">
                             <span class="store-chip" title="App Store" aria-label="App Store'da mevcut">${appleGlyph}</span>
                         </div>
                         <a class="product-site-cue" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası">${siteArrow}</a>
+                        <div class="live-stage" aria-hidden="true">
+                            <span class="live-chip live-chip-left">
+                                <span class="live-dot live-dot-green"></span>
+                                <span data-tr="f1-foods-chip1">Gluten: Yok</span>
+                            </span>
+                            <span class="live-chip live-chip-right">
+                                <span class="live-dot live-dot-amber"></span>
+                                <span data-tr="f1-foods-chip2">Skor: 92/100</span>
+                            </span>
+                        </div>
                         <a class="product-phone product-site" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası" tabindex="-1">
+                            <span class="live-scan-line" aria-hidden="true"></span>
                             <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
                         </a>
                     </div>
@@ -89,6 +100,16 @@ const html = String.raw`<section class="products-section" id="products">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                         </div>
                         <a class="product-site-cue" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi">${siteArrow}</a>
+                        <div class="live-stage" aria-hidden="true">
+                            <span class="live-chip live-chip-left">
+                                <span class="live-dot live-dot-violet"></span>
+                                <span data-tr="f1-pause-chip1">★ 9.4 İnceleme</span>
+                            </span>
+                            <span class="live-chip live-chip-right">
+                                <span class="live-typing"><i></i><i></i><i></i></span>
+                                <span data-tr="f1-pause-chip2">AI Kulübü Aktif</span>
+                            </span>
+                        </div>
                         <a class="product-phone product-site" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi" tabindex="-1">
                             <img src="/assets/pausemenu-screen.jpg" data-img-tr="/assets/pausemenu-screen.jpg" data-img-en="/assets/pausemenu-en.jpg" alt="Pause Menu uygulama ekranı" loading="lazy">
                         </a>
@@ -123,7 +144,18 @@ const html = String.raw`<section class="products-section" id="products">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
                         </div>
                         <a class="product-site-cue" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası">${siteArrow}</a>
+                        <div class="live-stage" aria-hidden="true">
+                            <span class="live-chip live-chip-left">
+                                <span class="live-dot live-dot-green"></span>
+                                <span data-tr="f1-cosm-chip1">Cilt Uyumu: %96</span>
+                            </span>
+                            <span class="live-chip live-chip-right">
+                                <span class="live-dot live-dot-teal"></span>
+                                <span data-tr="f1-cosm-chip2">Temiz İçerik</span>
+                            </span>
+                        </div>
                         <a class="product-phone product-site" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası" tabindex="-1">
+                            <span class="live-scan-line live-scan-teal" aria-hidden="true"></span>
                             <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
                         </a>
                     </div>
@@ -154,6 +186,16 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <div class="product-stores">
                             <span class="store-chip" title="Google Play" aria-label="Google Play'de mevcut">${playGlyph}</span>
+                        </div>
+                        <div class="live-stage" aria-hidden="true">
+                            <span class="live-chip live-chip-left">
+                                <span class="live-dot live-dot-blue"></span>
+                                <span data-tr="f1-fintel-chip1">Nova AI: +%18</span>
+                            </span>
+                            <span class="live-chip live-chip-right">
+                                <span class="live-dot live-dot-green"></span>
+                                <span data-tr="f1-fintel-chip2">Limit: Dengeli</span>
+                            </span>
                         </div>
                         <div class="product-phone">
                             <img src="/assets/fintel-screen.webp" alt="Fintel uygulama ekranı" loading="lazy">

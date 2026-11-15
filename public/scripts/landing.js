@@ -97,6 +97,16 @@ const translations = {
         "footer-developer": "Kurucu",
         "footer-email": "E-posta",
         "footer-rights": "Tüm hakları saklıdır.",
+        // [FEATURE-1 START]
+        "f1-foods-chip1": "Gluten: Yok",
+        "f1-foods-chip2": "Skor: 92/100",
+        "f1-pause-chip1": "★ 9.4 İnceleme",
+        "f1-pause-chip2": "AI Kulübü Aktif",
+        "f1-cosm-chip1": "Cilt Uyumu: %96",
+        "f1-cosm-chip2": "Temiz İçerik",
+        "f1-fintel-chip1": "Nova AI: +%18",
+        "f1-fintel-chip2": "Limit: Dengeli",
+        // [FEATURE-1 END]
     },
     en: {
         "nav-about": "About",
@@ -195,6 +205,16 @@ const translations = {
         "footer-developer": "Founder",
         "footer-email": "Email",
         "footer-rights": "All rights reserved.",
+        // [FEATURE-1 START]
+        "f1-foods-chip1": "Gluten: Free",
+        "f1-foods-chip2": "Score: 92/100",
+        "f1-pause-chip1": "★ 9.4 Review",
+        "f1-pause-chip2": "AI Club Live",
+        "f1-cosm-chip1": "Skin Match: 96%",
+        "f1-cosm-chip2": "Clean Formula",
+        "f1-fintel-chip1": "Nova AI: +18%",
+        "f1-fintel-chip2": "Limit: On Track",
+        // [FEATURE-1 END]
     },
 };
 
