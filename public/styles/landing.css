@@ -2630,7 +2630,7 @@ html[data-theme="dark"] .live-chip {
 
 .studio-card {
     width: min(440px, 100%);
-    padding: 1.9rem 2rem 2rem;
+    padding: 1.95rem 2.1rem 2.55rem;
 }
 
 .studio-card-head {
@@ -2645,8 +2645,19 @@ html[data-theme="dark"] .live-chip {
 }
 
 .studio-card-specs {
-    margin-top: 1.1rem;
-    gap: 0.7rem;
+    margin-top: 1.15rem;
+    gap: 0.9rem;
+}
+
+.studio-card-specs li:last-child {
+    padding-right: 4.8rem;
+}
+
+.studio-stamp {
+    right: -32px;
+    bottom: -42px;
+    width: 112px;
+    height: 112px;
 }
 
 .roman-strip {
@@ -2694,31 +2705,33 @@ html[data-theme="dark"] .roman-strip {
 /* === [FEATURE-4 END] === */
 
 /* === [FEATURE-5 START: Vision Scroll-Linked Logo-Blue Timeline Beam] === */
+.timeline::before {
+    background: repeating-linear-gradient(180deg, var(--line) 0 4px, transparent 4px 8px);
+    opacity: 0.9;
+}
+
 .timeline::after {
     content: '';
     position: absolute;
-    left: 7.5px;
+    left: 7.75px;
     top: 10px;
-    bottom: 10px;
-    width: 2.5px;
-    border-radius: 4px;
-    background: linear-gradient(180deg, #4F7CFF 0%, #6D93FF 85%, #FFFFFF 100%);
-    box-shadow: 0 0 12px rgba(79, 124, 255, 0.65), 0 0 4px rgba(79, 124, 255, 0.9);
-    transform-origin: top center;
-    transform: scaleY(var(--tl-progress, 0));
-    transition: transform 0.08s linear;
+    width: 1.5px;
+    height: calc((100% - 20px) * var(--tl-progress, 0));
+    border-radius: 2px;
+    background: #4F7CFF;
+    box-shadow: 0 0 6px rgba(79, 124, 255, 0.32);
     pointer-events: none;
 }
 
 .timeline-dot {
     z-index: 1;
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .timeline-item.is-lit .timeline-dot {
     border-color: #4F7CFF;
     background: #4F7CFF;
-    box-shadow: 0 0 0 5px rgba(79, 124, 255, 0.22), 0 0 14px rgba(79, 124, 255, 0.55);
-    transform: scale(1.08);
+    box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.18);
+    transform: scale(1.05);
 }
 /* === [FEATURE-5 END] === */

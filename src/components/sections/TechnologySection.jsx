@@ -237,12 +237,8 @@ const html = String.raw`<section class="tech-section" id="technology">
 
                     <!-- Central SeptimusLab Core Hub -->
                     <g class="bus-core-node" transform="translate(500, 49)">
-                        <rect x="-46" y="-19" width="92" height="38" rx="12" class="bus-core-pill" />
-                        <rect x="-34" y="-7" width="14" height="14" rx="3.5" fill="#4F7CFF" opacity="0.2" />
-                        <circle cx="-27" cy="0" r="3.5" fill="#4F7CFF">
-                            <animate attributeName="r" values="3;4.5;3" dur="2.2s" repeatCount="indefinite" />
-                        </circle>
-                        <text x="6" y="4" text-anchor="middle" class="bus-core-text">CORE VII</text>
+                        <rect x="-42" y="-17" width="84" height="34" rx="11" class="bus-core-pill" />
+                        <text x="0" y="4" text-anchor="middle" class="bus-core-text">CORE VII</text>
                     </g>
 
                     <!-- Bottom app physical socket pins (aligned with the 4 apps) -->
@@ -257,28 +253,28 @@ const html = String.raw`<section class="tech-section" id="technology">
 
             <div class="tech-apps-dock">
                 <a href="#products" class="tech-dock-app" data-dock-app="1">
-                    <img src="/assets/apps/purescan-foods-icon.png" alt="PureScan Foods" width="32" height="32">
+                    <img src="/assets/purescan2.png" alt="PureScan Foods" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>PureScan Foods</strong>
                         <span>iOS · Android</span>
                     </div>
                 </a>
                 <a href="#products" class="tech-dock-app" data-dock-app="2">
-                    <img src="/assets/apps/pausemenu-icon.png" alt="Pause Menu" width="32" height="32">
+                    <img src="/assets/pausemenu.png" alt="Pause Menu" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>Pause Menu</strong>
-                        <span>Web · Android</span>
+                        <span>Web · iOS · Android</span>
                     </div>
                 </a>
                 <a href="#products" class="tech-dock-app" data-dock-app="3">
-                    <img src="/assets/apps/purescan-icon.png" alt="PureScan Cosmetics" width="32" height="32">
+                    <img src="/assets/purescan.png" alt="PureScan Cosmetics" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>PureScan Cosmetics</strong>
                         <span>Android</span>
                     </div>
                 </a>
                 <a href="#products" class="tech-dock-app" data-dock-app="4">
-                    <img src="/assets/apps/fintel-icon.png" alt="Fintel" width="32" height="32">
+                    <img src="/assets/fintel.webp" alt="Fintel" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>Fintel</strong>
                         <span>Android</span>

@@ -590,40 +590,47 @@ function setupVisionTimelineBeam() {
     if (!timeline) return;
 
     const items = Array.from(timeline.querySelectorAll(".timeline-item"));
-    let ticking = false;
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let rafId = 0;
 
-    function updateBeam() {
-        ticking = false;
+    function computeTarget() {
         const rect = timeline.getBoundingClientRect();
         const vh = window.innerHeight;
-        // Start filling when top of timeline enters 72% of viewport, finish near 28%
-        const startY = vh * 0.72;
+        const startY = vh * 0.68;
         const raw = (startY - rect.top) / Math.max(1, rect.height - 20);
-        const progress = Math.max(0, Math.min(1, raw));
-        timeline.style.setProperty("--tl-progress", progress.toFixed(4));
+        targetProgress = Math.max(0, Math.min(1, raw));
+        if (!rafId) {
+            rafId = requestAnimationFrame(step);
+        }
+    }
 
-        const beamTipY = rect.top + 10 + (rect.height - 20) * progress;
+    function step() {
+        const diff = targetProgress - currentProgress;
+        if (Math.abs(diff) > 0.0008) {
+            currentProgress += diff * 0.14;
+            rafId = requestAnimationFrame(step);
+        } else {
+            currentProgress = targetProgress;
+            rafId = 0;
+        }
+
+        timeline.style.setProperty("--tl-progress", currentProgress.toFixed(4));
+
+        const rect = timeline.getBoundingClientRect();
+        const beamTipY = rect.top + 10 + (rect.height - 20) * currentProgress;
         items.forEach((item) => {
             const dot = item.querySelector(".timeline-dot");
             if (!dot) return;
             const dotRect = dot.getBoundingClientRect();
             const dotCenter = dotRect.top + dotRect.height * 0.5;
-            item.classList.toggle("is-lit", progress > 0.02 && beamTipY >= dotCenter - 6);
+            item.classList.toggle("is-lit", currentProgress > 0.015 && beamTipY >= dotCenter - 4);
         });
     }
 
-    window.addEventListener(
-        "scroll",
-        () => {
-            if (!ticking) {
-                requestAnimationFrame(updateBeam);
-                ticking = true;
-            }
-        },
-        { passive: true },
-    );
-    window.addEventListener("resize", updateBeam, { passive: true });
-    updateBeam();
+    window.addEventListener("scroll", computeTarget, { passive: true });
+    window.addEventListener("resize", computeTarget, { passive: true });
+    computeTarget();
 }
 // [FEATURE-5 END]
 
