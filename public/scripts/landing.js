@@ -116,6 +116,17 @@ const translations = {
         "f2-status-cosmetics": "Kamera Vizyonu (05) -> React Native (02) -> Formül AI (04) -> Bulut Senkron (03)",
         "f2-status-fintel": "React Native 60fps (02) -> Şifreli Bulut (03) -> Nova AI Bütçe Motoru (04)",
         // [FEATURE-2 END]
+        // [FEATURE-4 START]
+        "f4-eyebrow": "ETKİLEŞİMLİ KÖKEN MATRİSİ",
+        "f4-era-roman": "Roma Takvimi (7. Ay)",
+        "f4-era-modern": "+Ocak & Şubat (9. Ay)",
+        "f4-badge-roman": "7. KARE · SEPTIMUS",
+        "f4-readout-roman":
+            "Logomuzdaki 3x3 dizilimin 7. karesi (sol alt), eski Roma takviminde yılın 7. ayı olan Eylül'ü (Septimus) temsil eder.",
+        "f4-badge-modern": "9. SIRA · KÖK KORUNDU",
+        "f4-readout-modern":
+            "Ocak (Ianuarius) ve Şubat (Februarius) başa eklenince Eylül 9. sıraya kaydı; ancak Latince 'yedinci' (Septimus) kökü değişmedi.",
+        // [FEATURE-4 END]
     },
     en: {
         "nav-about": "About",
@@ -233,6 +244,17 @@ const translations = {
         "f2-status-cosmetics": "Camera Vision (05) -> React Native (02) -> Formula AI (04) -> Cloud Sync (03)",
         "f2-status-fintel": "React Native 60fps (02) -> Encrypted Cloud (03) -> Nova AI Budget Engine (04)",
         // [FEATURE-2 END]
+        // [FEATURE-4 START]
+        "f4-eyebrow": "INTERACTIVE ORIGIN MATRIX",
+        "f4-era-roman": "Roman Calendar (7th)",
+        "f4-era-modern": "+Jan & Feb (9th)",
+        "f4-badge-roman": "TILE VII · SEPTIMUS",
+        "f4-readout-roman":
+            "Tile 7 (bottom-left) in our 3x3 emblem marks September (Septimus), originally the 7th month of the ancient Roman year.",
+        "f4-badge-modern": "SLOT IX · ROOT ENDURED",
+        "f4-readout-modern":
+            "Adding Ianuarius and Februarius shifted September to the 9th slot, yet its Latin root Septimus ('the seventh') remained.",
+        // [FEATURE-4 END]
     },
 };
 
@@ -604,6 +626,84 @@ function setupFeature3ThemeAndAudio() {
 }
 // [FEATURE-3 END]
 
+// [FEATURE-4 START: Interactive 3x3 Septimus Roman Calendar Matrix]
+function setupFeature4Matrix() {
+    const matrix = document.querySelector(".septimus-matrix");
+    if (!matrix) return;
+
+    const eraBtns = Array.from(matrix.querySelectorAll(".matrix-era-btn"));
+    const cells = Array.from(matrix.querySelectorAll(".matrix-cell"));
+    const badgeEl = document.getElementById("matrixBadge");
+    const readoutEl = document.getElementById("matrixReadout");
+
+    const romanSlots = [
+        { num: "I", name: "Martius", septimus: false, added: false },
+        { num: "II", name: "Aprilis", septimus: false, added: false },
+        { num: "III", name: "Maius", septimus: false, added: false },
+        { num: "IV", name: "Iunius", septimus: false, added: false },
+        { num: "V", name: "Quintilis", septimus: false, added: false },
+        { num: "VI", name: "Sextilis", septimus: false, added: false },
+        { num: "VII", name: "Septimus", septimus: true, added: false },
+        { num: "VIII", name: "October", septimus: false, added: false },
+        { num: "IX", name: "November", septimus: false, added: false },
+    ];
+
+    const modernSlots = [
+        { num: "+I", name: "Ianuarius", septimus: false, added: true },
+        { num: "+II", name: "Februarius", septimus: false, added: true },
+        { num: "III", name: "Martius", septimus: false, added: false },
+        { num: "IV", name: "Aprilis", septimus: false, added: false },
+        { num: "V", name: "Maius", septimus: false, added: false },
+        { num: "VI", name: "Iunius", septimus: false, added: false },
+        { num: "VII", name: "Quintilis", septimus: false, added: false },
+        { num: "VIII", name: "Sextilis", septimus: false, added: false },
+        { num: "IX", name: "Septimus", septimus: true, added: false },
+    ];
+
+    const sevenGlyph = `<svg class="matrix-seven-glyph" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M5 6 H22 V23" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+    function renderEra(era) {
+        matrix.dataset.era = era;
+        const slots = era === "modern" ? modernSlots : romanSlots;
+
+        eraBtns.forEach((btn) => {
+            btn.classList.toggle("active", btn.dataset.eraBtn === era);
+        });
+
+        cells.forEach((cell, idx) => {
+            const item = slots[idx];
+            cell.classList.toggle("is-septimus", item.septimus);
+            cell.classList.toggle("is-added", item.added);
+            cell.innerHTML = `<span class="matrix-roman">${item.num}</span><span class="matrix-month">${item.name}</span>${item.septimus ? sevenGlyph : ""}`;
+        });
+
+        if (badgeEl && readoutEl) {
+            const badgeKey = era === "modern" ? "f4-badge-modern" : "f4-badge-roman";
+            const readoutKey = era === "modern" ? "f4-readout-modern" : "f4-readout-roman";
+            badgeEl.setAttribute("data-tr", badgeKey);
+            readoutEl.setAttribute("data-tr", readoutKey);
+            if (translations[currentLang]) {
+                badgeEl.textContent = translations[currentLang][badgeKey] || badgeEl.textContent;
+                readoutEl.textContent = translations[currentLang][readoutKey] || readoutEl.textContent;
+            }
+        }
+    }
+
+    eraBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            renderEra(btn.dataset.eraBtn || "roman");
+        });
+    });
+
+    cells.forEach((cell) => {
+        cell.addEventListener("click", () => {
+            const nextEra = matrix.dataset.era === "roman" ? "modern" : "roman";
+            renderEra(nextEra);
+        });
+    });
+}
+// [FEATURE-4 END]
+
 document.addEventListener("DOMContentLoaded", () => {
     // Auto-detect and set initial language
     const userLang = navigator.language || navigator.userLanguage;
@@ -623,4 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // [FEATURE-3 START]
     setupFeature3ThemeAndAudio();
     // [FEATURE-3 END]
+    // [FEATURE-4 START]
+    setupFeature4Matrix();
+    // [FEATURE-4 END]
 });
