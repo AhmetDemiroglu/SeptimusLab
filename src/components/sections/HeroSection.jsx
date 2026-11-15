@@ -14,7 +14,7 @@ const html = String.raw`<section class="hero-section" id="hero">
                     <span data-tr="hero-title-1">Fikirden mağazaya,</span><br>
                     <em class="hero-title-accent" data-tr="hero-title-2">akıllı mobil uygulamalar.</em>
                 </h1>
-                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">Fikirleri iOS ve Android'de yaşayan, yapay zeka destekli mobil ürünlere dönüştürüyoruz. Tasarım, mühendislik ve mağaza yayını tek çatı altında.</p>
+                <p class="hero-subtitle reveal reveal-delay-2" data-tr="hero-subtitle">Yaratıcı fikirlerinizi iOS ve Android'de yaşayan, yapay zeka destekli mobil ürünlere dönüştürüyoruz. Tasarım, mühendislik ve mağaza yayını tek çatı altında.</p>
                 <div class="hero-actions reveal reveal-delay-3">
                     <a href="https://play.google.com/store/apps/developer?id=SeptimusLab" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-solid" aria-label="SeptimusLab Google Play Mağazası">
                         <svg class="store-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

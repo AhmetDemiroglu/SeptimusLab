@@ -105,7 +105,7 @@ const html = String.raw`<section class="products-section" id="products">
                         </p>
                         <div class="product-features">
                             <span class="feature-tag" data-tr="pausemenu-f1">Oyun Keşfi</span>
-                            <span class="feature-tag" data-tr="pausemenu-f2">İnceleme & Puan</span>
+                            <span class="feature-tag" data-tr="pausemenu-f2">İnceleme &amp; Puan</span>
                             <span class="feature-tag" data-tr="pausemenu-f3">AI Kulübü</span>
                             <span class="feature-tag" data-tr="pausemenu-f4">Canlı Mesajlaşma</span>
                         </div>

@@ -1,8 +1,8 @@
 import { HtmlBlock } from "../HtmlBlock";
 
 const html = String.raw`<section class="contact-section" id="contact">
-        <div class="contact-glow contact-glow-1" aria-hidden="true" data-parallax="0.06"></div>
-        <div class="contact-glow contact-glow-2" aria-hidden="true" data-parallax="0.1"></div>
+        <div class="contact-glow contact-glow-1" aria-hidden="true"></div>
+        <div class="contact-glow contact-glow-2" aria-hidden="true"></div>
 
         <div class="container">
             <div class="contact-content">
