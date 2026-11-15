@@ -8,7 +8,7 @@ const html = String.raw`<nav class="nav-wrapper" role="navigation" aria-label="A
             </span>
 
             <a href="#" class="nav-brand" aria-label="SeptimusLab Ana Sayfa">
-                <img src="/assets/brand/septimuslab-lockup-yatay-acik-zemin.svg" alt="SeptimusLab" class="nav-brand-logo" width="184" height="27">
+                <img src="/assets/brand/septimuslab-lockup-yatay-acik-zemin.svg" data-logo-light="/assets/brand/septimuslab-lockup-yatay-acik-zemin.svg" data-logo-dark="/assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg" alt="SeptimusLab" class="nav-brand-logo" width="184" height="27">
             </a>
 
             <div class="nav-links">
@@ -20,6 +20,38 @@ const html = String.raw`<nav class="nav-wrapper" role="navigation" aria-label="A
             </div>
 
             <div class="nav-actions">
+                <!-- [FEATURE-3 START: Night-Navy Dark Theme & Web Audio Micro-Haptics] -->
+                <div class="lab-controls" role="group" aria-label="Stüdyo görünüm ve ses kontrolleri">
+                    <button type="button" class="lab-ctrl-btn" id="themeToggleBtn" aria-pressed="false" aria-label="Gece Mavisi Modu" title="Gece Mavisi Modu (#0E1A33)">
+                        <svg class="lab-icon lab-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="lab-icon lab-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="12" y1="2" x2="12" y2="4"></line>
+                            <line x1="12" y1="20" x2="12" y2="22"></line>
+                            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+                            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+                            <line x1="2" y1="12" x2="4" y2="12"></line>
+                            <line x1="20" y1="12" x2="22" y2="12"></line>
+                            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+                            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+                        </svg>
+                    </button>
+                    <button type="button" class="lab-ctrl-btn active" id="soundToggleBtn" aria-pressed="true" aria-label="Mikro Ses Efektleri" title="Mikro Ses Efektleri">
+                        <svg class="lab-icon lab-icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                        <svg class="lab-icon lab-icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                    </button>
+                </div>
+                <!-- [FEATURE-3 END] -->
                 <div class="lang-toggle" role="group" aria-label="Dil seçimi">
                     <button class="lang-btn active" data-lang="tr" aria-pressed="true" aria-label="Türkçe">
                         <svg class="flag-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">

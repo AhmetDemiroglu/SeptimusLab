@@ -498,6 +498,112 @@ function setupFeature2Pipeline() {
 }
 // [FEATURE-2 END]
 
+// [FEATURE-3 START: Night-Navy Dark Theme & Web Audio Micro-Haptics]
+function setupFeature3ThemeAndAudio() {
+    const themeBtn = document.getElementById("themeToggleBtn");
+    const soundBtn = document.getElementById("soundToggleBtn");
+    const root = document.documentElement;
+
+    let isDark = false;
+    try {
+        isDark = localStorage.getItem("septimus-theme") === "dark";
+    } catch (_) {}
+
+    let soundEnabled = true;
+    try {
+        const savedSound = localStorage.getItem("septimus-sound");
+        if (savedSound !== null) soundEnabled = savedSound === "1";
+    } catch (_) {}
+
+    let audioCtx = null;
+
+    function playMicroTick(freq = 680, duration = 0.022, gainVal = 0.025) {
+        if (!soundEnabled || prefersReducedMotion) return;
+        try {
+            const Ctx = window.AudioContext || window.webkitAudioContext;
+            if (!Ctx) return;
+            if (!audioCtx) audioCtx = new Ctx();
+            if (audioCtx.state === "suspended") audioCtx.resume();
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(freq * 0.45, audioCtx.currentTime + duration);
+
+            gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        } catch (_) {}
+    }
+
+    function applyTheme(dark) {
+        isDark = dark;
+        if (dark) {
+            root.setAttribute("data-theme", "dark");
+        } else {
+            root.removeAttribute("data-theme");
+        }
+
+        if (themeBtn) {
+            themeBtn.classList.toggle("active", dark);
+            themeBtn.setAttribute("aria-pressed", String(dark));
+        }
+
+        document.querySelectorAll("[data-logo-light][data-logo-dark]").forEach((img) => {
+            const targetSrc = dark ? img.getAttribute("data-logo-dark") : img.getAttribute("data-logo-light");
+            if (targetSrc && img.getAttribute("src") !== targetSrc) {
+                img.setAttribute("src", targetSrc);
+            }
+        });
+
+        try {
+            localStorage.setItem("septimus-theme", dark ? "dark" : "light");
+        } catch (_) {}
+    }
+
+    function applySoundState(enabled) {
+        soundEnabled = enabled;
+        if (soundBtn) {
+            soundBtn.classList.toggle("active", enabled);
+            soundBtn.setAttribute("aria-pressed", String(enabled));
+        }
+        try {
+            localStorage.setItem("septimus-sound", enabled ? "1" : "0");
+        } catch (_) {}
+    }
+
+    applyTheme(isDark);
+    applySoundState(soundEnabled);
+
+    if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+            applyTheme(!isDark);
+            playMicroTick(isDark ? 520 : 760, 0.035, 0.035);
+        });
+    }
+
+    if (soundBtn) {
+        soundBtn.addEventListener("click", () => {
+            const next = !soundEnabled;
+            applySoundState(next);
+            if (next) playMicroTick(840, 0.03, 0.035);
+        });
+    }
+
+    document.addEventListener("click", (e) => {
+        const interactive = e.target.closest("a, button, .tech-card, .product-card, .matrix-cell");
+        if (interactive && interactive !== themeBtn && interactive !== soundBtn) {
+            playMicroTick(720, 0.024, 0.028);
+        }
+    });
+}
+// [FEATURE-3 END]
+
 document.addEventListener("DOMContentLoaded", () => {
     // Auto-detect and set initial language
     const userLang = navigator.language || navigator.userLanguage;
@@ -514,4 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // [FEATURE-2 START]
     setupFeature2Pipeline();
     // [FEATURE-2 END]
+    // [FEATURE-3 START]
+    setupFeature3ThemeAndAudio();
+    // [FEATURE-3 END]
 });
