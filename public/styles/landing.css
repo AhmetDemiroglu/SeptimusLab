@@ -1471,7 +1471,6 @@ a.product-phone {
     }
 
     .product-head {
-        align-items: flex-start;
         flex-wrap: wrap;
     }
 
