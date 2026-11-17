@@ -1154,12 +1154,8 @@ section > .container {
     gap: 1.75rem;
 }
 
-@media (min-width: 720px) and (max-width: 1023px) {
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (min-width: 1024px) {
-    .products-grid { grid-template-columns: repeat(3, 1fr); }
+    .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .product-card {
@@ -1430,48 +1426,58 @@ a.product-phone {
     font-size: 0.82rem;
 }
 
-/* Kart içi hizalama: görsel, başlık, açıklama, etiketler ve butonlar
-   aynı satırdaki tüm kartlarda aynı hizada başlar (subgrid, 5 satır). */
+/* Horizontal product cards: keep the whole phone visible beside the copy.
+   Narrow screens retain the original stacked card layout. */
 @media (min-width: 720px) {
-    .products-grid {
-        row-gap: 0;
-        margin-bottom: -1.75rem;
-    }
     .product-card {
-        grid-row: span 5;
         display: grid;
-        grid-template-rows: subgrid;
-        row-gap: 0;
-        margin-bottom: 1.75rem;
+        grid-template-columns: minmax(160px, 0.72fr) minmax(0, 1fr);
     }
-    .product-card .product-body {
-        display: contents;
+
+    .product-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 360px;
+        padding: 32px 16px;
     }
-    .product-card .product-head,
-    .product-card .product-tagline,
-    .product-card .product-features,
-    .product-card .product-actions {
-        margin-left: 1.75rem;
-        margin-right: 1.75rem;
+
+    .product-phone {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 138px;
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+        transform: none;
     }
-    .product-card .product-head { margin-top: 1.75rem; }
-    .product-card .product-features { align-content: flex-start; }
-    .product-card .product-actions {
-        margin-bottom: 2rem;
-        align-self: end;
+
+    .product-phone img {
+        height: auto;
+        object-fit: contain;
     }
-}
-@supports not (grid-template-rows: subgrid) {
-    @media (min-width: 720px) {
-        .product-card { display: flex; flex-direction: column; grid-row: auto; margin-bottom: 0; }
-        .products-grid { row-gap: 1.75rem; margin-bottom: 0; }
-        .product-card .product-body { display: flex; flex-direction: column; flex: 1; }
-        .product-card .product-head,
-        .product-card .product-tagline,
-        .product-card .product-features,
-        .product-card .product-actions { margin-left: 0; margin-right: 0; }
-        .product-card .product-head { margin-top: 0; }
-        .product-card .product-actions { margin-top: auto; margin-bottom: 0; }
+
+    .product-card:hover .product-phone {
+        transform: translateY(-6px);
+    }
+
+    .product-body {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        padding: 28px 20px;
+    }
+
+    .product-head {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .product-actions {
+        flex-wrap: wrap;
+        margin-top: auto;
     }
 }
 
