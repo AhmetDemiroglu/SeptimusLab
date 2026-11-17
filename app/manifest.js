@@ -13,27 +13,27 @@ export default function manifest() {
     categories: ["business", "developer tools", "productivity"],
     icons: [
       {
-        src: "/assets/brand/favicon.ico",
+        src: "/assets/brand/favicon.ico?v=2",
         sizes: "48x48 32x32 16x16",
         type: "image/x-icon",
       },
       {
-        src: "/assets/brand/favicon.svg",
+        src: "/assets/brand/favicon.svg?v=2",
         sizes: "any",
         type: "image/svg+xml",
       },
       {
-        src: "/assets/brand/icon-192.png",
+        src: "/assets/brand/icon-192.png?v=2",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/assets/brand/icon-512.png",
+        src: "/assets/brand/icon-512.png?v=2",
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "/assets/brand/icon-maskable-512.png",
+        src: "/assets/brand/icon-maskable-512.png?v=2",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",

@@ -206,11 +206,11 @@ export const metadata = {
     },
     icons: {
         icon: [
-            { url: "/assets/brand/favicon.ico", sizes: "48x48" },
-            { url: "/assets/brand/favicon.svg", type: "image/svg+xml" },
+            { url: "/assets/brand/favicon.ico?v=2", sizes: "48x48" },
+            { url: "/assets/brand/favicon.svg?v=2", type: "image/svg+xml" },
         ],
-        shortcut: "/assets/brand/favicon.ico",
-        apple: "/assets/brand/apple-touch-icon.png",
+        shortcut: "/assets/brand/favicon.ico?v=2",
+        apple: "/assets/brand/apple-touch-icon.png?v=2",
     },
     robots: {
         index: true,
