@@ -68,7 +68,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-body">
                         <header class="product-head">
                             <span class="product-icon">
-                                <img src="/assets/purescan2.png" alt="PureScan Foods uygulama ikonu">
+                                <img src="/assets/purescan2-icon.webp" alt="PureScan Foods uygulama ikonu">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer">PureScan Foods<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
@@ -90,13 +90,13 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi">${siteArrow}</a>
                         <a class="product-phone product-site" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi" tabindex="-1">
-                            <img src="/assets/pausemenu-screen.jpg" data-img-tr="/assets/pausemenu-screen.jpg" data-img-en="/assets/pausemenu-en.jpg" alt="Pause Menu uygulama ekranı" loading="lazy">
+                            <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" alt="Pause Menu uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
                         <header class="product-head">
                             <span class="product-icon">
-                                <img src="/assets/pausemenu.png" alt="Pause Menu uygulama ikonu">
+                                <img src="/assets/pausemenu-icon.webp" alt="Pause Menu uygulama ikonu">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer">Pause Menu<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>
@@ -125,7 +125,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-body">
                         <header class="product-head">
                             <span class="product-icon">
-                                <img src="/assets/purescan.png" alt="PureScan Cosmetics uygulama ikonu">
+                                <img src="/assets/purescan-icon.webp" alt="PureScan Cosmetics uygulama ikonu">
                             </span>
                             <h3 class="product-name"><a class="product-name-link" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer">PureScan Cosmetics<span class="ext-arrow">${siteArrow}</span></a></h3>
                         </header>

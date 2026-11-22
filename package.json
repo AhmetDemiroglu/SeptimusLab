@@ -4,7 +4,9 @@
   "private": true,
   "description": "SeptimusLab landing page refactored to Next.js",
   "scripts": {
+    "predev": "node scripts/minify-assets.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/minify-assets.mjs",
     "build": "next build",
     "start": "next start"
   },

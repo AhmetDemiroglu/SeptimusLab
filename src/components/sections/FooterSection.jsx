@@ -36,7 +36,7 @@ const html = String.raw`<footer class="footer">
                 </div>
 
                 <div>
-                    <h4 class="footer-column-title" data-tr="footer-products">Ürünler</h4>
+                    <h3 class="footer-column-title" data-tr="footer-products">Ürünler</h3>
                     <div class="footer-links">
                         <a href="https://play.google.com/store/apps/details?id=com.septimuslab.purescan" target="_blank" rel="noopener noreferrer" class="footer-link">PureScan Cosmetics</a>
                         <a href="https://play.google.com/store/apps/details?id=com.fintel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Fintel</a>
@@ -46,7 +46,7 @@ const html = String.raw`<footer class="footer">
                 </div>
 
                 <div>
-                    <h4 class="footer-column-title" data-tr="footer-company">Şirket</h4>
+                    <h3 class="footer-column-title" data-tr="footer-company">Şirket</h3>
                     <div class="footer-links">
                         <a href="#about" class="footer-link" data-tr="nav-about">Hakkımızda</a>
                         <a href="#vision" class="footer-link" data-tr="nav-vision">Vizyon</a>
@@ -54,7 +54,7 @@ const html = String.raw`<footer class="footer">
                 </div>
 
                 <div>
-                    <h4 class="footer-column-title" data-tr="footer-developer">Kurucu</h4>
+                    <h3 class="footer-column-title" data-tr="footer-developer">Kurucu</h3>
                     <div class="footer-links">
                         <a href="https://ahmetdemiroglu.dev/" target="_blank" rel="noopener noreferrer" class="footer-link">Ahmet Demiroğlu</a>
                         <a href="mailto:info@septimuslab.com" class="footer-link">info@septimuslab.com</a>

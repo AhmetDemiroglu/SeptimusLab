@@ -263,8 +263,8 @@ export default function RootLayout({ children }) {
     return (
         <html lang="tr">
             <head>
-                {/* Google Analytics 4 */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5RB1ESJLY" />
+                {/* Google Analytics 4: kuyruk hemen kurulur (sayfa gorunumu kaybolmaz), 180 KB'lik
+                    gtag.js ise ilk etkilesimde ya da yuklemeden 3 sn sonra gelir, ilk boyamayla yarismaz. */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
@@ -272,21 +272,30 @@ export default function RootLayout({ children }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-G5RB1ESJLY');
+              (function(){
+                var done = false, evs = ['pointerdown','keydown','touchstart','scroll'];
+                function load(){
+                  if (done) return; done = true;
+                  evs.forEach(function(e){ removeEventListener(e, load); });
+                  var s = document.createElement('script');
+                  s.async = true;
+                  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G5RB1ESJLY';
+                  document.head.appendChild(s);
+                }
+                evs.forEach(function(e){ addEventListener(e, load, { once: true, passive: true }); });
+                addEventListener('load', function(){ setTimeout(load, 3000); });
+              })();
             `,
                     }}
                 />
 
-                {/* Preconnects */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-                <link rel="preconnect" href="https://www.googletagmanager.com" />
-                <link rel="preconnect" href="https://www.google-analytics.com" />
+                {/* Font siteden sunulur; ilk ekrandaki dik kesim dosyalar onceden istenir */}
+                <link rel="preload" href="/fonts/chakra-petch-400-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
+                <link rel="preload" href="/fonts/chakra-petch-600-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
+                <link rel="preload" href="/fonts/chakra-petch-400-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="" />
+                <link rel="preload" href="/fonts/chakra-petch-600-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="" />
 
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-                    rel="stylesheet"
-                />
-                <link rel="stylesheet" href="/styles/landing.css" />
+                <link rel="stylesheet" href="/styles/landing.min.css" />
 
                 {/* JSON-LD Structured Data */}
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

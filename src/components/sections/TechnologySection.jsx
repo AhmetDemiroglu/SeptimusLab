@@ -248,21 +248,21 @@ const html = String.raw`<section class="tech-section" id="technology">
 
             <div class="tech-apps-dock">
                 <a href="#products" class="tech-dock-app" data-dock-app="1">
-                    <img src="/assets/purescan2.png" alt="PureScan Foods" width="32" height="32">
+                    <img src="/assets/purescan2-icon.webp" alt="PureScan Foods" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>PureScan Foods</strong>
                         <span>iOS · Android</span>
                     </div>
                 </a>
                 <a href="#products" class="tech-dock-app" data-dock-app="2">
-                    <img src="/assets/pausemenu.png" alt="Pause Menu" width="32" height="32">
+                    <img src="/assets/pausemenu-icon.webp" alt="Pause Menu" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>Pause Menu</strong>
                         <span>Web · iOS · Android</span>
                     </div>
                 </a>
                 <a href="#products" class="tech-dock-app" data-dock-app="3">
-                    <img src="/assets/purescan.png" alt="PureScan Cosmetics" width="32" height="32">
+                    <img src="/assets/purescan-icon.webp" alt="PureScan Cosmetics" width="32" height="32">
                     <div class="tech-dock-meta">
                         <strong>PureScan Cosmetics</strong>
                         <span>Android</span>

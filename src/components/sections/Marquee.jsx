@@ -3,7 +3,7 @@ import { HtmlBlock } from "../HtmlBlock";
 const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknoloji bantı">
         <div class="marquee-track">
             <div class="marquee-item">
-                <img src="/assets/brand-logo-cosmetic.png" alt="PureScan Cosmetics">
+                <img src="/assets/brand-logo-cosmetic-66.webp" alt="PureScan Cosmetics">
                 <span>PureScan Cosmetics</span>
             </div>
             <div class="marquee-item">
@@ -17,7 +17,7 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>Google Play</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-food.webp" alt="PureScan Foods">
+                <img src="/assets/brand-logo-food-66.webp" alt="PureScan Foods">
                 <span>PureScan Foods</span>
             </div>
             <div class="marquee-item">
@@ -27,12 +27,12 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>App Store</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-pausemenu.png" alt="Pause Menu">
+                <img src="/assets/brand-logo-pausemenu-66.webp" alt="Pause Menu">
                 <span>Pause Menu</span>
             </div>
             <!-- Repeat -->
             <div class="marquee-item">
-                <img src="/assets/brand-logo-cosmetic.png" alt="PureScan Cosmetics">
+                <img src="/assets/brand-logo-cosmetic-66.webp" alt="PureScan Cosmetics">
                 <span>PureScan Cosmetics</span>
             </div>
             <div class="marquee-item">
@@ -46,7 +46,7 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>Google Play</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-food.webp" alt="PureScan Foods">
+                <img src="/assets/brand-logo-food-66.webp" alt="PureScan Foods">
                 <span>PureScan Foods</span>
             </div>
             <div class="marquee-item">
@@ -56,7 +56,7 @@ const html = String.raw`<div class="marquee-wrapper" aria-label="Marka ve teknol
                 <span>App Store</span>
             </div>
             <div class="marquee-item">
-                <img src="/assets/brand-logo-pausemenu.png" alt="Pause Menu">
+                <img src="/assets/brand-logo-pausemenu-66.webp" alt="Pause Menu">
                 <span>Pause Menu</span>
             </div>
         </div>

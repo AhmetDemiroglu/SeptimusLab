@@ -15,16 +15,18 @@ export default function HomePage() {
     <>
       <Navigation />
       <MobileMenu />
-      <HeroSection />
-      <Marquee />
-      <AboutSection />
-      <ProductsSection />
-      <TechnologySection />
-      <VisionSection />
-      <ContactSection />
+      <main>
+        <HeroSection />
+        <Marquee />
+        <AboutSection />
+        <ProductsSection />
+        <TechnologySection />
+        <VisionSection />
+        <ContactSection />
+      </main>
       <SectionSeparator />
       <FooterSection />
-      <script src="/scripts/landing.js"></script>
+      <script src="/scripts/landing.min.js"></script>
     </>
   );
 }
