@@ -1,4 +1,6 @@
-const siteUrl = "https://septimuslab.com";
+// Asil adres www: Vercel septimuslab.com'u www'ye yonlendiriyor. Kanonik yonlenen adresi gosterirse
+// Google www sayfasini "alternatif sayfa" sayip dizine eklemiyor (Search Console, Mart 2026).
+const siteUrl = "https://www.septimuslab.com";
 
 const jsonLd = {
     "@context": "https://schema.org",
@@ -198,11 +200,6 @@ export const metadata = {
     publisher: "SeptimusLab",
     alternates: {
         canonical: "/",
-        languages: {
-            "tr-TR": "/",
-            "en-US": "/",
-            "x-default": "/",
-        },
     },
     icons: {
         icon: [

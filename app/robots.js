@@ -6,7 +6,7 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://septimuslab.com/sitemap.xml",
-    host: "https://septimuslab.com",
+    sitemap: "https://www.septimuslab.com/sitemap.xml",
+    host: "https://www.septimuslab.com",
   };
 }
