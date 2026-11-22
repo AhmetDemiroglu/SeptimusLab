@@ -43,7 +43,7 @@ const html = String.raw`<section class="hero-section" id="hero">
                         <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" alt="Pause Menu uygulama arayüzü" loading="eager">
                     </div>
                     <div class="h-phone h-phone-right">
-                        <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama arayüzü" loading="eager">
+                        <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" alt="PureScan Cosmetics uygulama arayüzü" loading="eager">
                     </div>
                     <div class="h-phone h-phone-front">
                         <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama arayüzü" loading="eager">

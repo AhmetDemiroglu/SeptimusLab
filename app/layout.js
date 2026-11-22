@@ -122,7 +122,7 @@ const jsonLd = {
             description:
                 "Maaş dönemi, günlük limit, taksit ve fiş okuma ile aile bütçesi uygulaması. Nova ile harcama raporu ve sohbet.",
             applicationCategory: "FinanceApplication",
-            operatingSystem: "Android",
+            operatingSystem: "Android, iOS",
             offers: {
                 "@type": "Offer",
                 price: "0",

@@ -47,6 +47,9 @@ const appleButtonSoon = () => String.raw`<span class="store-btn is-disabled" ari
 const PAUSEMENU_SITE_TR = "https://pausemenu.app/tr";
 const PAUSEMENU_SITE_EN = "https://pausemenu.app/en-US";
 const APP_STORE_PAUSEMENU = "https://apps.apple.com/app/id6781281375";
+const APP_STORE_FINTEL = "https://apps.apple.com/app/id6835149318";
+// PureScan Cosmetics App Store'a girince: linki buraya yaz, karttaki appleButtonSoon() yerine appleButton(APP_STORE_COSMETICS) koy.
+const APP_STORE_COSMETICS = "";
 
 const html = String.raw`<section class="products-section" id="products">
         <div class="container">
@@ -119,7 +122,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası">${siteArrow}</a>
                         <a class="product-phone product-site" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası" tabindex="-1">
-                            <img src="/assets/purescan-screen.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
+                            <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
@@ -169,7 +172,7 @@ const html = String.raw`<section class="products-section" id="products">
                         </div>
                         <div class="product-actions">
                             ${playButton("https://play.google.com/store/apps/details?id=com.fintel.app")}
-                            ${appleButtonSoon()}
+                            ${appleButton(APP_STORE_FINTEL)}
                         </div>
                     </div>
                 </article>
