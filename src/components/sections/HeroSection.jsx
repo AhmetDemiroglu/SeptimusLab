@@ -40,13 +40,13 @@ const html = String.raw`<section class="hero-section" id="hero">
             <div class="hero-stage hero-in hero-in-d2">
                 <div class="hero-scene" data-tilt="5">
                     <div class="h-phone h-phone-left">
-                        <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" alt="Pause Menu uygulama arayüzü" loading="eager">
+                        <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" data-img-tr-dark="/assets/pausemenu-screen-dark.webp" data-img-en-dark="/assets/pausemenu-en-dark.webp" alt="Pause Menu uygulama arayüzü" loading="eager">
                     </div>
                     <div class="h-phone h-phone-right">
-                        <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" alt="PureScan Cosmetics uygulama arayüzü" loading="eager">
+                        <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" data-img-tr-dark="/assets/purescan-screen-dark.webp" data-img-en-dark="/assets/purescan-en-dark.webp" alt="PureScan Cosmetics uygulama arayüzü" loading="eager">
                     </div>
                     <div class="h-phone h-phone-front">
-                        <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama arayüzü" loading="eager">
+                        <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" data-img-tr-dark="/assets/purescan-foods-screen-dark.webp" data-img-en-dark="/assets/purescan-foods-en-dark.webp" alt="PureScan Foods uygulama arayüzü" loading="eager">
                     </div>
                     <div class="hero-ground"></div>
                 </div>

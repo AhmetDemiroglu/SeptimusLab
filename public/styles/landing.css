@@ -2631,6 +2631,11 @@ html[data-theme="dark"] .hero-mark-bg {
     filter: invert(1) brightness(1.6);
 }
 
+html[data-theme="dark"] .h-phone-left::before,
+html[data-theme="dark"] .h-phone-right::before {
+    background: rgba(14, 26, 51, 0.32);
+}
+
 html[data-theme="dark"] .marquee-wrapper {
     background: #0B152B;
     border-color: rgba(151, 163, 188, 0.14);

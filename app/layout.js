@@ -261,8 +261,15 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="tr">
+        <html lang="tr" suppressHydrationWarning>
             <head>
+                {/* Kayitli koyu tema ilk boyamadan once uygulanir: sayfa acik temada yanip sonmez,
+                    uygulama ekranlari da dogrudan koyu surumle gelir. */}
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `try{if(localStorage.getItem('septimus-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}`,
+                    }}
+                />
                 {/* Google Analytics 4: kuyruk hemen kurulur (sayfa gorunumu kaybolmaz), 180 KB'lik
                     gtag.js ise ilk etkilesimde ya da yuklemeden 3 sn sonra gelir, ilk boyamayla yarismaz. */}
                 <script

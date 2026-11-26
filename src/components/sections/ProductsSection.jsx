@@ -65,7 +65,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası">${siteArrow}</a>
                         <a class="product-phone product-site" href="${FOODS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Foods tanıtım sayfası" tabindex="-1">
-                            <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
+                            <img src="/assets/purescan-foods-screen.webp" data-img-tr="/assets/purescan-foods-screen.webp" data-img-en="/assets/purescan-foods-en.webp" data-img-tr-dark="/assets/purescan-foods-screen-dark.webp" data-img-en-dark="/assets/purescan-foods-en-dark.webp" alt="PureScan Foods uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
@@ -93,7 +93,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi">${siteArrow}</a>
                         <a class="product-phone product-site" href="${PAUSEMENU_SITE_TR}" data-href-tr="${PAUSEMENU_SITE_TR}" data-href-en="${PAUSEMENU_SITE_EN}" target="_blank" rel="noopener noreferrer" aria-label="Pause Menu web sitesi" tabindex="-1">
-                            <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" alt="Pause Menu uygulama ekranı" loading="lazy">
+                            <img src="/assets/pausemenu-screen.webp" data-img-tr="/assets/pausemenu-screen.webp" data-img-en="/assets/pausemenu-en.webp" data-img-tr-dark="/assets/pausemenu-screen-dark.webp" data-img-en-dark="/assets/pausemenu-en-dark.webp" alt="Pause Menu uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
@@ -122,7 +122,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası">${siteArrow}</a>
                         <a class="product-phone product-site" href="${COSMETICS_SITE}" target="_blank" rel="noopener noreferrer" aria-label="PureScan Cosmetics tanıtım sayfası" tabindex="-1">
-                            <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
+                            <img src="/assets/purescan-screen.webp" data-img-tr="/assets/purescan-screen.webp" data-img-en="/assets/purescan-en.webp" data-img-tr-dark="/assets/purescan-screen-dark.webp" data-img-en-dark="/assets/purescan-en-dark.webp" alt="PureScan Cosmetics uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">
@@ -151,7 +151,7 @@ const html = String.raw`<section class="products-section" id="products">
                     <div class="product-visual">
                         <a class="product-site-cue" href="${FINTEL_SITE}" target="_blank" rel="noopener noreferrer" aria-label="Fintel tanıtım sayfası">${siteArrow}</a>
                         <a class="product-phone product-site" href="${FINTEL_SITE}" target="_blank" rel="noopener noreferrer" aria-label="Fintel tanıtım sayfası" tabindex="-1">
-                            <img src="/assets/fintel-screen.webp" alt="Fintel uygulama ekranı" loading="lazy">
+                            <img src="/assets/fintel-screen.webp" data-img-tr="/assets/fintel-screen.webp" data-img-en="/assets/fintel-screen.webp" data-img-tr-dark="/assets/fintel-screen-dark.webp" data-img-en-dark="/assets/fintel-screen-dark.webp" alt="Fintel uygulama ekranı" loading="lazy">
                         </a>
                     </div>
                     <div class="product-body">

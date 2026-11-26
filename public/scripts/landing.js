@@ -214,11 +214,7 @@ function setLanguage(lang) {
         }
     });
 
-    // Swap localized screenshots (e.g. PureScan Foods screen has a TR and an EN version)
-    document.querySelectorAll("[data-img-" + lang + "]").forEach((img) => {
-        const src = img.getAttribute("data-img-" + lang);
-        if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
-    });
+    updateScreenshots();
 
     // Swap localized links (e.g. Pause Menu site -> /tr vs /en-US depending on page language)
     document.querySelectorAll("[data-href-" + lang + "]").forEach((a) => {
@@ -229,6 +225,17 @@ function setLanguage(lang) {
     document.querySelectorAll(".lang-btn").forEach((btn) => {
         btn.classList.toggle("active", btn.dataset.lang === lang);
         btn.setAttribute("aria-pressed", btn.dataset.lang === lang);
+    });
+}
+
+// Uygulama ekranlari dile ve temaya gore degisir (data-img-<dil> ve data-img-<dil>-dark).
+// Yalniz gorunen surum indirilir; koyu surumu olmayan gorsel acik surumde kalir.
+function updateScreenshots() {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    const key = "data-img-" + currentLang;
+    document.querySelectorAll("[" + key + "]").forEach((img) => {
+        const src = (dark && img.getAttribute(key + "-dark")) || img.getAttribute(key);
+        if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
     });
 }
 
@@ -481,6 +488,7 @@ function setupFeature3ThemeAndAudio() {
         } else {
             root.removeAttribute("data-theme");
         }
+        updateScreenshots();
 
         if (themeBtn) {
             themeBtn.classList.toggle("active", dark);
